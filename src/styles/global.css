@@ -1,0 +1,449 @@
+@import "tailwindcss";
+
+@theme {
+    --color-night-950: oklch(0.15 0.035 258);
+    --color-night-900: oklch(0.2 0.045 258);
+    --color-night-800: oklch(0.27 0.05 255);
+    --color-algae-500: oklch(0.55 0.08 167);
+    --color-lilac-500: oklch(0.67 0.1 286);
+    --color-paper-100: oklch(0.93 0.02 255);
+    --color-paper-300: oklch(0.8 0.03 252);
+}
+
+:root {
+    --bg-main: oklch(0.16 0.032 258);
+    --bg-panel: color-mix(in oklch, oklch(0.22 0.04 257), var(--bg-main) 42%);
+    --bg-panel-soft: color-mix(in oklch, oklch(0.28 0.04 257), var(--bg-main) 60%);
+    --line-soft: oklch(0.56 0.03 258 / 0.33);
+    --text-main: oklch(0.92 0.018 254);
+    --text-soft: color-mix(in oklch, var(--text-main), var(--bg-main) 38%);
+    --accent: #92FE9D;
+    --accent-2: #00C9FF;
+    --step--1: clamp(0.84rem, 0.81rem + 0.15vw, 0.95rem);
+    --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+    --step-2: clamp(1.45rem, 1.2rem + 1vw, 2.1rem);
+    --step-3: clamp(1.8rem, 1.3rem + 2vw, 3.1rem);
+    --step-4: clamp(2.35rem, 1.6rem + 3.3vw, 4.7rem);
+}
+
+html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Instrument Sans", "Segoe UI", sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.5;
+    color: var(--text-main);
+    background:
+        radial-gradient(95% 65% at 11% -20%, color-mix(in oklch, var(--accent-2), transparent 78%), transparent 72%),
+        radial-gradient(75% 55% at 88% -8%, color-mix(in oklch, var(--accent), transparent 80%), transparent 70%),
+        linear-gradient(180deg, oklch(0.16 0.032 258) 0%, oklch(0.19 0.035 257) 55%, oklch(0.15 0.03 258) 100%);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+    background: color-mix(in oklch, var(--accent), var(--bg-main) 55%);
+    color: var(--text-main);
+}
+
+.shell {
+    width: min(1160px, 92vw);
+    margin-inline: auto;
+    padding-block: clamp(2rem, 2vw + 1.3rem, 4rem) clamp(4rem, 6vw, 7rem);
+}
+
+.section+.section {
+    margin-top: clamp(3.3rem, 5vw, 7rem);
+}
+
+.eyebrow {
+    margin: 0;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: var(--step--1);
+    color: var(--text-soft);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Sora", "Avenir Next", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--step-4);
+    line-height: 1.04;
+    max-width: 14ch;
+}
+
+h2 {
+    font-size: var(--step-3);
+    line-height: 1.1;
+}
+
+h3 {
+    font-size: var(--step-1);
+}
+
+p {
+    margin: 0;
+    color: var(--text-soft);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr;
+    gap: clamp(1.1rem, 3vw, 3rem);
+    align-items: end;
+}
+
+.hero-copy {
+    display: grid;
+    gap: 1.15rem;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.logo-slot {
+    position: relative;
+    overflow: hidden;
+    inline-size: clamp(3.3rem, 5vw, 4.1rem);
+    aspect-ratio: 1;
+    border: 1px solid color-mix(in oklch, var(--accent-2), var(--line-soft) 50%);
+    background:
+        linear-gradient(140deg, color-mix(in oklch, var(--accent), transparent 8%), color-mix(in oklch, var(--accent-2), transparent 10%));
+    display: grid;
+    place-items: center;
+    color: oklch(0.18 0.03 258);
+    font-family: "Sora", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.logo-slot--circle {
+    border-radius: 999px;
+}
+
+.logo-slot--square {
+    border-radius: 0.85rem;
+}
+
+.logo-slot--filled {
+    border: none;
+    background: transparent;
+}
+
+.logo-image {
+    position: absolute;
+    inset: 0;
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: inherit;
+    z-index: 1;
+}
+
+.logo-fallback {
+    position: absolute;
+    z-index: 0;
+}
+
+.logo-note {
+    font-size: var(--step--1);
+    color: var(--text-soft);
+}
+
+.hero-tagline {
+    font-size: var(--step-1);
+    max-width: 52ch;
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 0.9rem;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 999px;
+    padding: 0.74rem 1.35rem;
+    text-decoration: none;
+    transition: transform 260ms cubic-bezier(0.19, 1, 0.22, 1), background-color 260ms cubic-bezier(0.19, 1, 0.22, 1), border-color 260ms cubic-bezier(0.19, 1, 0.22, 1);
+    will-change: transform;
+    font-weight: 600;
+}
+
+.cta:hover {
+    transform: translateY(-2px);
+}
+
+.cta:focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--accent), white 20%);
+    outline-offset: 2px;
+}
+
+.cta--primary {
+    color: oklch(0.17 0.03 258);
+    background: color-mix(in oklch, var(--accent), white 15%);
+}
+
+.cta--secondary {
+    color: var(--text-main);
+    border: 1px solid var(--line-soft);
+    background: color-mix(in oklch, var(--bg-main), white 4%);
+}
+
+.cta-icon {
+    inline-size: 0.95rem;
+    block-size: 0.95rem;
+    flex-shrink: 0;
+}
+
+.relay {
+    padding: clamp(1rem, 2.2vw, 1.7rem);
+    border: 1px solid var(--line-soft);
+    background: linear-gradient(180deg, color-mix(in oklch, var(--bg-panel-soft), transparent 20%), color-mix(in oklch, var(--bg-main), black 6%));
+}
+
+.relay-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem;
+    align-items: baseline;
+    font-size: var(--step--1);
+    color: var(--text-soft);
+}
+
+.relay-row+.relay-row {
+    margin-top: 0.45rem;
+}
+
+.relay-label {
+    color: color-mix(in oklch, var(--accent), var(--text-main) 35%);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.problem {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(1.4rem, 3vw, 2.8rem);
+    align-items: start;
+}
+
+.problem-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.problem-list li {
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.problem-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: color-mix(in oklch, var(--accent), var(--text-main) 30%);
+}
+
+.feature-rail {
+    border-top: 1px solid var(--line-soft);
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: minmax(2rem, 2.7rem) 1fr;
+    gap: 0.8rem 1.2rem;
+    padding-block: 1.1rem;
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.feature-index {
+    font-family: "Sora", sans-serif;
+    color: color-mix(in oklch, var(--accent-2), var(--text-main) 25%);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    font-variant-numeric: tabular-nums;
+}
+
+.platform-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.62rem;
+}
+
+.platform {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    border: 1px solid var(--line-soft);
+    background: color-mix(in oklch, var(--bg-panel), transparent 10%);
+    padding: 0.7rem 0.8rem;
+    font-size: var(--step--1);
+    color: color-mix(in oklch, var(--text-main), var(--bg-main) 10%);
+}
+
+.platform-icon {
+    inline-size: 1.08rem;
+    block-size: 1.08rem;
+    flex-shrink: 0;
+    filter: saturate(1.08);
+}
+
+.platform:nth-child(3n + 1) {
+    grid-column: span 2;
+}
+
+.platform:nth-child(4n) {
+    background: color-mix(in oklch, var(--bg-panel), var(--accent) 12%);
+}
+
+.platform:nth-child(5n) {
+    background: color-mix(in oklch, var(--bg-panel), var(--accent-2) 14%);
+}
+
+.proof-grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.72rem;
+}
+
+.proof-card {
+    border: 1px solid var(--line-soft);
+    background: linear-gradient(160deg,
+            color-mix(in oklch, var(--bg-panel), transparent 6%),
+            color-mix(in oklch, var(--bg-main), black 6%));
+    padding: clamp(0.9rem, 1.4vw, 1.2rem);
+}
+
+.proof-value {
+    font-family: "Sora", "Avenir Next", sans-serif;
+    font-size: var(--step-2);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    color: color-mix(in oklch, var(--accent), var(--text-main) 35%);
+}
+
+.proof-label {
+    margin-top: 0.45rem;
+    font-size: var(--step--1);
+}
+
+.hosting {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem 1.6rem;
+    align-items: end;
+}
+
+.hosting-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.hosting-tags span {
+    border-radius: 999px;
+    border: 1px solid var(--line-soft);
+    padding: 0.46rem 0.78rem;
+    font-size: var(--step--1);
+    color: var(--text-soft);
+}
+
+.closing {
+    margin-top: clamp(4rem, 7vw, 8rem);
+    border-block: 1px solid var(--line-soft);
+    padding-block: clamp(1.5rem, 3vw, 2.8rem);
+    display: grid;
+    gap: 0.85rem;
+}
+
+.closing p {
+    max-width: 62ch;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: rise 850ms cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+
+.delay-1 {
+    animation-delay: 140ms;
+}
+
+.delay-2 {
+    animation-delay: 220ms;
+}
+
+@keyframes rise {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .cta {
+        transition: none;
+    }
+}
+
+@media (max-width: 980px) {
+
+    .hero,
+    .problem,
+    .hosting {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .proof-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform:nth-child(3n + 1) {
+        grid-column: span 1;
+    }
+}

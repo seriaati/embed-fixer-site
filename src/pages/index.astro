@@ -1,11 +1,254 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const features = [
+	"Automatic fixing through webhook reposting with your username + avatar.",
+	'Manual fixings with /fix and right-click "Fix Embed" in DMs and unsupported servers.',
+	"Media extraction for supported links in a gallery-like view.",
+	"Numerous settings to customize behavior and tailor to your server’s needs.",
+];
+
+const logoPath = "/logo.png";
+const platformIconMonochrome = "DCEBFF";
+const githubIconMonochrome = "DCEBFF";
+
+const platforms = [
+	{ name: "Twitter/X", slug: "x" },
+	{ name: "Pixiv", slug: "pixiv" },
+	{ name: "TikTok", slug: "tiktok" },
+	{ name: "Reddit", slug: "reddit" },
+	{ name: "Instagram", slug: "instagram" },
+	{ name: "Bluesky", slug: "bluesky" },
+	{ name: "Facebook", slug: "facebook" },
+	{ name: "Threads", slug: "threads" },
+	{ name: "Tumblr", slug: "tumblr" },
+	{ name: "Bilibili", slug: "bilibili" },
+	{ name: "Twitch Clips", slug: "twitch" },
+	{ name: "FurAffinity", slug: "furaffinity" },
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+	title="Embed Fixer — Feature-rich Discord bot for fixing social media embeds"
+	description="Embed Fixer repairs broken social media embeds in Discord by reposting links through webhooks with your name and avatar."
+>
+	<main class="shell">
+		<section class="section hero reveal">
+			<div class="hero-copy">
+				<div class="brand-row">
+					<div
+						class="logo-slot logo-slot--circle logo-slot--filled"
+						aria-label="Embed Fixer logo"
+					>
+						<img
+							src={logoPath}
+							alt="Embed Fixer logo"
+							class="logo-image"
+							loading="lazy"
+						/>
+					</div>
+				</div>
+				<p class="eyebrow">Embed Fixer</p>
+				<h1>The link looked broken. The conversation shouldn’t.</h1>
+				<p class="hero-tagline">
+					Embed Fixer intercepts broken social links and reposts them
+					through webhooks so embeds render correctly inside Discord.
+				</p>
+				<div class="cta-row">
+					<a
+						href="https://discord.com/oauth2/authorize?client_id=770144963735453696"
+						target="_blank"
+						rel="noreferrer"
+						class="cta cta--primary"
+					>
+						Add to Discord
+					</a>
+					<a
+						href="https://github.com/seriaati/embed-fixer"
+						target="_blank"
+						rel="noreferrer"
+						class="cta cta--secondary"
+					>
+						<img
+							src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
+							alt=""
+							aria-hidden="true"
+							class="cta-icon"
+							loading="lazy"
+							decoding="async"
+						/>
+						View on GitHub
+					</a>
+				</div>
+			</div>
+
+			<aside class="relay" aria-label="How webhook relay works">
+				<div class="relay-row">
+					<span class="relay-label">incoming</span>
+					<span>https://x.com/... (broken embed)</span>
+				</div>
+				<div class="relay-row">
+					<span class="relay-label">action</span>
+					<span>Delete + resend through webhook with your avatar</span
+					>
+				</div>
+				<div class="relay-row">
+					<span class="relay-label">result</span>
+					<span>Playable media, full previews, readable context</span>
+				</div>
+			</aside>
+		</section>
+
+		<section class="section problem reveal delay-1">
+			<div>
+				<p class="eyebrow">Problem</p>
+				<h2>Discord strips the point out of shared posts.</h2>
+			</div>
+			<ul class="problem-list">
+				<li>Twitter/X previews fail or load partially.</li>
+				<li>Pixiv and Instagram often hide core media.</li>
+				<li>TikTok and Reddit links lose playable context.</li>
+				<li>Broken link forces users to leave Discord.</li>
+			</ul>
+		</section>
+
+		<section class="section reveal delay-1">
+			<p class="eyebrow">Features</p>
+			<h2 style="margin-top: 0.35rem;">
+				Features that are well-thoughtout and actually useful.
+			</h2>
+			<div class="feature-rail" style="margin-top: 1.1rem;">
+				{
+					features.map((feature, index) => (
+						<article class="feature">
+							<div class="feature-index">
+								{String(index + 1).padStart(2, "0")}
+							</div>
+							<p>{feature}</p>
+						</article>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="section reveal delay-2">
+			<p class="eyebrow">Supported Platforms</p>
+			<h2 style="margin-top: 0.35rem;">
+				Built for the links your server actually shares.
+			</h2>
+			<div
+				class="platform-grid"
+				role="list"
+				aria-label="Supported platform list"
+			>
+				{
+					platforms.map((platform) => (
+						<div class="platform" role="listitem">
+							<img
+								class="platform-icon"
+								src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
+								alt=""
+								loading="lazy"
+								decoding="async"
+								aria-hidden="true"
+							/>
+							<span>{platform.name}</span>
+						</div>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="section proof reveal delay-2">
+			<p class="eyebrow">Social Proof</p>
+			<h2 style="margin-top: 0.35rem;">
+				Trusted by communities that share a lot of links.
+			</h2>
+			<div
+				class="proof-grid"
+				role="list"
+				aria-label="Embed Fixer usage stats"
+			>
+				<article class="proof-card" role="listitem">
+					<p class="proof-value">1200+</p>
+					<p class="proof-label">Discord servers using the bot</p>
+				</article>
+				<article class="proof-card" role="listitem">
+					<p class="proof-value">150+</p>
+					<p class="proof-label">GitHub stars</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="section hosting reveal delay-2">
+			<div>
+				<p class="eyebrow">Self-hosting</p>
+				<h2 style="margin-top: 0.35rem;">
+					Care about privacy? Open source comes to the rescue.
+				</h2>
+				<p style="margin-top: 0.7rem; max-width: 60ch;">
+					Run Embed Fixer on your own machine if you want maximum
+					control over your data and configuration.
+				</p>
+				<div class="cta-row" style="margin-top: 1rem;">
+					<a
+						href="https://github.com/seriaati/embed-fixer#self-hosting"
+						target="_blank"
+						rel="noreferrer"
+						class="cta cta--secondary"
+					>
+						<img
+							src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
+							alt=""
+							aria-hidden="true"
+							class="cta-icon"
+							loading="lazy"
+							decoding="async"
+						/>
+						Self-hosting Instructions
+					</a>
+				</div>
+			</div>
+			<div class="hosting-tags" aria-label="Deployment options">
+				<span>Docker + SQLite/PostgreSQL</span>
+				<span>Local via uv</span>
+				<span>Optional Redis</span>
+			</div>
+		</section>
+
+		<section class="closing reveal delay-2">
+			<p class="eyebrow">Call to action</p>
+			<h2>If your server shares links, this belongs in it.</h2>
+			<p>
+				Stop leaving Discord for broken embeds. Add Embed Fixer and keep
+				every conversation intact.
+			</p>
+			<div class="cta-row">
+				<a
+					href="https://discord.com/oauth2/authorize?client_id=770144963735453696"
+					target="_blank"
+					rel="noreferrer"
+					class="cta cta--primary"
+				>
+					Add to Discord
+				</a>
+				<a
+					href="https://github.com/seriaati/embed-fixer"
+					target="_blank"
+					rel="noreferrer"
+					class="cta cta--secondary"
+				>
+					<img
+						src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
+						alt=""
+						aria-hidden="true"
+						class="cta-icon"
+						loading="lazy"
+						decoding="async"
+					/>
+					View on GitHub
+				</a>
+			</div>
+		</section>
+	</main>
 </Layout>

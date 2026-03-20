@@ -18,13 +18,17 @@ const platforms = [
 	{ name: "TikTok", slug: "tiktok" },
 	{ name: "Reddit", slug: "reddit" },
 	{ name: "Instagram", slug: "instagram" },
-	{ name: "Bluesky", slug: "bluesky" },
-	{ name: "Facebook", slug: "facebook" },
-	{ name: "Threads", slug: "threads" },
-	{ name: "Tumblr", slug: "tumblr" },
-	{ name: "Bilibili", slug: "bilibili" },
-	{ name: "Twitch Clips", slug: "twitch" },
 	{ name: "FurAffinity", slug: "furaffinity" },
+	{ name: "Twitch Clips", slug: "twitch" },
+	{ name: "Iwara", slug: null },
+	{ name: "Bluesky", slug: "bluesky" },
+	{ name: "Kemono", slug: null },
+	{ name: "Facebook", slug: "facebook" },
+	{ name: "Bilibili", slug: "bilibili" },
+	{ name: "Tumblr", slug: "tumblr" },
+	{ name: "Threads", slug: "threads" },
+	{ name: "PTT", slug: null },
+	{ name: "DeviantArt", slug: "deviantart" },
 ];
 ---
 
@@ -137,7 +141,7 @@ const platforms = [
 		<section class="section reveal delay-2">
 			<p class="eyebrow">Supported Platforms</p>
 			<h2 style="margin-top: 0.35rem;">
-				Built for the links your server actually shares.
+				From mainstream to niche, if a fixer exists, we support it.
 			</h2>
 			<div
 				class="platform-grid"
@@ -147,14 +151,23 @@ const platforms = [
 				{
 					platforms.map((platform) => (
 						<div class="platform" role="listitem">
-							<img
-								class="platform-icon"
-								src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
-								alt=""
-								loading="lazy"
-								decoding="async"
-								aria-hidden="true"
-							/>
+							{platform.slug ? (
+								<img
+									class="platform-icon"
+									src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
+									alt=""
+									loading="lazy"
+									decoding="async"
+									aria-hidden="true"
+								/>
+							) : (
+								<span
+									class="platform-icon platform-icon--fallback"
+									aria-hidden="true"
+								>
+									{platform.name.charAt(0).toUpperCase()}
+								</span>
+							)}
 							<span>{platform.name}</span>
 						</div>
 					))

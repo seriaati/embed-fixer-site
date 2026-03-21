@@ -409,6 +409,35 @@ p {
     max-width: 62ch;
 }
 
+.site-footer {
+    margin-top: clamp(1.6rem, 3vw, 2.7rem);
+    border-top: 1px solid var(--line-soft);
+    padding-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--text-soft);
+}
+
+.site-footer a {
+    margin-left: 0.55rem;
+    color: color-mix(in oklch, var(--accent-2), var(--text-main) 25%);
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+}
+
+.site-footer a:hover {
+    color: color-mix(in oklch, var(--accent), var(--text-main) 30%);
+}
+
+.site-footer a:focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--accent), white 20%);
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(16px);

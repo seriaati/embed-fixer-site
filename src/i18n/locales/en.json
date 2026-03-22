@@ -1,0 +1,78 @@
+{
+    "meta": {
+        "title": "Embed Fixer | Discord bot for fixing social media embeds",
+        "description": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord. Supports all the popular platforms, trusted by 1200+ servers, and open source for self-hosting."
+    },
+    "languageSelector": {
+        "label": "Language",
+        "ariaLabel": "Choose site language"
+    },
+    "hero": {
+        "heading": "The link looked broken. The conversation shouldn’t.",
+        "tagline": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord.",
+        "ctaAdd": "Add to Discord",
+        "ctaGithub": "View on GitHub",
+        "relay": {
+            "ariaLabel": "How webhook relay works",
+            "incomingLabel": "incoming",
+            "incomingValue": "https://x.com/... (broken embed)",
+            "actionLabel": "action",
+            "actionValue": "Delete + resend through webhook with your avatar and username",
+            "resultLabel": "result",
+            "resultValue": "Playable media, full previews, readable content"
+        }
+    },
+    "problem": {
+        "eyebrow": "Problem",
+        "heading": "Discord strips the point out of shared posts.",
+        "items": [
+            "Twitter/X previews fail or load partially.",
+            "Pixiv and Instagram often hide core media.",
+            "TikTok and Reddit links lose playable context.",
+            "Broken link forces users to leave Discord."
+        ]
+    },
+    "features": {
+        "eyebrow": "Features",
+        "heading": "Features that are well-thoughtout and actually useful.",
+        "items": [
+            "Automatic fixing through webhook reposting with your username + avatar.",
+            "Manual fixings with /fix and right-click \"Fix Embed\" in DMs and unsupported servers.",
+            "Media extraction for supported links in a gallery-like view.",
+            "Numerous settings to customize behavior and tailor to your server’s needs."
+        ]
+    },
+    "platforms": {
+        "eyebrow": "Supported Platforms",
+        "heading": "From mainstream to niche, if a fixer exists, we support it.",
+        "ariaLabel": "Supported platform list"
+    },
+    "proof": {
+        "eyebrow": "Social Proof",
+        "heading": "Trusted by communities.",
+        "ariaLabel": "Embed Fixer usage stats",
+        "statLabels": [
+            "Discord servers",
+            "GitHub stars"
+        ]
+    },
+    "hosting": {
+        "eyebrow": "Self-hosting",
+        "heading": "Care about privacy? Open source comes to the rescue.",
+        "body": "Run Embed Fixer on your own machine if you want maximum control over your data and configuration.",
+        "cta": "Self-hosting Instructions",
+        "tags": [
+            "Docker + SQLite/PostgreSQL",
+            "Local via uv",
+            "Optional Redis"
+        ]
+    },
+    "closing": {
+        "eyebrow": "Call to action",
+        "heading": "If your server shares links, this belongs in it.",
+        "body": "Stop leaving Discord for broken embeds. Add Embed Fixer and keep every conversation intact."
+    },
+    "footer": {
+        "copyright": "Copyright © 2026 Seria Ati. All rights reserved."
+    }
+}

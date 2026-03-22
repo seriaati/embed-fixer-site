@@ -1,0 +1,78 @@
+{
+    "meta": {
+        "title": "Embed Fixer | 修复社交媒体嵌入的 Discord 机器人",
+        "description": "Embed Fixer 会拦截失效的社交链接，并通过 webhook 重新发送消息，让嵌入内容在 Discord 中正确显示。支持主流平台，已被 1200+ 服务器信赖，并且开源可自托管。"
+    },
+    "languageSelector": {
+        "label": "语言",
+        "ariaLabel": "选择网站语言"
+    },
+    "hero": {
+        "heading": "链接坏了，聊天不该跟着坏。",
+        "tagline": "Embed Fixer 会拦截失效的社交链接，并通过 webhook 重新发送消息，让嵌入内容在 Discord 中正确显示。",
+        "ctaAdd": "添加到 Discord",
+        "ctaGithub": "在 GitHub 查看",
+        "relay": {
+            "ariaLabel": "Webhook 转发流程",
+            "incomingLabel": "输入",
+            "incomingValue": "https://x.com/...（嵌入失效）",
+            "actionLabel": "处理",
+            "actionValue": "删除原消息并通过 webhook 以你的头像和昵称重新发送",
+            "resultLabel": "结果",
+            "resultValue": "可播放媒体、完整预览、更易读内容"
+        }
+    },
+    "problem": {
+        "eyebrow": "问题",
+        "heading": "Discord 经常把分享内容的重点“吞掉”。",
+        "items": [
+            "Twitter/X 预览经常失效或加载不完整。",
+            "Pixiv 和 Instagram 常常隐藏关键媒体内容。",
+            "TikTok 和 Reddit 链接会丢失可播放上下文。",
+            "链接损坏会迫使用户离开 Discord。"
+        ]
+    },
+    "features": {
+        "eyebrow": "功能",
+        "heading": "经过打磨、真正好用的功能。",
+        "items": [
+            "通过 webhook 自动修复，并保留你的用户名和头像。",
+            "支持 /fix 手动修复，以及私信和不支持服务器中的右键“Fix Embed”。",
+            "对支持的链接可提取媒体并以类似图库的方式展示。",
+            "提供丰富设置，可按服务器需求自定义行为。"
+        ]
+    },
+    "platforms": {
+        "eyebrow": "支持的平台",
+        "heading": "从主流到小众，只要有修复器，我们就支持。",
+        "ariaLabel": "支持的平台列表"
+    },
+    "proof": {
+        "eyebrow": "社群验证",
+        "heading": "已被众多社区信赖。",
+        "ariaLabel": "Embed Fixer 使用数据",
+        "statLabels": [
+            "Discord 服务器",
+            "GitHub 星标"
+        ]
+    },
+    "hosting": {
+        "eyebrow": "自托管",
+        "heading": "在意隐私？开源就是答案。",
+        "body": "你可以在自己的机器上运行 Embed Fixer，最大化掌控数据与配置。",
+        "cta": "自托管指南",
+        "tags": [
+            "Docker + SQLite/PostgreSQL",
+            "本地运行（uv）",
+            "可选 Redis"
+        ]
+    },
+    "closing": {
+        "eyebrow": "立即行动",
+        "heading": "只要你的服务器会分享链接，它就该拥有它。",
+        "body": "别再因为嵌入失效而离开 Discord。添加 Embed Fixer，让每段对话都保持完整。"
+    },
+    "footer": {
+        "copyright": "版权所有 © 2026 Seria Ati。保留所有权利。"
+    }
+}

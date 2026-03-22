@@ -1,0 +1,875 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+    DEFAULT_LOCALE,
+    getDictionary,
+    localeOptions,
+    localeDictionaries,
+} from "../i18n";
+
+interface Props {
+    lang: string;
+}
+
+const { lang } = Astro.props;
+const t = getDictionary(lang);
+
+const brandName = "Embed Fixer";
+const logoPath = "/logo.png";
+const platformIconMonochrome = "DCEBFF";
+const githubIconMonochrome = "DCEBFF";
+const platforms = [
+    { name: "Twitter/X", slug: "x" },
+    { name: "Pixiv", slug: "pixiv" },
+    { name: "TikTok", slug: "tiktok" },
+    { name: "Reddit", slug: "reddit" },
+    { name: "Instagram", slug: "instagram" },
+    { name: "FurAffinity", slug: "furaffinity" },
+    { name: "Twitch Clips", slug: "twitch" },
+    { name: "Iwara", slug: null },
+    { name: "Bluesky", slug: "bluesky" },
+    { name: "Kemono", slug: null },
+    { name: "Facebook", slug: "facebook" },
+    { name: "Bilibili", slug: "bilibili" },
+    { name: "Tumblr", slug: "tumblr" },
+    { name: "Threads", slug: "threads" },
+    { name: "PTT", slug: null },
+    { name: "DeviantArt", slug: "deviantart" },
+];
+const statValues = ["1200+", "150+"];
+---
+
+<Layout
+    lang={lang}
+    title={t.meta.title}
+    description={t.meta.description}
+    ogImage="/og-image.png"
+>
+    <main class="shell">
+        <section class="section hero reveal">
+            <div class="hero-copy">
+                <div class="brand-row">
+                    <div
+                        class="logo-slot logo-slot--circle logo-slot--filled"
+                        aria-label="Embed Fixer logo"
+                    >
+                        <img
+                            src={logoPath}
+                            alt="Embed Fixer logo"
+                            class="logo-image"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+                <p class="eyebrow" id="brand-name">{brandName}</p>
+                <h1 id="hero-heading">{t.hero.heading}</h1>
+                <p class="hero-tagline" id="hero-tagline">
+                    {t.hero.tagline}
+                </p>
+                <div class="cta-row">
+                    <a
+                        href="https://discord.com/oauth2/authorize?client_id=770144963735453696"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="cta cta--primary"
+                    >
+                        <span id="cta-add-top">{t.hero.ctaAdd}</span>
+                    </a>
+                    <a
+                        href="https://github.com/seriaati/embed-fixer"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="cta cta--secondary"
+                    >
+                        <img
+                            src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
+                            alt=""
+                            aria-hidden="true"
+                            class="cta-icon"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <span id="cta-github-top">{t.hero.ctaGithub}</span>
+                    </a>
+                </div>
+            </div>
+
+            <aside class="relay" id="relay" aria-label={t.hero.relay.ariaLabel}>
+                <div class="relay-row">
+                    <span class="relay-label" id="relay-incoming-label"
+                        >{t.hero.relay.incomingLabel}</span
+                    >
+                    <span id="relay-incoming-value"
+                        >{t.hero.relay.incomingValue}</span
+                    >
+                </div>
+                <div class="relay-row">
+                    <span class="relay-label" id="relay-action-label"
+                        >{t.hero.relay.actionLabel}</span
+                    >
+                    <span id="relay-action-value"
+                        >{t.hero.relay.actionValue}</span
+                    >
+                </div>
+                <div class="relay-row">
+                    <span class="relay-label" id="relay-result-label"
+                        >{t.hero.relay.resultLabel}</span
+                    >
+                    <span id="relay-result-value"
+                        >{t.hero.relay.resultValue}</span
+                    >
+                </div>
+            </aside>
+        </section>
+
+        <section class="section problem reveal delay-1">
+            <div>
+                <p class="eyebrow" id="problem-eyebrow">{t.problem.eyebrow}</p>
+                <h2 id="problem-heading">{t.problem.heading}</h2>
+            </div>
+            <ul class="problem-list" id="problem-list">
+                {t.problem.items.map((item) => <li>{item}</li>)}
+            </ul>
+        </section>
+
+        <section class="section reveal delay-1">
+            <p class="eyebrow" id="features-eyebrow">{t.features.eyebrow}</p>
+            <h2 id="features-heading" style="margin-top: 0.35rem;">
+                {t.features.heading}
+            </h2>
+            <div
+                class="feature-rail"
+                id="feature-rail"
+                style="margin-top: 1.1rem;"
+            >
+                {
+                    t.features.items.map((feature, index) => (
+                        <article class="feature">
+                            <div class="feature-index">
+                                {String(index + 1).padStart(2, "0")}
+                            </div>
+                            <p>{feature}</p>
+                        </article>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section class="section reveal delay-2">
+            <p class="eyebrow" id="platforms-eyebrow">{t.platforms.eyebrow}</p>
+            <h2 id="platforms-heading" style="margin-top: 0.35rem;">
+                {t.platforms.heading}
+            </h2>
+            <div
+                class="platform-grid"
+                id="platform-grid"
+                role="list"
+                aria-label={t.platforms.ariaLabel}
+            >
+                {
+                    platforms.map((platform) => (
+                        <div class="platform" role="listitem">
+                            {platform.slug ? (
+                                <img
+                                    class="platform-icon"
+                                    src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                    aria-hidden="true"
+                                />
+                            ) : (
+                                <span
+                                    class="platform-icon platform-icon--fallback"
+                                    aria-hidden="true"
+                                >
+                                    {platform.name.charAt(0).toUpperCase()}
+                                </span>
+                            )}
+                            <span>{platform.name}</span>
+                        </div>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section class="section proof reveal delay-2">
+            <p class="eyebrow" id="proof-eyebrow">{t.proof.eyebrow}</p>
+            <h2 id="proof-heading" style="margin-top: 0.35rem;">
+                {t.proof.heading}
+            </h2>
+            <div
+                class="proof-grid"
+                id="proof-grid"
+                role="list"
+                aria-label={t.proof.ariaLabel}
+            >
+                {
+                    statValues.map((value, index) => (
+                        <article class="proof-card" role="listitem">
+                            <p class="proof-value">{value}</p>
+                            <p class="proof-label">
+                                {t.proof.statLabels[index]}
+                            </p>
+                        </article>
+                    ))
+                }
+            </div>
+        </section>
+
+        <section class="section hosting reveal delay-2">
+            <div>
+                <p class="eyebrow" id="hosting-eyebrow">{t.hosting.eyebrow}</p>
+                <h2 id="hosting-heading" style="margin-top: 0.35rem;">
+                    {t.hosting.heading}
+                </h2>
+                <p
+                    id="hosting-body"
+                    style="margin-top: 0.7rem; max-width: 60ch;"
+                >
+                    {t.hosting.body}
+                </p>
+                <div class="cta-row" style="margin-top: 1rem;">
+                    <a
+                        href="https://github.com/seriaati/embed-fixer#self-hosting"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="cta cta--secondary"
+                    >
+                        <img
+                            src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
+                            alt=""
+                            aria-hidden="true"
+                            class="cta-icon"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <span id="hosting-cta">{t.hosting.cta}</span>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="hosting-tags"
+                id="hosting-tags"
+                aria-label="Deployment options"
+            >
+                {t.hosting.tags.map((tag) => <span>{tag}</span>)}
+            </div>
+        </section>
+
+        <section class="closing reveal delay-2">
+            <p class="eyebrow" id="closing-eyebrow">{t.closing.eyebrow}</p>
+            <h2 id="closing-heading">{t.closing.heading}</h2>
+            <p id="closing-body">{t.closing.body}</p>
+            <div class="cta-row">
+                <a
+                    href="https://discord.com/oauth2/authorize?client_id=770144963735453696"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="cta cta--primary"
+                >
+                    <span id="cta-add-bottom">{t.hero.ctaAdd}</span>
+                </a>
+                <a
+                    href="https://github.com/seriaati/embed-fixer"
+                    target="_blank"
+                    rel="noreferrer"
+                    class="cta cta--secondary"
+                >
+                    <img
+                        src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
+                        alt=""
+                        aria-hidden="true"
+                        class="cta-icon"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <span id="cta-github-bottom">{t.hero.ctaGithub}</span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="site-footer" aria-label="Site footer">
+            <div class="site-footer-row">
+                <p id="footer-copyright">{t.footer.copyright}</p>
+                <div
+                    class="language-selector"
+                    role="group"
+                    aria-labelledby="language-label"
+                >
+                    <label
+                        class="language-label"
+                        id="language-label"
+                        for="language-select-trigger"
+                    >
+                        {t.languageSelector.label}
+                    </label>
+                    <button
+                        id="language-select-trigger"
+                        class="language-select-trigger"
+                        type="button"
+                        aria-label={t.languageSelector.ariaLabel}
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                        aria-controls="language-options"
+                    >
+                        <span id="language-current-label">
+                            {
+                                localeOptions.find(
+                                    (locale: { code: string; label: string }) =>
+                                        locale.code === lang,
+                                )?.label
+                            }
+                        </span>
+                        <span class="language-select-caret" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 16 16"
+                                fill="none"
+                                aria-hidden="true"
+                            >
+                                <path
+                                    d="M3.5 6.5L8 11L12.5 6.5"
+                                    stroke="currentColor"
+                                    stroke-width="1.6"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </button>
+                    <ul
+                        id="language-options"
+                        class="language-select-menu"
+                        role="listbox"
+                        tabindex="-1"
+                        hidden
+                    >
+                        {
+                            localeOptions.map(
+                                (locale: { code: string; label: string }) => (
+                                    <li role="presentation">
+                                        <button
+                                            type="button"
+                                            class="language-option"
+                                            role="option"
+                                            data-locale={locale.code}
+                                            aria-selected={
+                                                locale.code === lang
+                                                    ? "true"
+                                                    : "false"
+                                            }
+                                        >
+                                            {locale.label}
+                                        </button>
+                                    </li>
+                                ),
+                            )
+                        }
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </main>
+</Layout>
+
+<script
+    is:inline
+    define:vars={{
+        dictionaries: localeDictionaries,
+        localeOptions,
+        defaultLocale: DEFAULT_LOCALE,
+        activeLocaleCode: lang,
+        platformIconMonochrome,
+        platforms,
+        statValues,
+        brandName,
+    }}
+>
+    const STORAGE_KEY = "embed-fixer-locale";
+
+    const byId = (id) => document.getElementById(id);
+
+    const setText = (id, value) => {
+        const el = byId(id);
+        if (el && typeof value === "string") {
+            el.textContent = value;
+        }
+    };
+
+    const setMetaContent = (selector, value) => {
+        const el = document.querySelector(selector);
+        if (el && typeof value === "string") {
+            el.setAttribute("content", value);
+        }
+    };
+
+    const getLocaleLabel = (localeCode) => {
+        const matchingOption = localeOptions.find(
+            (option) => option.code === localeCode,
+        );
+        return matchingOption?.label ?? localeCode;
+    };
+
+    const getLanguageElements = () => {
+        const trigger = byId("language-select-trigger");
+        const menu = byId("language-options");
+        const currentLabel = byId("language-current-label");
+        const options = Array.from(
+            document.querySelectorAll(".language-option"),
+        );
+
+        return { trigger, menu, currentLabel, options };
+    };
+
+    const closeLanguageMenu = () => {
+        const { trigger, menu } = getLanguageElements();
+        if (!trigger || !menu) {
+            return;
+        }
+
+        trigger.setAttribute("aria-expanded", "false");
+        menu.hidden = true;
+    };
+
+    const openLanguageMenu = () => {
+        const { trigger, menu } = getLanguageElements();
+        if (!trigger || !menu) {
+            return;
+        }
+
+        trigger.setAttribute("aria-expanded", "true");
+        menu.hidden = false;
+    };
+
+    const syncLanguageSelector = (localeCode, ariaLabel) => {
+        const { trigger, currentLabel, options } = getLanguageElements();
+
+        if (trigger && typeof ariaLabel === "string") {
+            trigger.setAttribute("aria-label", ariaLabel);
+        }
+
+        if (currentLabel) {
+            currentLabel.textContent = getLocaleLabel(localeCode);
+        }
+
+        options.forEach((optionButton) => {
+            const isSelected = optionButton.dataset.locale === localeCode;
+            optionButton.setAttribute("aria-selected", isSelected.toString());
+
+            if (isSelected) {
+                optionButton.classList.add("is-selected");
+            } else {
+                optionButton.classList.remove("is-selected");
+            }
+        });
+    };
+
+    const normalizeLocale = (inputLocale) => {
+        if (!inputLocale) {
+            return defaultLocale;
+        }
+
+        const lowered = String(inputLocale).toLowerCase();
+        const exact = localeOptions.find(
+            (option) => option.code.toLowerCase() === lowered,
+        );
+
+        if (exact) {
+            return exact.code;
+        }
+
+        const baseLanguage = lowered.split("-")[0];
+        const base = localeOptions.find(
+            (option) =>
+                option.code.toLowerCase() === baseLanguage ||
+                option.code.toLowerCase().startsWith(`${baseLanguage}-`),
+        );
+
+        return base?.code ?? defaultLocale;
+    };
+
+    const renderProblemList = (items) => {
+        const list = byId("problem-list");
+        if (!list) {
+            return;
+        }
+
+        list.innerHTML = "";
+        items.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            list.append(li);
+        });
+    };
+
+    const renderFeatureList = (items) => {
+        const rail = byId("feature-rail");
+        if (!rail) {
+            return;
+        }
+
+        rail.innerHTML = "";
+        items.forEach((item, index) => {
+            const article = document.createElement("article");
+            article.className = "feature";
+
+            const featureIndex = document.createElement("div");
+            featureIndex.className = "feature-index";
+            featureIndex.textContent = String(index + 1).padStart(2, "0");
+
+            const paragraph = document.createElement("p");
+            paragraph.textContent = item;
+
+            article.append(featureIndex, paragraph);
+            rail.append(article);
+        });
+    };
+
+    const renderPlatforms = (items) => {
+        const grid = byId("platform-grid");
+        if (!grid) {
+            return;
+        }
+
+        grid.innerHTML = "";
+        items.forEach((platform) => {
+            const item = document.createElement("div");
+            item.className = "platform";
+            item.setAttribute("role", "listitem");
+
+            if (platform.slug) {
+                const icon = document.createElement("img");
+                icon.className = "platform-icon";
+                icon.src = `https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`;
+                icon.alt = "";
+                icon.loading = "lazy";
+                icon.decoding = "async";
+                icon.setAttribute("aria-hidden", "true");
+                item.append(icon);
+            } else {
+                const fallback = document.createElement("span");
+                fallback.className = "platform-icon platform-icon--fallback";
+                fallback.setAttribute("aria-hidden", "true");
+                fallback.textContent = String(platform.name)
+                    .charAt(0)
+                    .toUpperCase();
+                item.append(fallback);
+            }
+
+            const label = document.createElement("span");
+            label.textContent = platform.name;
+            item.append(label);
+
+            grid.append(item);
+        });
+    };
+
+    const renderProofStats = (labels) => {
+        const grid = byId("proof-grid");
+        if (!grid) {
+            return;
+        }
+
+        grid.innerHTML = "";
+        labels.forEach((label, index) => {
+            const article = document.createElement("article");
+            article.className = "proof-card";
+            article.setAttribute("role", "listitem");
+
+            const value = document.createElement("p");
+            value.className = "proof-value";
+            value.textContent = statValues[index];
+
+            const labelEl = document.createElement("p");
+            labelEl.className = "proof-label";
+            labelEl.textContent = label;
+
+            article.append(value, labelEl);
+            grid.append(article);
+        });
+    };
+
+    const renderHostingTags = (tags) => {
+        const container = byId("hosting-tags");
+        if (!container) {
+            return;
+        }
+
+        container.innerHTML = "";
+        tags.forEach((tag) => {
+            const span = document.createElement("span");
+            span.textContent = tag;
+            container.append(span);
+        });
+    };
+
+    const applyTranslations = (locale) => {
+        const normalizedLocale = normalizeLocale(locale);
+        const dict =
+            dictionaries[normalizedLocale] ?? dictionaries[defaultLocale];
+
+        document.documentElement.lang = normalizedLocale;
+
+        syncLanguageSelector(normalizedLocale, dict.languageSelector.ariaLabel);
+
+        setText("language-label", dict.languageSelector.label);
+        setText("brand-name", brandName);
+        setText("hero-heading", dict.hero.heading);
+        setText("hero-tagline", dict.hero.tagline);
+        setText("cta-add-top", dict.hero.ctaAdd);
+        setText("cta-github-top", dict.hero.ctaGithub);
+        setText("cta-add-bottom", dict.hero.ctaAdd);
+        setText("cta-github-bottom", dict.hero.ctaGithub);
+
+        setText("relay-incoming-label", dict.hero.relay.incomingLabel);
+        setText("relay-incoming-value", dict.hero.relay.incomingValue);
+        setText("relay-action-label", dict.hero.relay.actionLabel);
+        setText("relay-action-value", dict.hero.relay.actionValue);
+        setText("relay-result-label", dict.hero.relay.resultLabel);
+        setText("relay-result-value", dict.hero.relay.resultValue);
+
+        setText("problem-eyebrow", dict.problem.eyebrow);
+        setText("problem-heading", dict.problem.heading);
+        renderProblemList(dict.problem.items);
+
+        setText("features-eyebrow", dict.features.eyebrow);
+        setText("features-heading", dict.features.heading);
+        renderFeatureList(dict.features.items);
+
+        setText("platforms-eyebrow", dict.platforms.eyebrow);
+        setText("platforms-heading", dict.platforms.heading);
+        const platformGrid = byId("platform-grid");
+        if (platformGrid) {
+            platformGrid.setAttribute("aria-label", dict.platforms.ariaLabel);
+        }
+        renderPlatforms(platforms);
+
+        setText("proof-eyebrow", dict.proof.eyebrow);
+        setText("proof-heading", dict.proof.heading);
+        const proofGrid = byId("proof-grid");
+        if (proofGrid) {
+            proofGrid.setAttribute("aria-label", dict.proof.ariaLabel);
+        }
+        renderProofStats(dict.proof.statLabels);
+
+        setText("hosting-eyebrow", dict.hosting.eyebrow);
+        setText("hosting-heading", dict.hosting.heading);
+        setText("hosting-body", dict.hosting.body);
+        setText("hosting-cta", dict.hosting.cta);
+        renderHostingTags(dict.hosting.tags);
+
+        setText("closing-eyebrow", dict.closing.eyebrow);
+        setText("closing-heading", dict.closing.heading);
+        setText("closing-body", dict.closing.body);
+        setText("footer-copyright", dict.footer.copyright);
+
+        document.title = dict.meta.title;
+        setMetaContent('meta[name="description"]', dict.meta.description);
+        setMetaContent('meta[property="og:title"]', dict.meta.title);
+        setMetaContent(
+            'meta[property="og:description"]',
+            dict.meta.description,
+        );
+        setMetaContent('meta[name="twitter:title"]', dict.meta.title);
+        setMetaContent(
+            'meta[name="twitter:description"]',
+            dict.meta.description,
+        );
+        setMetaContent(
+            'meta[property="og:image:alt"]',
+            `${dict.meta.title} preview image`,
+        );
+
+        return normalizedLocale;
+    };
+
+    const getStoredLocale = () => {
+        try {
+            return localStorage.getItem(STORAGE_KEY);
+        } catch {
+            return null;
+        }
+    };
+
+    const setStoredLocale = (locale) => {
+        try {
+            localStorage.setItem(STORAGE_KEY, locale);
+        } catch {
+            // ignore write errors
+        }
+    };
+
+    const getBrowserLocale = () => {
+        const preferredLocales =
+            Array.isArray(navigator.languages) && navigator.languages.length > 0
+                ? navigator.languages
+                : [navigator.language];
+
+        for (const locale of preferredLocales) {
+            const normalized = normalizeLocale(locale);
+            if (normalized) {
+                return normalized;
+            }
+        }
+
+        return defaultLocale;
+    };
+
+    const initI18n = () => {
+        const stored = getStoredLocale();
+        // If we are on a localized route, we use that locale as initial.
+        // If we are on the root route, we check stored then browser.
+        const isRoot = window.location.pathname === "/";
+        const initialLocale = isRoot
+            ? stored
+                ? normalizeLocale(stored)
+                : getBrowserLocale()
+            : activeLocaleCode;
+
+        const activeLocale = applyTranslations(initialLocale);
+
+        if (!stored) {
+            setStoredLocale(activeLocale);
+        }
+
+        const { trigger, menu, options } = getLanguageElements();
+        if (!trigger || !menu || options.length === 0) {
+            return;
+        }
+
+        const getSelectedOption = () =>
+            options.find(
+                (option) => option.getAttribute("aria-selected") === "true",
+            );
+
+        const focusOption = (option) => {
+            if (option) {
+                option.focus();
+            }
+        };
+
+        const moveFocus = (direction) => {
+            const activeIndex = options.findIndex(
+                (option) => option === document.activeElement,
+            );
+
+            const selectedOption = getSelectedOption();
+            const selectedIndex = selectedOption
+                ? options.indexOf(selectedOption)
+                : 0;
+            const currentIndex = activeIndex >= 0 ? activeIndex : selectedIndex;
+            const nextIndex =
+                (currentIndex + direction + options.length) % options.length;
+
+            focusOption(options[nextIndex]);
+        };
+
+        const chooseLocale = (localeCode) => {
+            const selectedLocale = normalizeLocale(localeCode);
+            const nextLocale = applyTranslations(selectedLocale);
+            setStoredLocale(nextLocale);
+
+            // If the user changed the language, and we are not on the root route,
+            // we should probably redirect them to the correct localized route or root.
+            // But for now, we just update the page content dynamically.
+            // If they are on /zh-CN/ and they choose English, they stay on /zh-CN/ but see English.
+            // To be more consistent with Astro's routing, we could redirect:
+            // window.location.href = selectedLocale === defaultLocale ? "/" : `/${selectedLocale}/`;
+
+            closeLanguageMenu();
+            trigger.focus();
+        };
+
+        trigger.addEventListener("click", () => {
+            const isExpanded = trigger.getAttribute("aria-expanded") === "true";
+            if (isExpanded) {
+                closeLanguageMenu();
+            } else {
+                openLanguageMenu();
+                focusOption(getSelectedOption() ?? options[0]);
+            }
+        });
+
+        trigger.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+                event.preventDefault();
+                openLanguageMenu();
+                const selectedOption = getSelectedOption() ?? options[0];
+                if (event.key === "ArrowDown") {
+                    focusOption(selectedOption);
+                } else {
+                    focusOption(options[options.length - 1]);
+                }
+            }
+        });
+
+        options.forEach((option) => {
+            option.addEventListener("click", () => {
+                chooseLocale(option.dataset.locale);
+            });
+        });
+
+        menu.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                event.preventDefault();
+                closeLanguageMenu();
+                trigger.focus();
+                return;
+            }
+
+            if (event.key === "ArrowDown") {
+                event.preventDefault();
+                moveFocus(1);
+                return;
+            }
+
+            if (event.key === "ArrowUp") {
+                event.preventDefault();
+                moveFocus(-1);
+                return;
+            }
+
+            if (event.key === "Home") {
+                event.preventDefault();
+                focusOption(options[0]);
+                return;
+            }
+
+            if (event.key === "End") {
+                event.preventDefault();
+                focusOption(options[options.length - 1]);
+                return;
+            }
+
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                const activeButton = document.activeElement;
+                if (activeButton?.classList?.contains("language-option")) {
+                    chooseLocale(activeButton.dataset.locale);
+                }
+            }
+        });
+
+        document.addEventListener("click", (event) => {
+            const target = event.target;
+            if (!(target instanceof Node)) {
+                return;
+            }
+
+            if (!menu.contains(target) && !trigger.contains(target)) {
+                closeLanguageMenu();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeLanguageMenu();
+            }
+        });
+    };
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initI18n, { once: true });
+    } else {
+        initI18n();
+    }
+</script>

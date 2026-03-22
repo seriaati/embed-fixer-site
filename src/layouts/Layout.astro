@@ -5,12 +5,14 @@ interface Props {
 	title?: string;
 	description?: string;
 	ogImage?: string;
+	lang?: string;
 }
 
 const {
 	title = "Embed Fixer",
 	description = "Feature-rich Discord bot for fixing social media embeds.",
 	ogImage = "/logo.png",
+	lang = "en",
 } = Astro.props;
 
 const baseUrl = Astro.site ?? Astro.url;
@@ -19,7 +21,7 @@ const ogImageUrl = new URL(ogImage, baseUrl).toString();
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />

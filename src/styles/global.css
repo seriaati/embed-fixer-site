@@ -118,6 +118,110 @@ p {
     gap: 0.9rem;
 }
 
+.language-selector {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid color-mix(in oklch, var(--line-soft), var(--bg-main) 15%);
+    background: color-mix(in oklch, var(--bg-panel), transparent 25%);
+    border-radius: 0.7rem;
+    padding: 0.3rem 0.4rem 0.3rem 0.55rem;
+}
+
+.language-label {
+    font-size: 0.68rem;
+    color: color-mix(in oklch, var(--text-soft), var(--bg-main) 20%);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.language-select-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.35rem;
+    border: 1px solid color-mix(in oklch, var(--line-soft), var(--bg-main) 10%);
+    border-radius: 0.5rem;
+    padding: 0.28rem 0.45rem 0.28rem 0.55rem;
+    background: color-mix(in oklch, var(--bg-main), white 2%);
+    color: var(--text-main);
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.2;
+    min-inline-size: 5.6rem;
+    cursor: pointer;
+}
+
+.language-select-trigger:hover {
+    border-color: color-mix(in oklch, var(--accent-2), var(--line-soft) 65%);
+}
+
+.language-select-trigger:focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--accent), white 20%);
+    outline-offset: 2px;
+}
+
+.language-select-caret {
+    inline-size: 0.9rem;
+    block-size: 0.9rem;
+    color: color-mix(in oklch, var(--text-soft), var(--text-main) 45%);
+    transition: transform 220ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.language-select-caret svg {
+    display: block;
+    inline-size: 100%;
+    block-size: 100%;
+}
+
+.language-select-trigger[aria-expanded="true"] .language-select-caret {
+    transform: rotate(180deg);
+}
+
+.language-select-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.35rem);
+    z-index: 20;
+    list-style: none;
+    margin: 0;
+    padding: 0.35rem;
+    min-inline-size: 9rem;
+    border-radius: 0.65rem;
+    border: 1px solid color-mix(in oklch, var(--line-soft), var(--bg-main) 5%);
+    background: color-mix(in oklch, var(--bg-panel), var(--bg-main) 35%);
+    box-shadow: 0 12px 32px oklch(0.03 0.01 258 / 0.45);
+}
+
+.language-option {
+    inline-size: 100%;
+    border: none;
+    background: transparent;
+    color: var(--text-main);
+    font: inherit;
+    font-size: 0.78rem;
+    text-align: left;
+    border-radius: 0.45rem;
+    padding: 0.42rem 0.58rem;
+    cursor: pointer;
+}
+
+.language-option:hover {
+    background: color-mix(in oklch, var(--bg-panel-soft), var(--accent-2) 16%);
+}
+
+.language-option.is-selected {
+    background: color-mix(in oklch, var(--bg-panel-soft), var(--accent) 18%);
+    color: color-mix(in oklch, var(--text-main), white 12%);
+}
+
+.language-option:focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--accent), white 20%);
+    outline-offset: 0;
+}
+
 .logo-slot {
     position: relative;
     overflow: hidden;
@@ -415,6 +519,14 @@ p {
     padding-top: clamp(1rem, 2vw, 1.5rem);
 }
 
+.site-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .site-footer p {
     margin: 0;
     font-size: var(--step--1);
@@ -489,5 +601,9 @@ p {
 
     .platform:nth-child(3n + 1) {
         grid-column: span 1;
+    }
+
+    .site-footer-row {
+        align-items: flex-start;
     }
 }

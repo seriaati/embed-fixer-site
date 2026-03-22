@@ -1,11 +1,13 @@
 import en from "./locales/en.json";
 import zhCN from "./locales/zh-CN.json";
+import zhTW from "./locales/zh-TW.json";
 
 export const DEFAULT_LOCALE = "en" as const;
 
 export const localeOptions = [
     { code: "en", label: "English" },
     { code: "zh-CN", label: "简体中文" },
+    { code: "zh-TW", label: "繁體中文" },
 ] as const;
 
 export type LocaleCode = (typeof localeOptions)[number]["code"];
@@ -14,6 +16,7 @@ export type TranslationDictionary = typeof en;
 const dictionaries: Record<LocaleCode, TranslationDictionary> = {
     en,
     "zh-CN": zhCN,
+    "zh-TW": zhTW,
 };
 
 export function normalizeLocale(locale: string | null | undefined): LocaleCode {

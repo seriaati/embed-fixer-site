@@ -4,7 +4,8 @@ on:
   push:
     branches: [main]
     paths:
-      - "src/i18n/locales/**"
+      - "src/i18n/locales/en.json"
+      - ".github/workflows/tx-sync-push.yml"
   workflow_dispatch:
 
 jobs:
@@ -19,7 +20,7 @@ jobs:
           node-version: 22
 
       - name: Flatten
-        run: node txsync.mjs push
+        run: node txsync.mjs push --locale en
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5

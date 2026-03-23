@@ -1,0 +1,30 @@
+# .github/workflows/tx-sync.yml
+name: Transifex Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/i18n/locales/**"
+  workflow_dispatch:
+
+jobs:
+  push-source:
+    name: Flatten source & translated strings
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Flatten
+        run: node txsync.mjs push
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update flattened source & translated strings"
+          branch: main
+          file_pattern: "tx/*.json"

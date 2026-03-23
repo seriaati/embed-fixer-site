@@ -37,14 +37,14 @@
         "heading": "Features that are well-thoughtout and actually useful.",
         "items": [
             "Automatic fixing through webhook reposting with your username + avatar.",
-            "Manual fixings with /fix and right-click \"Fix Embed\" in DMs and unsupported servers.",
+            "Manual fixings with /fix in DMs and unsupported servers.",
             "Media extraction for supported links in a gallery-like view.",
             "Numerous settings to customize behavior and tailor to your server’s needs."
         ]
     },
     "platforms": {
         "eyebrow": "Supported Platforms",
-        "heading": "From mainstream to niche, if a fixer exists, we support it.",
+        "heading": "From mainstream to niche, if the embed is broken, we’ll fix it.",
         "ariaLabel": "Supported platform list"
     },
     "proof": {

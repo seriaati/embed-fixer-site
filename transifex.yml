@@ -2,8 +2,8 @@ filters:
   - filter_type: file
     file_format: STRUCTURED_JSON
     source_language: en_US
-    source_file: src/i18n/locales/en.json
-    translation_files_expression: "src/i18n/locales/<lang>.json"
+    source_file: tx/en.json
+    translation_files_expression: "tx/<lang>.json"
 settings:
   language_mapping:
     zh_CN: zh-CN

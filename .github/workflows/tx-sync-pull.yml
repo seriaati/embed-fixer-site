@@ -1,0 +1,29 @@
+name: Transifex Sync (Pull)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "tx/*.json"
+  workflow_dispatch:
+
+jobs:
+  pull:
+    name: Pull translated strings
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pull
+        run: node txsync.mjs pull
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update translated strings from Transifex"
+          branch: main
+          file_pattern: "src/i18n/locales/*.json"

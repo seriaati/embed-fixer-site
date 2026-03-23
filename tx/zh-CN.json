@@ -1,0 +1,140 @@
+{
+    "meta.title": {
+        "string": "Embed Fixer | 专为修复 Discord 社交媒体预览而生的机器人"
+    },
+    "meta.description": {
+        "string": "Embed Fixer 会拦截失效的社交媒体链接，并通过 Webhook 重新发布，确保预览在 Discord 中正常显示。支持各大热门平台，深受 1200+ 服务器信任，且完全开源，支持自托管。"
+    },
+    "languageSelector.label": {
+        "string": "语言"
+    },
+    "languageSelector.ariaLabel": {
+        "string": "选择网站语言"
+    },
+    "hero.heading": {
+        "string": "链接失效了，但对话不该因此中断。"
+    },
+    "hero.tagline": {
+        "string": "Embed Fixer 拦截失效的社交链接，并通过 Webhook 重新发布，让预览内容在 Discord 内完美呈现。"
+    },
+    "hero.ctaAdd": {
+        "string": "添加至 Discord"
+    },
+    "hero.ctaGithub": {
+        "string": "在 GitHub 上查看"
+    },
+    "hero.relay.ariaLabel": {
+        "string": "Webhook 转发工作原理"
+    },
+    "hero.relay.incomingLabel": {
+        "string": "输入"
+    },
+    "hero.relay.incomingValue": {
+        "string": "https://x.com/... (预览失效)"
+    },
+    "hero.relay.actionLabel": {
+        "string": "处理"
+    },
+    "hero.relay.actionValue": {
+        "string": "删除原消息，并利用你的头像和用户名通过 Webhook 重新发送"
+    },
+    "hero.relay.resultLabel": {
+        "string": "结果"
+    },
+    "hero.relay.resultValue": {
+        "string": "可播放的媒体、完整的预览、清晰的内容"
+    },
+    "problem.eyebrow": {
+        "string": "问题所在"
+    },
+    "problem.heading": {
+        "string": "Discord 的预览失效，让分享内容失去了意义。"
+    },
+    "problem.items.0": {
+        "string": "Twitter/X 预览失败或仅加载部分内容。"
+    },
+    "problem.items.1": {
+        "string": "Pixiv 和 Instagram 经常隐藏核心媒体内容。"
+    },
+    "problem.items.2": {
+        "string": "TikTok 和 Reddit 链接丢失了可播放的上下文。"
+    },
+    "problem.items.3": {
+        "string": "损坏的链接迫使消息接收者必须离开 Discord 才能查看。"
+    },
+    "features.eyebrow": {
+        "string": "功能特色"
+    },
+    "features.heading": {
+        "string": "经过深思熟虑且真正实用的功能。"
+    },
+    "features.items.0": {
+        "string": "通过 Webhook 以你的用户名和头像自动重新发布并修复预览。"
+    },
+    "features.items.1": {
+        "string": "支持在私聊或未添加机器人的服务器中，通过 /fix 或右键菜单“修复预览”进行手动修复。"
+    },
+    "features.items.2": {
+        "string": "为支持的链接提取媒体，并以画廊形式展示。"
+    },
+    "features.items.3": {
+        "string": "丰富的设置项，可根据服务器需求自定义机器人行为。"
+    },
+    "platforms.eyebrow": {
+        "string": "支持平台"
+    },
+    "platforms.heading": {
+        "string": "从主流到小众，只要有修复方案，我们便提供支持。"
+    },
+    "platforms.ariaLabel": {
+        "string": "支持平台列表"
+    },
+    "proof.eyebrow": {
+        "string": "社区口碑"
+    },
+    "proof.heading": {
+        "string": "深受广大社区信任。"
+    },
+    "proof.ariaLabel": {
+        "string": "Embed Fixer 使用统计"
+    },
+    "proof.statLabels.0": {
+        "string": "Discord 服务器"
+    },
+    "proof.statLabels.1": {
+        "string": "GitHub 星星数"
+    },
+    "hosting.eyebrow": {
+        "string": "自托管"
+    },
+    "hosting.heading": {
+        "string": "在意隐私？开源项目来帮忙。"
+    },
+    "hosting.body": {
+        "string": "如果你想完全掌控数据和配置，可以在自己的机器上运行 Embed Fixer。"
+    },
+    "hosting.cta": {
+        "string": "自托管教程"
+    },
+    "hosting.tags.0": {
+        "string": "Docker + SQLite/PostgreSQL"
+    },
+    "hosting.tags.1": {
+        "string": "通过 uv 本地运行"
+    },
+    "hosting.tags.2": {
+        "string": "可选 Redis"
+    },
+    "closing.eyebrow": {
+        "string": "立即行动"
+    },
+    "closing.heading": {
+        "string": "只要你的服务器有人分享链接，它就属于那里。"
+    },
+    "closing.body": {
+        "string": "别再让失效的预览破坏聊天兴致。立即添加 Embed Fixer，保持每一次对话的完整性。"
+    },
+    "footer.copyright": {
+        "string": "Copyright © 2026 Seria Ati. 保留所有权利。"
+    }
+}

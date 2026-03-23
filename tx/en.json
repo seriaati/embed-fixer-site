@@ -1,0 +1,140 @@
+{
+    "meta.title": {
+        "string": "Embed Fixer | Discord bot for fixing social media embeds"
+    },
+    "meta.description": {
+        "string": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord. Supports all the popular platforms, trusted by 1200+ servers, and open source for self-hosting."
+    },
+    "languageSelector.label": {
+        "string": "Language"
+    },
+    "languageSelector.ariaLabel": {
+        "string": "Choose site language"
+    },
+    "hero.heading": {
+        "string": "The link looked broken. The conversation shouldn’t."
+    },
+    "hero.tagline": {
+        "string": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord."
+    },
+    "hero.ctaAdd": {
+        "string": "Add to Discord"
+    },
+    "hero.ctaGithub": {
+        "string": "View on GitHub"
+    },
+    "hero.relay.ariaLabel": {
+        "string": "How webhook relay works"
+    },
+    "hero.relay.incomingLabel": {
+        "string": "incoming"
+    },
+    "hero.relay.incomingValue": {
+        "string": "https://x.com/... (broken embed)"
+    },
+    "hero.relay.actionLabel": {
+        "string": "action"
+    },
+    "hero.relay.actionValue": {
+        "string": "Delete + resend through webhook with your avatar and username"
+    },
+    "hero.relay.resultLabel": {
+        "string": "result"
+    },
+    "hero.relay.resultValue": {
+        "string": "Playable media, full previews, readable content"
+    },
+    "problem.eyebrow": {
+        "string": "Problem"
+    },
+    "problem.heading": {
+        "string": "Discord strips the point out of shared posts."
+    },
+    "problem.items.0": {
+        "string": "Twitter/X previews fail or load partially."
+    },
+    "problem.items.1": {
+        "string": "Pixiv and Instagram often hide core media."
+    },
+    "problem.items.2": {
+        "string": "TikTok and Reddit links lose playable context."
+    },
+    "problem.items.3": {
+        "string": "Broken link forces users to leave Discord."
+    },
+    "features.eyebrow": {
+        "string": "Features"
+    },
+    "features.heading": {
+        "string": "Features that are well-thoughtout and actually useful."
+    },
+    "features.items.0": {
+        "string": "Automatic fixing through webhook reposting with your username + avatar."
+    },
+    "features.items.1": {
+        "string": "Manual fixings with /fix and right-click \"Fix Embed\" in DMs and unsupported servers."
+    },
+    "features.items.2": {
+        "string": "Media extraction for supported links in a gallery-like view."
+    },
+    "features.items.3": {
+        "string": "Numerous settings to customize behavior and tailor to your server’s needs."
+    },
+    "platforms.eyebrow": {
+        "string": "Supported Platforms"
+    },
+    "platforms.heading": {
+        "string": "From mainstream to niche, if a fixer exists, we support it."
+    },
+    "platforms.ariaLabel": {
+        "string": "Supported platform list"
+    },
+    "proof.eyebrow": {
+        "string": "Social Proof"
+    },
+    "proof.heading": {
+        "string": "Trusted by the communities."
+    },
+    "proof.ariaLabel": {
+        "string": "Embed Fixer usage stats"
+    },
+    "proof.statLabels.0": {
+        "string": "Discord servers"
+    },
+    "proof.statLabels.1": {
+        "string": "GitHub stars"
+    },
+    "hosting.eyebrow": {
+        "string": "Self-hosting"
+    },
+    "hosting.heading": {
+        "string": "Care about privacy? Open source comes to the rescue."
+    },
+    "hosting.body": {
+        "string": "Run Embed Fixer on your own machine if you want maximum control over your data and configuration."
+    },
+    "hosting.cta": {
+        "string": "Self-hosting Instructions"
+    },
+    "hosting.tags.0": {
+        "string": "Docker + SQLite/PostgreSQL"
+    },
+    "hosting.tags.1": {
+        "string": "Local via uv"
+    },
+    "hosting.tags.2": {
+        "string": "Optional Redis"
+    },
+    "closing.eyebrow": {
+        "string": "Call to action"
+    },
+    "closing.heading": {
+        "string": "If your server shares links, this belongs in it."
+    },
+    "closing.body": {
+        "string": "Stop leaving Discord for broken embeds. Add Embed Fixer and keep every conversation intact."
+    },
+    "footer.copyright": {
+        "string": "Copyright © 2026 Seria Ati. All rights reserved."
+    }
+}

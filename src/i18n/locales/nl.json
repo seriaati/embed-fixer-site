@@ -37,7 +37,7 @@
         "heading": "Functies die écht doordacht en nuttig zijn.",
         "items": [
             "Automatisch herstel via webhooks, met behoud van je eigen gebruikersnaam en avatar.",
-            "Handmatig fixen met /fix of rechtermuisknop \"Fix Embed\" in DM's en niet-ondersteunde servers.",
+            "Handmatige fixes met /fix in DM's en niet-ondersteunde servers.",
             "Media-extractie voor ondersteunde links in een overzichtelijke galerij.",
             "Talloze instellingen om de bot aan te passen aan de behoeften van jouw server."
         ]

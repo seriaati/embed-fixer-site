@@ -72,7 +72,7 @@
         "string": "Tự động sửa lỗi bằng cách đăng lại qua Webhook với tên và avatar của chính bạn."
     },
     "features.items.1": {
-        "string": "Sửa thủ công bằng lệnh /fix hoặc chuột phải chọn \"Fix Embed\" trong DM hoặc các server chưa cài bot."
+        "string": "Sửa thủ công bằng lệnh /fix trong DM và các máy chủ không được hỗ trợ."
     },
     "features.items.2": {
         "string": "Trích xuất hình ảnh/video từ link vào một giao diện dạng album dễ nhìn."

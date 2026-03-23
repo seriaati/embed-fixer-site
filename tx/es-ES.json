@@ -72,7 +72,7 @@
         "string": "Corrección automática mediante webhooks manteniendo tu nombre y avatar."
     },
     "features.items.1": {
-        "string": "Arreglos manuales con /fix o clic derecho en \"Fix Embed\" en DMs y servidores sin el bot."
+        "string": "Arreglos manuales con /fix en MDs y servidores no compatibles."
     },
     "features.items.2": {
         "string": "Extracción de contenido para enlaces compatibles en una vista tipo galería."

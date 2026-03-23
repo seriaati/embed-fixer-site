@@ -72,7 +72,7 @@
         "string": "Automatisch herstel via webhooks, met behoud van je eigen gebruikersnaam en avatar."
     },
     "features.items.1": {
-        "string": "Handmatig fixen met /fix of rechtermuisknop \"Fix Embed\" in DM's en niet-ondersteunde servers."
+        "string": "Handmatige fixes met /fix in DM's en niet-ondersteunde servers."
     },
     "features.items.2": {
         "string": "Media-extractie voor ondersteunde links in een overzichtelijke galerij."

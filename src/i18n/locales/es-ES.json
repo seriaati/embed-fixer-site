@@ -37,7 +37,7 @@
         "heading": "Funciones pensadas con cabeza y que sirven para algo.",
         "items": [
             "Corrección automática mediante webhooks manteniendo tu nombre y avatar.",
-            "Arreglos manuales con /fix o clic derecho en \"Fix Embed\" en DMs y servidores sin el bot.",
+            "Arreglos manuales con /fix en MDs y servidores no compatibles.",
             "Extracción de contenido para enlaces compatibles en una vista tipo galería.",
             "Un montón de ajustes para personalizar el bot a las necesidades de tu servidor."
         ]

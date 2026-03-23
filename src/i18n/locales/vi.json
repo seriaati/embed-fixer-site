@@ -37,7 +37,7 @@
         "heading": "Những tính năng thực tế, tinh tế và cực kỳ hữu dụng.",
         "items": [
             "Tự động sửa lỗi bằng cách đăng lại qua Webhook với tên và avatar của chính bạn.",
-            "Sửa thủ công bằng lệnh /fix hoặc chuột phải chọn \"Fix Embed\" trong DM hoặc các server chưa cài bot.",
+            "Sửa thủ công bằng lệnh /fix trong DM và các máy chủ không được hỗ trợ.",
             "Trích xuất hình ảnh/video từ link vào một giao diện dạng album dễ nhìn.",
             "Hệ thống cài đặt đa dạng để tùy chỉnh theo đúng nhu cầu của server bạn."
         ]

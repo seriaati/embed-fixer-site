@@ -8,7 +8,7 @@ export default defineConfig({
     site: "https://ef.seria.moe",
     i18n: {
         defaultLocale: "en",
-        locales: ["en", "zh-CN", "zh-TW"],
+        locales: ["en", "zh-CN", "zh-TW", "vi", "nl", "es-ES"],
         routing: {
             prefixDefaultLocale: false,
             fallbackType: "redirect",

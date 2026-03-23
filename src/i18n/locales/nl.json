@@ -1,0 +1,78 @@
+{
+    "meta": {
+        "title": "Embed Fixer | Discord bot die social media embeds fixt",
+        "description": "Embed Fixer herkent kapotte social media links en plaatst ze opnieuw via webhooks, zodat previews wél goed laden in Discord. Ondersteunt alle populaire platforms, wordt vertrouwd door 1200+ servers en is open-source voor eigen hosting."
+    },
+    "languageSelector": {
+        "label": "Taal",
+        "ariaLabel": "Kies websitetaal"
+    },
+    "hero": {
+        "heading": "De link is stuk. Je gesprek hoeft dat niet te zijn.",
+        "tagline": "Embed Fixer onderschept kapotte social media links en plaatst ze opnieuw via webhooks, zodat embeds altijd correct worden weergegeven in Discord.",
+        "ctaAdd": "Toevoegen aan Discord",
+        "ctaGithub": "Bekijk op GitHub",
+        "relay": {
+            "ariaLabel": "Hoe de webhook-relay werkt",
+            "incomingLabel": "inkomend",
+            "incomingValue": "https://x.com/... (geen preview)",
+            "actionLabel": "actie",
+            "actionValue": "Verwijderen + opnieuw verzenden via webhook met jouw avatar en naam",
+            "resultLabel": "resultaat",
+            "resultValue": "Afspeelbare media, volledige previews, leesbare content"
+        }
+    },
+    "problem": {
+        "eyebrow": "Het Probleem",
+        "heading": "Discord haalt de lol uit gedeelde berichten.",
+        "items": [
+            "Twitter/X previews laden niet of slechts gedeeltelijk.",
+            "Pixiv en Instagram verbergen vaak de belangrijkste media.",
+            "TikTok- en Reddit-links verliezen hun afspeelbare video's.",
+            "Kapotte links dwingen gebruikers om Discord te verlaten."
+        ]
+    },
+    "features": {
+        "eyebrow": "Features",
+        "heading": "Functies die écht doordacht en nuttig zijn.",
+        "items": [
+            "Automatisch herstel via webhooks, met behoud van je eigen gebruikersnaam en avatar.",
+            "Handmatig fixen met /fix of rechtermuisknop \"Fix Embed\" in DM's en niet-ondersteunde servers.",
+            "Media-extractie voor ondersteunde links in een overzichtelijke galerij.",
+            "Talloze instellingen om de bot aan te passen aan de behoeften van jouw server."
+        ]
+    },
+    "platforms": {
+        "eyebrow": "Ondersteunde Platformen",
+        "heading": "Van mainstream tot niche: als er een fixer bestaat, ondersteunen we het.",
+        "ariaLabel": "Lijst met ondersteunde platformen"
+    },
+    "proof": {
+        "eyebrow": "Social Proof",
+        "heading": "Vertrouwd door de community.",
+        "ariaLabel": "Embed Fixer statistieken",
+        "statLabels": [
+            "Discord servers",
+            "GitHub stars"
+        ]
+    },
+    "hosting": {
+        "eyebrow": "Zelf hosten",
+        "heading": "Privacy-fanaat? Open-source schiet te hulp.",
+        "body": "Draai Embed Fixer op je eigen machine als je volledige controle wilt over je data en configuratie.",
+        "cta": "Instructies voor zelf hosten",
+        "tags": [
+            "Docker + SQLite/PostgreSQL",
+            "Lokaal via uv",
+            "Optioneel Redis"
+        ]
+    },
+    "closing": {
+        "eyebrow": "Aan de slag",
+        "heading": "Als er in je server links worden gedeeld, hoort deze bot erbij.",
+        "body": "Stop met het verlaten van Discord voor kapotte previews. Voeg Embed Fixer toe en houd elk gesprek intact."
+    },
+    "footer": {
+        "copyright": "Copyright © 2026 Seria Ati. Alle rechten voorbehouden."
+    }
+}

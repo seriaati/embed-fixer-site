@@ -1,6 +1,9 @@
 import en from "./locales/en.json";
 import zhCN from "./locales/zh-CN.json";
 import zhTW from "./locales/zh-TW.json";
+import vi from "./locales/vi.json";
+import nl from "./locales/nl.json";
+import esES from "./locales/es-ES.json";
 
 export const DEFAULT_LOCALE = "en" as const;
 
@@ -8,6 +11,9 @@ export const localeOptions = [
     { code: "en", label: "English" },
     { code: "zh-CN", label: "简体中文" },
     { code: "zh-TW", label: "繁體中文" },
+    { code: "vi", label: "Tiếng Việt" },
+    { code: "nl", label: "Nederlands" },
+    { code: "es-ES", label: "Español (España)" },
 ] as const;
 
 export type LocaleCode = (typeof localeOptions)[number]["code"];
@@ -17,6 +23,9 @@ const dictionaries: Record<LocaleCode, TranslationDictionary> = {
     en,
     "zh-CN": zhCN,
     "zh-TW": zhTW,
+    vi,
+    nl,
+    "es-ES": esES,
 };
 
 export function normalizeLocale(locale: string | null | undefined): LocaleCode {

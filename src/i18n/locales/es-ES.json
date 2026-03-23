@@ -1,0 +1,78 @@
+{
+    "meta": {
+        "title": "Embed Fixer | Bot de Discord para arreglar previsualizaciones de redes sociales",
+        "description": "Embed Fixer detecta enlaces rotos y los vuelve a publicar mediante webhooks para que se vean bien en Discord. Compatible con las plataformas más populares, usado en más de 1200 servidores y de código abierto."
+    },
+    "languageSelector": {
+        "label": "Idioma",
+        "ariaLabel": "Elegir idioma del sitio"
+    },
+    "hero": {
+        "heading": "El enlace estaba roto. Tu conversación no tiene por qué estarlo.",
+        "tagline": "Embed Fixer intercepta los enlaces de redes sociales que fallan y los reenvía mediante webhooks para que las previsualizaciones carguen perfectamente en Discord.",
+        "ctaAdd": "Añadir a Discord",
+        "ctaGithub": "Ver en GitHub",
+        "relay": {
+            "ariaLabel": "Cómo funciona el reenvío por webhook",
+            "incomingLabel": "entrada",
+            "incomingValue": "https://x.com/... (previsualización rota)",
+            "actionLabel": "acción",
+            "actionValue": "Eliminar + reenviar vía webhook con tu avatar y nombre de usuario",
+            "resultLabel": "resultado",
+            "resultValue": "Vídeos reproducibles, vistas previas completas y contenido legible"
+        }
+    },
+    "problem": {
+        "eyebrow": "El problema",
+        "heading": "Discord le quita toda la gracia a lo que compartes.",
+        "items": [
+            "Las previews de Twitter/X no cargan o se quedan a medias.",
+            "Pixiv e Instagram suelen ocultar el contenido principal.",
+            "Los enlaces de TikTok y Reddit pierden los vídeos reproducibles.",
+            "Un enlace roto obliga a los usuarios a salir de Discord."
+        ]
+    },
+    "features": {
+        "eyebrow": "Características",
+        "heading": "Funciones pensadas con cabeza y que sirven para algo.",
+        "items": [
+            "Corrección automática mediante webhooks manteniendo tu nombre y avatar.",
+            "Arreglos manuales con /fix o clic derecho en \"Fix Embed\" en DMs y servidores sin el bot.",
+            "Extracción de contenido para enlaces compatibles en una vista tipo galería.",
+            "Un montón de ajustes para personalizar el bot a las necesidades de tu servidor."
+        ]
+    },
+    "platforms": {
+        "eyebrow": "Plataformas compatibles",
+        "heading": "Desde lo más mainstream hasta lo más nicho: si se puede arreglar, lo cubrimos.",
+        "ariaLabel": "Lista de plataformas compatibles"
+    },
+    "proof": {
+        "eyebrow": "Confianza",
+        "heading": "Usado por las mejores comunidades.",
+        "ariaLabel": "Estadísticas de uso de Embed Fixer",
+        "statLabels": [
+            "Servidores de Discord",
+            "Estrellas en GitHub"
+        ]
+    },
+    "hosting": {
+        "eyebrow": "Self-hosting",
+        "heading": "¿Te importa la privacidad? El código abierto al rescate.",
+        "body": "Ejecuta Embed Fixer en tu propia máquina si quieres tener el control total sobre tus datos y tu configuración.",
+        "cta": "Instrucciones para self-hosting",
+        "tags": [
+            "Docker + SQLite/PostgreSQL",
+            "Local mediante uv",
+            "Redis opcional"
+        ]
+    },
+    "closing": {
+        "eyebrow": "Llamada a la acción",
+        "heading": "Si en tu servidor se comparten enlaces, necesitas esto.",
+        "body": "Deja de salir de Discord por culpa de previsualizaciones rotas. Añade Embed Fixer y mantén el hilo de la conversación."
+    },
+    "footer": {
+        "copyright": "Copyright © 2026 Seria Ati. Todos los derechos reservados."
+    }
+}

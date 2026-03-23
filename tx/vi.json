@@ -1,0 +1,140 @@
+{
+    "meta.title": {
+        "string": "Embed Fixer | Bot Discord sửa lỗi hiển thị link mạng xã hội"
+    },
+    "meta.description": {
+        "string": "Embed Fixer tự động xử lý các link mạng xã hội bị lỗi và đăng lại qua webhook để nội dung hiển thị chuẩn chỉnh ngay trong Discord. Hỗ trợ mọi nền tảng phổ biến, hơn 1200 server tin dùng và hoàn toàn mở nguồn cho việc tự vận hành."
+    },
+    "languageSelector.label": {
+        "string": "Ngôn ngữ"
+    },
+    "languageSelector.ariaLabel": {
+        "string": "Chọn ngôn ngữ trang web"
+    },
+    "hero.heading": {
+        "string": "Link có thể lỗi, nhưng mạch chuyện thì không."
+    },
+    "hero.tagline": {
+        "string": "Embed Fixer tự động bắt các link mạng xã hội bị lỗi hiển thị và đăng lại qua webhook, giúp nội dung hiện ra mượt mà ngay trên Discord."
+    },
+    "hero.ctaAdd": {
+        "string": "Thêm vào Discord"
+    },
+    "hero.ctaGithub": {
+        "string": "Xem trên GitHub"
+    },
+    "hero.relay.ariaLabel": {
+        "string": "Cách thức hoạt động của webhook relay"
+    },
+    "hero.relay.incomingLabel": {
+        "string": "Đầu vào"
+    },
+    "hero.relay.incomingValue": {
+        "string": "https://x.com/... (link bị lỗi hiển thị)"
+    },
+    "hero.relay.actionLabel": {
+        "string": "Xử lý"
+    },
+    "hero.relay.actionValue": {
+        "string": "Xóa và đăng lại qua webhook bằng tên và avatar của bạn"
+    },
+    "hero.relay.resultLabel": {
+        "string": "Kết quả"
+    },
+    "hero.relay.resultValue": {
+        "string": "Xem được video, ảnh đầy đủ, nội dung rõ ràng"
+    },
+    "problem.eyebrow": {
+        "string": "Vấn đề"
+    },
+    "problem.heading": {
+        "string": "Discord đang làm mất đi cái hay của các link chia sẻ."
+    },
+    "problem.items.0": {
+        "string": "Link Twitter/X không hiện preview hoặc load nửa vời."
+    },
+    "problem.items.1": {
+        "string": "Pixiv và Instagram thường xuyên bị ẩn nội dung chính."
+    },
+    "problem.items.2": {
+        "string": "Video trên TikTok và Reddit không thể xem trực tiếp."
+    },
+    "problem.items.3": {
+        "string": "Link lỗi khiến mọi người phải thoát Discord mới xem được nội dung."
+    },
+    "features.eyebrow": {
+        "string": "Tính năng"
+    },
+    "features.heading": {
+        "string": "Những tính năng thực tế, tinh tế và cực kỳ hữu dụng."
+    },
+    "features.items.0": {
+        "string": "Tự động sửa lỗi bằng cách đăng lại qua Webhook với tên và avatar của chính bạn."
+    },
+    "features.items.1": {
+        "string": "Sửa thủ công bằng lệnh /fix hoặc chuột phải chọn \"Fix Embed\" trong DM hoặc các server chưa cài bot."
+    },
+    "features.items.2": {
+        "string": "Trích xuất hình ảnh/video từ link vào một giao diện dạng album dễ nhìn."
+    },
+    "features.items.3": {
+        "string": "Hệ thống cài đặt đa dạng để tùy chỉnh theo đúng nhu cầu của server bạn."
+    },
+    "platforms.eyebrow": {
+        "string": "Nền tảng hỗ trợ"
+    },
+    "platforms.heading": {
+        "string": "Từ phổ biến đến ngách, chỉ cần có lỗi là chúng tôi hỗ trợ."
+    },
+    "platforms.ariaLabel": {
+        "string": "Danh sách các nền tảng được hỗ trợ"
+    },
+    "proof.eyebrow": {
+        "string": "Độ tin cậy"
+    },
+    "proof.heading": {
+        "string": "Được các cộng đồng tin dùng."
+    },
+    "proof.ariaLabel": {
+        "string": "Thống kê sử dụng Embed Fixer"
+    },
+    "proof.statLabels.0": {
+        "string": "Server Discord"
+    },
+    "proof.statLabels.1": {
+        "string": "Lượt sao GitHub"
+    },
+    "hosting.eyebrow": {
+        "string": "Tự vận hành (Self-hosting)"
+    },
+    "hosting.heading": {
+        "string": "Bạn ưu tiên quyền riêng tư? Đã có mã nguồn mở."
+    },
+    "hosting.body": {
+        "string": "Bạn hoàn toàn có thể tự chạy Embed Fixer trên máy chủ riêng để kiểm soát tối đa dữ liệu và cấu hình theo ý muốn."
+    },
+    "hosting.cta": {
+        "string": "Hướng dẫn tự cài đặt"
+    },
+    "hosting.tags.0": {
+        "string": "Docker + SQLite/PostgreSQL"
+    },
+    "hosting.tags.1": {
+        "string": "Chạy cục bộ qua uv"
+    },
+    "hosting.tags.2": {
+        "string": "Hỗ trợ Redis (không bắt buộc)"
+    },
+    "closing.eyebrow": {
+        "string": "Bắt đầu ngay"
+    },
+    "closing.heading": {
+        "string": "Nếu server của bạn hay chia sẻ link, đây là công cụ không thể thiếu."
+    },
+    "closing.body": {
+        "string": "Đừng để những cái link lỗi làm gián đoạn cuộc vui. Thêm Embed Fixer ngay để giữ mạch trò chuyện luôn mượt mà."
+    },
+    "footer.copyright": {
+        "string": "Bản quyền © 2026 Seria Ati. Bảo lưu mọi quyền."
+    }
+}

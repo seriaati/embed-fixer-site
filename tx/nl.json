@@ -1,0 +1,140 @@
+{
+    "meta.title": {
+        "string": "Embed Fixer | Discord bot die social media embeds fixt"
+    },
+    "meta.description": {
+        "string": "Embed Fixer herkent kapotte social media links en plaatst ze opnieuw via webhooks, zodat previews wél goed laden in Discord. Ondersteunt alle populaire platforms, wordt vertrouwd door 1200+ servers en is open-source voor eigen hosting."
+    },
+    "languageSelector.label": {
+        "string": "Taal"
+    },
+    "languageSelector.ariaLabel": {
+        "string": "Kies websitetaal"
+    },
+    "hero.heading": {
+        "string": "De link is stuk. Je gesprek hoeft dat niet te zijn."
+    },
+    "hero.tagline": {
+        "string": "Embed Fixer onderschept kapotte social media links en plaatst ze opnieuw via webhooks, zodat embeds altijd correct worden weergegeven in Discord."
+    },
+    "hero.ctaAdd": {
+        "string": "Toevoegen aan Discord"
+    },
+    "hero.ctaGithub": {
+        "string": "Bekijk op GitHub"
+    },
+    "hero.relay.ariaLabel": {
+        "string": "Hoe de webhook-relay werkt"
+    },
+    "hero.relay.incomingLabel": {
+        "string": "inkomend"
+    },
+    "hero.relay.incomingValue": {
+        "string": "https://x.com/... (geen preview)"
+    },
+    "hero.relay.actionLabel": {
+        "string": "actie"
+    },
+    "hero.relay.actionValue": {
+        "string": "Verwijderen + opnieuw verzenden via webhook met jouw avatar en naam"
+    },
+    "hero.relay.resultLabel": {
+        "string": "resultaat"
+    },
+    "hero.relay.resultValue": {
+        "string": "Afspeelbare media, volledige previews, leesbare content"
+    },
+    "problem.eyebrow": {
+        "string": "Het Probleem"
+    },
+    "problem.heading": {
+        "string": "Discord haalt de lol uit gedeelde berichten."
+    },
+    "problem.items.0": {
+        "string": "Twitter/X previews laden niet of slechts gedeeltelijk."
+    },
+    "problem.items.1": {
+        "string": "Pixiv en Instagram verbergen vaak de belangrijkste media."
+    },
+    "problem.items.2": {
+        "string": "TikTok- en Reddit-links verliezen hun afspeelbare video's."
+    },
+    "problem.items.3": {
+        "string": "Kapotte links dwingen gebruikers om Discord te verlaten."
+    },
+    "features.eyebrow": {
+        "string": "Features"
+    },
+    "features.heading": {
+        "string": "Functies die écht doordacht en nuttig zijn."
+    },
+    "features.items.0": {
+        "string": "Automatisch herstel via webhooks, met behoud van je eigen gebruikersnaam en avatar."
+    },
+    "features.items.1": {
+        "string": "Handmatig fixen met /fix of rechtermuisknop \"Fix Embed\" in DM's en niet-ondersteunde servers."
+    },
+    "features.items.2": {
+        "string": "Media-extractie voor ondersteunde links in een overzichtelijke galerij."
+    },
+    "features.items.3": {
+        "string": "Talloze instellingen om de bot aan te passen aan de behoeften van jouw server."
+    },
+    "platforms.eyebrow": {
+        "string": "Ondersteunde Platformen"
+    },
+    "platforms.heading": {
+        "string": "Van mainstream tot niche: als er een fixer bestaat, ondersteunen we het."
+    },
+    "platforms.ariaLabel": {
+        "string": "Lijst met ondersteunde platformen"
+    },
+    "proof.eyebrow": {
+        "string": "Social Proof"
+    },
+    "proof.heading": {
+        "string": "Vertrouwd door de community."
+    },
+    "proof.ariaLabel": {
+        "string": "Embed Fixer statistieken"
+    },
+    "proof.statLabels.0": {
+        "string": "Discord servers"
+    },
+    "proof.statLabels.1": {
+        "string": "GitHub stars"
+    },
+    "hosting.eyebrow": {
+        "string": "Zelf hosten"
+    },
+    "hosting.heading": {
+        "string": "Privacy-fanaat? Open-source schiet te hulp."
+    },
+    "hosting.body": {
+        "string": "Draai Embed Fixer op je eigen machine als je volledige controle wilt over je data en configuratie."
+    },
+    "hosting.cta": {
+        "string": "Instructies voor zelf hosten"
+    },
+    "hosting.tags.0": {
+        "string": "Docker + SQLite/PostgreSQL"
+    },
+    "hosting.tags.1": {
+        "string": "Lokaal via uv"
+    },
+    "hosting.tags.2": {
+        "string": "Optioneel Redis"
+    },
+    "closing.eyebrow": {
+        "string": "Aan de slag"
+    },
+    "closing.heading": {
+        "string": "Als er in je server links worden gedeeld, hoort deze bot erbij."
+    },
+    "closing.body": {
+        "string": "Stop met het verlaten van Discord voor kapotte previews. Voeg Embed Fixer toe en houd elk gesprek intact."
+    },
+    "footer.copyright": {
+        "string": "Copyright © 2026 Seria Ati. Alle rechten voorbehouden."
+    }
+}

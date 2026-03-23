@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 /**
  * txsync.mjs — Transifex Structured JSON sync helper
  *
@@ -84,7 +83,7 @@ function readJSON(path) {
 }
 
 function writeJSON(path, data) {
-    writeFileSync(path, JSON.stringify(data, null, 4) + "\n", "utf8");
+    writeFileSync(path, JSON.stringify(data, null, 4), "utf8");
 }
 
 function resolveLocales(args) {

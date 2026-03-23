@@ -72,7 +72,7 @@
         "string": "Automatic fixing through webhook reposting with your username + avatar."
     },
     "features.items.1": {
-        "string": "Manual fixings with /fix and right-click \"Fix Embed\" in DMs and unsupported servers."
+        "string": "Manual fixings with /fix in DMs and unsupported servers."
     },
     "features.items.2": {
         "string": "Media extraction for supported links in a gallery-like view."
@@ -84,7 +84,7 @@
         "string": "Supported Platforms"
     },
     "platforms.heading": {
-        "string": "From mainstream to niche, if a fixer exists, we support it."
+        "string": "From mainstream to niche, if the embed is broken, we’ll fix it."
     },
     "platforms.ariaLabel": {
         "string": "Supported platform list"

@@ -56,6 +56,83 @@
             "GitHub stars"
         ]
     },
+    "customization": {
+        "eyebrow": "Very Customizable",
+        "heading": "Tune almost every behavior to fit your server.",
+        "body": "The most powerful part about Embed Fixer is that almost every behavior can be customized or toggled to your liking, including niche features shaped by real community needs.",
+        "resetNote": "All settings are unique to each server. Use /reset to restore default values.",
+        "ariaLabel": "Customizable settings list",
+        "settings": [
+            {
+                "label": "Language",
+                "description": "Change the language used by the bot."
+            },
+            {
+                "label": "Disable Embed Fixes for Websites",
+                "description": "Disable embed fixes for specific websites."
+            },
+            {
+                "label": "Media Extraction Channels",
+                "description": "Extract images/videos from Twitter/X or Pixiv links in selected channels."
+            },
+            {
+                "label": "Embed Fix Channel Blacklist",
+                "description": "Channels here will not receive embed fixes."
+            },
+            {
+                "label": "Embed Fix Channel Whitelist",
+                "description": "Only selected channels receive embed fixes, and this overrides blacklist rules."
+            },
+            {
+                "label": "Toggle Webhook Reply",
+                "description": "Toggle pinging the original author when replying via webhook."
+            },
+            {
+                "label": "Disable Automatic Spoilering in NSFW Channels",
+                "description": "Skip automatic spoiler tags for extracted media in selected NSFW channels."
+            },
+            {
+                "label": "Toggle Delete Message Reaction",
+                "description": "Add reactions so original authors can delete webhook messages."
+            },
+            {
+                "label": "Show Post Content Channels",
+                "description": "Show post text content in selected channels when media extraction is enabled."
+            },
+            {
+                "label": "Change Delete Message Reaction Emoji",
+                "description": "Choose which emoji is used for delete-by-reaction."
+            },
+            {
+                "label": "Choose Embed Fix Service",
+                "description": "Choose the embed fix service used for different websites."
+            },
+            {
+                "label": "Bot Visibility",
+                "description": "Choose whether links sent by other bots should also be fixed."
+            },
+            {
+                "label": "Funnel to Target Channel",
+                "description": "Send fixed embeds and extracted media to a target channel instead of the source channel."
+            },
+            {
+                "label": "Whitelist Roles",
+                "description": "Only users with selected roles get embed fixes. Leave empty to disable."
+            },
+            {
+                "label": "Toggle Original Link Button",
+                "description": "Show or hide a button linking to the original post."
+            },
+            {
+                "label": "Toggle Deleting Original Messages in Threads",
+                "description": "Delete original thread messages after sending fixed embeds through supported flow."
+            },
+            {
+                "label": "Reply Instead of Delete",
+                "description": "Reply to the original message with the fixed embed instead of deleting and resending."
+            }
+        ]
+    },
     "hosting": {
         "eyebrow": "Self-hosting",
         "heading": "Care about privacy? Open source comes to the rescue.",

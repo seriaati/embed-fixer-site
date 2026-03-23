@@ -150,6 +150,35 @@ const statValues = ["1200+", "150+"];
             </div>
         </section>
 
+        <section class="section customization reveal delay-1">
+            <p class="eyebrow" id="customization-eyebrow">
+                {t.customization.eyebrow}
+            </p>
+            <h2 id="customization-heading" style="margin-top: 0.35rem;">
+                {t.customization.heading}
+            </h2>
+            <p class="customization-intro" id="customization-body">
+                {t.customization.body}
+            </p>
+            <p class="customization-note" id="customization-reset-note">
+                {t.customization.resetNote}
+            </p>
+            <ul
+                class="customization-grid"
+                id="customization-grid"
+                aria-label={t.customization.ariaLabel}
+            >
+                {
+                    t.customization.settings.map((setting) => (
+                        <li class="customization-item">
+                            <h3>{setting.label}</h3>
+                            <p>{setting.description}</p>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
+
         <section class="section reveal delay-2">
             <p class="eyebrow" id="platforms-eyebrow">{t.platforms.eyebrow}</p>
             <h2 id="platforms-heading" style="margin-top: 0.35rem;">

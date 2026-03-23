@@ -104,6 +104,123 @@
     "proof.statLabels.1": {
         "string": "GitHub 星星数"
     },
+    "customization.eyebrow": {
+        "string": "高度可定制"
+    },
+    "customization.heading": {
+        "string": "几乎所有行为都能按你的服务器需求进行调整。"
+    },
+    "customization.body": {
+        "string": "Embed Fixer 最强大的地方在于，几乎每个行为都可以按需自定义或开关，甚至包含许多基于真实用户需求打造的小众功能。"
+    },
+    "customization.resetNote": {
+        "string": "所有设置都按服务器独立保存。你可以使用 /reset 恢复默认值。"
+    },
+    "customization.ariaLabel": {
+        "string": "可定制设置列表"
+    },
+    "customization.settings.0.label": {
+        "string": "语言"
+    },
+    "customization.settings.0.description": {
+        "string": "更改机器人使用的语言。"
+    },
+    "customization.settings.1.label": {
+        "string": "关闭网站的预览嵌入"
+    },
+    "customization.settings.1.description": {
+        "string": "关闭特定网站的预览嵌入。"
+    },
+    "customization.settings.2.label": {
+        "string": "媒体提取频道"
+    },
+    "customization.settings.2.description": {
+        "string": "在这个频道里发送的 Twitter/X/Pixiv 链接的图片/视频都会被提取。"
+    },
+    "customization.settings.3.label": {
+        "string": "预览嵌入频道黑名单"
+    },
+    "customization.settings.3.description": {
+        "string": "这里的频道将不会接收预览嵌入，白名单优先于黑名单。"
+    },
+    "customization.settings.4.label": {
+        "string": "预览嵌入频道白名单"
+    },
+    "customization.settings.4.description": {
+        "string": "只有在这里设置的频道将接受预览嵌入，白名单优先于黑名单。"
+    },
+    "customization.settings.5.label": {
+        "string": "切换 Webhook 回复"
+    },
+    "customization.settings.5.description": {
+        "string": "开关回复 Webhook 时对原发布者的@。"
+    },
+    "customization.settings.6.label": {
+        "string": "关闭 NSFW 频道的自动剧透"
+    },
+    "customization.settings.6.description": {
+        "string": "对于媒体提取功能，在这里选择的 NSFW 频道内的媒体将不会自动标为剧透。"
+    },
+    "customization.settings.7.label": {
+        "string": "切换删除消息反应"
+    },
+    "customization.settings.7.description": {
+        "string": "添加表情反应到webhook消息，便于发布者通过反应表情删除。"
+    },
+    "customization.settings.8.label": {
+        "string": "显示帖子内容频道"
+    },
+    "customization.settings.8.description": {
+        "string": "如果媒体提取已开启，则在这里的已选频道将显示帖子内容。"
+    },
+    "customization.settings.9.label": {
+        "string": "更改删除消息反应表情"
+    },
+    "customization.settings.9.description": {
+        "string": "更改用于删除消息的表情。"
+    },
+    "customization.settings.10.label": {
+        "string": "选择预览嵌入服务"
+    },
+    "customization.settings.10.description": {
+        "string": "选择用于不同网站的预览嵌入。"
+    },
+    "customization.settings.11.label": {
+        "string": "机器人可见性"
+    },
+    "customization.settings.11.description": {
+        "string": "开启后， Embed Fixer 将会对来自其他机器人链接进行预览嵌入。关闭后，将只会对来自用户的链接进行预览嵌入。"
+    },
+    "customization.settings.12.label": {
+        "string": "转发到目标频道"
+    },
+    "customization.settings.12.description": {
+        "string": "若已设置，所有的预览嵌入和媒体提取都会发送到被设置的频道，而非原消息的频道。"
+    },
+    "customization.settings.13.label": {
+        "string": "白名单身份组"
+    },
+    "customization.settings.13.description": {
+        "string": "如有设置，则只有拥有这些身份组之一的用户才有预览嵌入。留空则关闭。"
+    },
+    "customization.settings.14.label": {
+        "string": "切换原链接按钮"
+    },
+    "customization.settings.14.description": {
+        "string": "是否在预览嵌入的消息中显示链接至原帖子的按钮。"
+    },
+    "customization.settings.15.label": {
+        "string": "开关删除主题串中的原消息"
+    },
+    "customization.settings.15.description": {
+        "string": "因为主题串无法使用 Webhook，原消息会被保留以识别发送者。启用此选项后，在发送修复后的链接预览后将删除主题串中的原消息。"
+    },
+    "customization.settings.16.label": {
+        "string": "转换时以回复替代删除"
+    },
+    "customization.settings.16.description": {
+        "string": "该功能启用时，Embed Fixer将不会删除原始消息，通过Webhook重发，而是通过对你的原始消息回复并预览嵌入。"
+    },
     "hosting.eyebrow": {
         "string": "自托管"
     },

@@ -104,6 +104,123 @@
     "proof.statLabels.1": {
         "string": "GitHub stars"
     },
+    "customization.eyebrow": {
+        "string": "Very Customizable"
+    },
+    "customization.heading": {
+        "string": "Tune almost every behavior to fit your server."
+    },
+    "customization.body": {
+        "string": "The most powerful part about Embed Fixer is that almost every behavior can be customized or toggled to your liking, including niche features shaped by real community needs."
+    },
+    "customization.resetNote": {
+        "string": "All settings are unique to each server. Use /reset to restore default values."
+    },
+    "customization.ariaLabel": {
+        "string": "Customizable settings list"
+    },
+    "customization.settings.0.label": {
+        "string": "Language"
+    },
+    "customization.settings.0.description": {
+        "string": "Change the language used by the bot."
+    },
+    "customization.settings.1.label": {
+        "string": "Disable Embed Fixes for Websites"
+    },
+    "customization.settings.1.description": {
+        "string": "Disable embed fixes for specific websites."
+    },
+    "customization.settings.2.label": {
+        "string": "Media Extraction Channels"
+    },
+    "customization.settings.2.description": {
+        "string": "Extract images/videos from Twitter/X or Pixiv links in selected channels."
+    },
+    "customization.settings.3.label": {
+        "string": "Embed Fix Channel Blacklist"
+    },
+    "customization.settings.3.description": {
+        "string": "Channels here will not receive embed fixes."
+    },
+    "customization.settings.4.label": {
+        "string": "Embed Fix Channel Whitelist"
+    },
+    "customization.settings.4.description": {
+        "string": "Only selected channels receive embed fixes, and this overrides blacklist rules."
+    },
+    "customization.settings.5.label": {
+        "string": "Toggle Webhook Reply"
+    },
+    "customization.settings.5.description": {
+        "string": "Toggle pinging the original author when replying via webhook."
+    },
+    "customization.settings.6.label": {
+        "string": "Disable Automatic Spoilering in NSFW Channels"
+    },
+    "customization.settings.6.description": {
+        "string": "Skip automatic spoiler tags for extracted media in selected NSFW channels."
+    },
+    "customization.settings.7.label": {
+        "string": "Toggle Delete Message Reaction"
+    },
+    "customization.settings.7.description": {
+        "string": "Add reactions so original authors can delete webhook messages."
+    },
+    "customization.settings.8.label": {
+        "string": "Show Post Content Channels"
+    },
+    "customization.settings.8.description": {
+        "string": "Show post text content in selected channels when media extraction is enabled."
+    },
+    "customization.settings.9.label": {
+        "string": "Change Delete Message Reaction Emoji"
+    },
+    "customization.settings.9.description": {
+        "string": "Choose which emoji is used for delete-by-reaction."
+    },
+    "customization.settings.10.label": {
+        "string": "Choose Embed Fix Service"
+    },
+    "customization.settings.10.description": {
+        "string": "Choose the embed fix service used for different websites."
+    },
+    "customization.settings.11.label": {
+        "string": "Bot Visibility"
+    },
+    "customization.settings.11.description": {
+        "string": "Choose whether links sent by other bots should also be fixed."
+    },
+    "customization.settings.12.label": {
+        "string": "Funnel to Target Channel"
+    },
+    "customization.settings.12.description": {
+        "string": "Send fixed embeds and extracted media to a target channel instead of the source channel."
+    },
+    "customization.settings.13.label": {
+        "string": "Whitelist Roles"
+    },
+    "customization.settings.13.description": {
+        "string": "Only users with selected roles get embed fixes. Leave empty to disable."
+    },
+    "customization.settings.14.label": {
+        "string": "Toggle Original Link Button"
+    },
+    "customization.settings.14.description": {
+        "string": "Show or hide a button linking to the original post."
+    },
+    "customization.settings.15.label": {
+        "string": "Toggle Deleting Original Messages in Threads"
+    },
+    "customization.settings.15.description": {
+        "string": "Delete original thread messages after sending fixed embeds through supported flow."
+    },
+    "customization.settings.16.label": {
+        "string": "Reply Instead of Delete"
+    },
+    "customization.settings.16.description": {
+        "string": "Reply to the original message with the fixed embed instead of deleting and resending."
+    },
     "hosting.eyebrow": {
         "string": "Self-hosting"
     },

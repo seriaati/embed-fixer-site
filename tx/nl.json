@@ -104,6 +104,123 @@
     "proof.statLabels.1": {
         "string": "GitHub stars"
     },
+    "customization.eyebrow": {
+        "string": "Zeer aanpasbaar"
+    },
+    "customization.heading": {
+        "string": "Stel bijna elk gedrag af op jouw server."
+    },
+    "customization.body": {
+        "string": "Het sterkste punt van Embed Fixer is dat bijna elk gedrag aangepast of in- en uitgeschakeld kan worden, inclusief nichefuncties die uit echte gebruikersvragen zijn ontstaan."
+    },
+    "customization.resetNote": {
+        "string": "Alle instellingen zijn uniek per server. Gebruik /reset om terug te gaan naar de standaardwaarden."
+    },
+    "customization.ariaLabel": {
+        "string": "Lijst met aanpasbare instellingen"
+    },
+    "customization.settings.0.label": {
+        "string": "Taal"
+    },
+    "customization.settings.0.description": {
+        "string": "Verander de taal van de bot."
+    },
+    "customization.settings.1.label": {
+        "string": "Schakel Embed Fixes Voor Websites Uit"
+    },
+    "customization.settings.1.description": {
+        "string": "Schakel Embed Fixes uit voor specifieke websites."
+    },
+    "customization.settings.2.label": {
+        "string": "Media Extractie Kanalen"
+    },
+    "customization.settings.2.description": {
+        "string": "Afbeeldingen/video's van Twitter/X/Pixiv-links die in deze kanalen worden verzonden, worden geëxtraheerd."
+    },
+    "customization.settings.3.label": {
+        "string": "Embed Fix Kanalen Blacklist"
+    },
+    "customization.settings.3.description": {
+        "string": "Kanalen hier ontvangen geen Embed Fixes, de whitelist heeft voorrang op de blacklist."
+    },
+    "customization.settings.4.label": {
+        "string": "Embed Fix Kanalen Whitelist"
+    },
+    "customization.settings.4.description": {
+        "string": "Alleen kanalen die hier worden ingesteld, ontvangen Embed Fixes, de whitelist heeft voorrang op de blacklist."
+    },
+    "customization.settings.5.label": {
+        "string": "Schakel Webhook Antwoord In"
+    },
+    "customization.settings.5.description": {
+        "string": "Schakel de ping naar de oorspronkelijke auteur wanneer je op een webhook reageert."
+    },
+    "customization.settings.6.label": {
+        "string": "Schakel automatische spoilering uit in NSFW kanalen"
+    },
+    "customization.settings.6.description": {
+        "string": "Voor de media extractie functie zullen de hier geselecteerde NSFW kanalen de media niet automatisch spoileren."
+    },
+    "customization.settings.7.label": {
+        "string": "Schakel Bericht Verwijder Reactie"
+    },
+    "customization.settings.7.description": {
+        "string": "Of emoji reacties moeten worden toegevoegd aan webhookberichten, zodat de oorspronkelijke auteur deze kan verwijderen door te reageren."
+    },
+    "customization.settings.8.label": {
+        "string": "Kanalen Voor Embeds Tonen"
+    },
+    "customization.settings.8.description": {
+        "string": "Als media extractie is ingeschakeld, tonen de hier geselecteerde kanalen de inhoud van het bericht."
+    },
+    "customization.settings.9.label": {
+        "string": "Wijzig Verwijder Bericht Reactie Emoji"
+    },
+    "customization.settings.9.description": {
+        "string": "Wijzig de emoji die wordt gebruikt om berichten te verwijderen."
+    },
+    "customization.settings.10.label": {
+        "string": "Kies de Embed Fix service"
+    },
+    "customization.settings.10.description": {
+        "string": "Kies de Embed Fix service die je voor verschillende websites wilt gebruiken."
+    },
+    "customization.settings.11.label": {
+        "string": "Bot Zichtbaarheid"
+    },
+    "customization.settings.11.description": {
+        "string": "Indien ingeschakeld, repareert Embed Fixer embeds die door andere bots zijn verzonden. Indien uitgeschakeld, worden alleen embeds hersteld die door gebruikers zijn verzonden."
+    },
+    "customization.settings.12.label": {
+        "string": "Stuur Alles Naar Doel Kanaal"
+    },
+    "customization.settings.12.description": {
+        "string": "Indien ingesteld, worden alle vembeds en media naar het doel kanaal verzonden in plaats van naar het oorspronkelijke kanaal."
+    },
+    "customization.settings.13.label": {
+        "string": "Whitelist Rollen"
+    },
+    "customization.settings.13.description": {
+        "string": "Indien ingesteld, worden de embeds van alleen gebruikers met een van deze rollen gefixt. Laat leeg om uit te schakelen."
+    },
+    "customization.settings.14.label": {
+        "string": "Schakel de knop \"Originele link\" in"
+    },
+    "customization.settings.14.description": {
+        "string": "Of er een knop moet worden weergegeven die naar het originele bericht linkt in fixed embed berichten."
+    },
+    "customization.settings.15.label": {
+        "string": "Schakel het verwijderen van originele berichten in threads"
+    },
+    "customization.settings.15.description": {
+        "string": "Omdat threads geen webhooks kunnen hebben, wordt het originele bericht bewaard om te weten wie het heeft verzonden. Door dit in te schakelen wordt het originele bericht in threads verwijderd na het verzenden van de gefixte embed."
+    },
+    "customization.settings.16.label": {
+        "string": "Antwoorden in plaats van verwijderen"
+    },
+    "customization.settings.16.description": {
+        "string": "Reageer met de gefixte embed op het originele bericht in plaats van verwijderen en opnieuw sturen."
+    },
     "hosting.eyebrow": {
         "string": "Zelf hosten"
     },

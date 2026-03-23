@@ -104,6 +104,123 @@
     "proof.statLabels.1": {
         "string": "Estrellas en GitHub"
     },
+    "customization.eyebrow": {
+        "string": "Muy personalizable"
+    },
+    "customization.heading": {
+        "string": "Ajusta casi cualquier comportamiento para tu servidor."
+    },
+    "customization.body": {
+        "string": "La mayor fortaleza de Embed Fixer es que casi todo puede personalizarse o activarse y desactivarse según tus preferencias, incluyendo funciones de nicho creadas a partir de necesidades reales de usuarios."
+    },
+    "customization.resetNote": {
+        "string": "Todos los ajustes son únicos por servidor. Usa /reset para volver a los valores por defecto."
+    },
+    "customization.ariaLabel": {
+        "string": "Lista de ajustes personalizables"
+    },
+    "customization.settings.0.label": {
+        "string": "Idioma"
+    },
+    "customization.settings.0.description": {
+        "string": "Cambiar el idioma del bot."
+    },
+    "customization.settings.1.label": {
+        "string": "Deshabilitar Embed Fixer Para Sitios Web"
+    },
+    "customization.settings.1.description": {
+        "string": "Deshabilitar Embed Fixer para sitios web específicos."
+    },
+    "customization.settings.2.label": {
+        "string": "Canales Con Extracción Multimedia"
+    },
+    "customization.settings.2.description": {
+        "string": "La extracción de multimedia para los enlaces de Twitter/X/Pixiv está habilitada para los siguientes canales."
+    },
+    "customization.settings.3.label": {
+        "string": "Ajustar Canales No Permitidos Para Embed Fixer"
+    },
+    "customization.settings.3.description": {
+        "string": "Embed Fixer no corregirá en los canales de la lista de no permitidos. No tiene prioridad sobre la lista de permitidos."
+    },
+    "customization.settings.4.label": {
+        "string": "Ajustar Canales Permitidos Para Embed Fixer"
+    },
+    "customization.settings.4.description": {
+        "string": "Embed Fixer corregirá en los canales de la lista de permitidos. Tiene prioridad sobre la lista de no permitidos."
+    },
+    "customization.settings.5.label": {
+        "string": "Habilitar/Deshabilitar Mención al Webhook"
+    },
+    "customization.settings.5.description": {
+        "string": "Habilitar/Deshabilitar la mención al autor original si respondes al webhook."
+    },
+    "customization.settings.6.label": {
+        "string": "Deshabilitar Marcar Como Spoiler Automáticamente en Canales NSFW"
+    },
+    "customization.settings.6.description": {
+        "string": "Habilita la función de marcar como Spoiler de forma automática en archivos multimedia en estos canales."
+    },
+    "customization.settings.7.label": {
+        "string": "Habilitar/Deshabilitar Reacción Para Eliminar Mensajes"
+    },
+    "customization.settings.7.description": {
+        "string": "Añade reacciones a los mensajes del webhook permitiendo así al autor original eliminarlos con dicha reacción."
+    },
+    "customization.settings.8.label": {
+        "string": "Mostrar Contenido Multimedia en Ciertos Canales"
+    },
+    "customization.settings.8.description": {
+        "string": "Mientras la extracción de multimedia esté activa, estos canales mostrarán el contenido de la publicación."
+    },
+    "customization.settings.9.label": {
+        "string": "Elegir Emoji Para Eliminar Mensaje"
+    },
+    "customization.settings.9.description": {
+        "string": "Elegir el emoji usado para eliminar el mensaje."
+    },
+    "customization.settings.10.label": {
+        "string": "Elegir Servicio de Embed Fix"
+    },
+    "customization.settings.10.description": {
+        "string": "Elegir qué tipo de embed fix se usará para los distintos sitios web."
+    },
+    "customization.settings.11.label": {
+        "string": "Visibilidad Hacia Otros Bots"
+    },
+    "customization.settings.11.description": {
+        "string": "Embed Fixer actuará sobre otros bots si está habilitado. Si no lo está, solo actuará sobre los usuarios."
+    },
+    "customization.settings.12.label": {
+        "string": "Canal de Destino Para Redirecciones"
+    },
+    "customization.settings.12.description": {
+        "string": "Configurando esta opción, se enviarán los enlaces al canal establecido independientemente del canal de origen."
+    },
+    "customization.settings.13.label": {
+        "string": "Roles Permitidos"
+    },
+    "customization.settings.13.description": {
+        "string": "Corregir los enlaces de los usuarios si poseen cualquier rol de esta lista. Déjalo en blanco para desactivarlo."
+    },
+    "customization.settings.14.label": {
+        "string": "Habilitar/Deshabilitar Botón de \"Enlace Original\""
+    },
+    "customization.settings.14.description": {
+        "string": "Se mostrará un botón de \"Enlace original\" en los mensajes de Embed Fixer."
+    },
+    "customization.settings.15.label": {
+        "string": "Habilitar/Deshabilitar el Borrado del Mensaje Original en Hilos"
+    },
+    "customization.settings.15.description": {
+        "string": "Por limitaciones técnicas, los hilos no soportan webhooks; por lo tanto el mensaje original se mantendrá. Activando esta opción hará que el mensaje sea eliminado y posteriormente se publicará el enlace corregido."
+    },
+    "customization.settings.16.label": {
+        "string": "Responder en lugar de borrar"
+    },
+    "customization.settings.16.description": {
+        "string": "Responde al mensaje original con el embed arreglado en lugar de borrar y reenviar."
+    },
     "hosting.eyebrow": {
         "string": "Self-hosting"
     },

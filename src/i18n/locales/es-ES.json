@@ -56,6 +56,83 @@
             "Estrellas en GitHub"
         ]
     },
+    "customization": {
+        "eyebrow": "Muy personalizable",
+        "heading": "Ajusta casi cualquier comportamiento para tu servidor.",
+        "body": "La mayor fortaleza de Embed Fixer es que casi todo puede personalizarse o activarse y desactivarse según tus preferencias, incluyendo funciones de nicho creadas a partir de necesidades reales de usuarios.",
+        "resetNote": "Todos los ajustes son únicos por servidor. Usa /reset para volver a los valores por defecto.",
+        "ariaLabel": "Lista de ajustes personalizables",
+        "settings": [
+            {
+                "label": "Idioma",
+                "description": "Cambiar el idioma del bot."
+            },
+            {
+                "label": "Deshabilitar Embed Fixer Para Sitios Web",
+                "description": "Deshabilitar Embed Fixer para sitios web específicos."
+            },
+            {
+                "label": "Canales Con Extracción Multimedia",
+                "description": "La extracción de multimedia para los enlaces de Twitter/X/Pixiv está habilitada para los siguientes canales."
+            },
+            {
+                "label": "Ajustar Canales No Permitidos Para Embed Fixer",
+                "description": "Embed Fixer no corregirá en los canales de la lista de no permitidos. No tiene prioridad sobre la lista de permitidos."
+            },
+            {
+                "label": "Ajustar Canales Permitidos Para Embed Fixer",
+                "description": "Embed Fixer corregirá en los canales de la lista de permitidos. Tiene prioridad sobre la lista de no permitidos."
+            },
+            {
+                "label": "Habilitar/Deshabilitar Mención al Webhook",
+                "description": "Habilitar/Deshabilitar la mención al autor original si respondes al webhook."
+            },
+            {
+                "label": "Deshabilitar Marcar Como Spoiler Automáticamente en Canales NSFW",
+                "description": "Habilita la función de marcar como Spoiler de forma automática en archivos multimedia en estos canales."
+            },
+            {
+                "label": "Habilitar/Deshabilitar Reacción Para Eliminar Mensajes",
+                "description": "Añade reacciones a los mensajes del webhook permitiendo así al autor original eliminarlos con dicha reacción."
+            },
+            {
+                "label": "Mostrar Contenido Multimedia en Ciertos Canales",
+                "description": "Mientras la extracción de multimedia esté activa, estos canales mostrarán el contenido de la publicación."
+            },
+            {
+                "label": "Elegir Emoji Para Eliminar Mensaje",
+                "description": "Elegir el emoji usado para eliminar el mensaje."
+            },
+            {
+                "label": "Elegir Servicio de Embed Fix",
+                "description": "Elegir qué tipo de embed fix se usará para los distintos sitios web."
+            },
+            {
+                "label": "Visibilidad Hacia Otros Bots",
+                "description": "Embed Fixer actuará sobre otros bots si está habilitado. Si no lo está, solo actuará sobre los usuarios."
+            },
+            {
+                "label": "Canal de Destino Para Redirecciones",
+                "description": "Configurando esta opción, se enviarán los enlaces al canal establecido independientemente del canal de origen."
+            },
+            {
+                "label": "Roles Permitidos",
+                "description": "Corregir los enlaces de los usuarios si poseen cualquier rol de esta lista. Déjalo en blanco para desactivarlo."
+            },
+            {
+                "label": "Habilitar/Deshabilitar Botón de \"Enlace Original\"",
+                "description": "Se mostrará un botón de \"Enlace original\" en los mensajes de Embed Fixer."
+            },
+            {
+                "label": "Habilitar/Deshabilitar el Borrado del Mensaje Original en Hilos",
+                "description": "Por limitaciones técnicas, los hilos no soportan webhooks; por lo tanto el mensaje original se mantendrá. Activando esta opción hará que el mensaje sea eliminado y posteriormente se publicará el enlace corregido."
+            },
+            {
+                "label": "Responder en lugar de borrar",
+                "description": "Responde al mensaje original con el embed arreglado en lugar de borrar y reenviar."
+            }
+        ]
+    },
     "hosting": {
         "eyebrow": "Self-hosting",
         "heading": "¿Te importa la privacidad? El código abierto al rescate.",

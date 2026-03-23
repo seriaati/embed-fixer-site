@@ -56,6 +56,83 @@
             "Lượt sao GitHub"
         ]
     },
+    "customization": {
+        "eyebrow": "Tùy biến cực cao",
+        "heading": "Tinh chỉnh gần như mọi hành vi theo đúng server của bạn.",
+        "body": "Điểm mạnh nhất của Embed Fixer là gần như mọi hành vi đều có thể tùy chỉnh hoặc bật/tắt theo ý bạn, kể cả các tính năng ngách được tạo từ nhu cầu thực tế của người dùng.",
+        "resetNote": "Mọi cài đặt đều tách biệt theo từng server. Dùng /reset để quay về mặc định.",
+        "ariaLabel": "Danh sách cài đặt có thể tùy chỉnh",
+        "settings": [
+            {
+                "label": "Ngôn Ngữ",
+                "description": "Thay đổi ngôn ngữ bot sử dụng."
+            },
+            {
+                "label": "Tắt Sửa Nhúng Cho Các Trang Web",
+                "description": "Tắt Nhúng Sửa cho các trang web cụ thể."
+            },
+            {
+                "label": "Kênh Trích Xuất Phương Tiện",
+                "description": "Hình ảnh/Video từ các liên kết Twitter/X/Pixiv được gửi trong các kênh này sẽ được trích xuất."
+            },
+            {
+                "label": "Danh Sách Đen Kênh Nhúng Sửa",
+                "description": "Chỉ các kênh được đặt ở đây sẽ không nhận được Nhúng Sửa, danh sách trắng được ưu tiên hơn danh sách đen."
+            },
+            {
+                "label": "Danh Sách Trắng Kênh Nhúng Sửa",
+                "description": "Chỉ các kênh được đặt ở đây mới nhận được Nhúng Sửa, danh sách trắng được ưu tiên hơn danh sách đen."
+            },
+            {
+                "label": "Bật/Tắt Trả Lời Webhook",
+                "description": "Bật/Tắt đề cập chủ tin nhắn gốc khi trả lời qua Webhook."
+            },
+            {
+                "label": "Tắt Tự Động Ẩn Nội Dung Trong Kênh NSFW",
+                "description": "Với tính năng Trình Xuất Phương Tiện, kênh NSFW được chọn sẽ không có Phượng tiện tự động ẩn."
+            },
+            {
+                "label": "Bật/Tắt Biểu Cảm Xóa",
+                "description": "Có nên thêm biểu cảm vào tin nhắn webhook để tác giả gốc có thể xóa chúng bằng biểu cảm xóa."
+            },
+            {
+                "label": "Hiển Thị Kênh Nội Dung Bài Đăng",
+                "description": "Hiển thị nội dung text của bài đăng ở các kênh đã chọn khi bật trích xuất media."
+            },
+            {
+                "label": "Thay Đổi Biểu Cảm Xóa Tin Nhắn",
+                "description": "Biểu cảm được sử dụng để xóa tin nhắn."
+            },
+            {
+                "label": "Chọn Dịch Vụ Nhúng Sửa",
+                "description": "Chọn dịch vụ Nhúng Sửa cho các trang web khác nhau."
+            },
+            {
+                "label": "Hiển Thị Của Bot",
+                "description": "Nếu được bật, Embed Fixer sẽ sửa các bản nhúng do bot khác gửi. Nếu bị tắt, nó sẽ chỉ sửa các bản nhúng do người dùng gửi."
+            },
+            {
+                "label": "Phễu Đến Kênh Mục Tiêu",
+                "description": "Nếu được thiết lập, tất cả các nội dung nhúng sửa và trích xuất phương tiện sẽ được gửi đến kênh đích thay vì kênh gốc."
+            },
+            {
+                "label": "Danh Sách Trắng Vai Trò",
+                "description": "Nếu được thiết lập, chỉ những người dùng có một trong những vai trò này mới có thể sửa nhúng của họ. Để trống để tắt."
+            },
+            {
+                "label": "Bật/Tắt Nút Link Gốc",
+                "description": "Hiển thị nút liên kết đến bài đăng gốc trong tin nhắn nhúng cố định không."
+            },
+            {
+                "label": "Bật/Tắt Xóa Tin Nhắn Gốc Trong Chủ Đề",
+                "description": "Vì chủ đề không thể có webhook, tin nhắn gốc được giữ lại để biết ai đã gửi. Bật tính năng này sẽ xóa tin nhắn gốc trong chủ đề sau khi gửi nhúng đã sửa."
+            },
+            {
+                "label": "Trả lời thay vì xóa",
+                "description": "Trả lời tin nhắn gốc bằng embed đã sửa thay vì xóa rồi gửi lại."
+            }
+        ]
+    },
     "hosting": {
         "eyebrow": "Tự vận hành (Self-hosting)",
         "heading": "Bạn ưu tiên quyền riêng tư? Đã có mã nguồn mở.",

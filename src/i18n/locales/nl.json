@@ -56,6 +56,83 @@
             "GitHub stars"
         ]
     },
+    "customization": {
+        "eyebrow": "Zeer aanpasbaar",
+        "heading": "Stel bijna elk gedrag af op jouw server.",
+        "body": "Het sterkste punt van Embed Fixer is dat bijna elk gedrag aangepast of in- en uitgeschakeld kan worden, inclusief nichefuncties die uit echte gebruikersvragen zijn ontstaan.",
+        "resetNote": "Alle instellingen zijn uniek per server. Gebruik /reset om terug te gaan naar de standaardwaarden.",
+        "ariaLabel": "Lijst met aanpasbare instellingen",
+        "settings": [
+            {
+                "label": "Taal",
+                "description": "Verander de taal van de bot."
+            },
+            {
+                "label": "Schakel Embed Fixes Voor Websites Uit",
+                "description": "Schakel Embed Fixes uit voor specifieke websites."
+            },
+            {
+                "label": "Media Extractie Kanalen",
+                "description": "Afbeeldingen/video's van Twitter/X/Pixiv-links die in deze kanalen worden verzonden, worden geëxtraheerd."
+            },
+            {
+                "label": "Embed Fix Kanalen Blacklist",
+                "description": "Kanalen hier ontvangen geen Embed Fixes, de whitelist heeft voorrang op de blacklist."
+            },
+            {
+                "label": "Embed Fix Kanalen Whitelist",
+                "description": "Alleen kanalen die hier worden ingesteld, ontvangen Embed Fixes, de whitelist heeft voorrang op de blacklist."
+            },
+            {
+                "label": "Schakel Webhook Antwoord In",
+                "description": "Schakel de ping naar de oorspronkelijke auteur wanneer je op een webhook reageert."
+            },
+            {
+                "label": "Schakel automatische spoilering uit in NSFW kanalen",
+                "description": "Voor de media extractie functie zullen de hier geselecteerde NSFW kanalen de media niet automatisch spoileren."
+            },
+            {
+                "label": "Schakel Bericht Verwijder Reactie",
+                "description": "Of emoji reacties moeten worden toegevoegd aan webhookberichten, zodat de oorspronkelijke auteur deze kan verwijderen door te reageren."
+            },
+            {
+                "label": "Kanalen Voor Embeds Tonen",
+                "description": "Als media extractie is ingeschakeld, tonen de hier geselecteerde kanalen de inhoud van het bericht."
+            },
+            {
+                "label": "Wijzig Verwijder Bericht Reactie Emoji",
+                "description": "Wijzig de emoji die wordt gebruikt om berichten te verwijderen."
+            },
+            {
+                "label": "Kies de Embed Fix service",
+                "description": "Kies de Embed Fix service die je voor verschillende websites wilt gebruiken."
+            },
+            {
+                "label": "Bot Zichtbaarheid",
+                "description": "Indien ingeschakeld, repareert Embed Fixer embeds die door andere bots zijn verzonden. Indien uitgeschakeld, worden alleen embeds hersteld die door gebruikers zijn verzonden."
+            },
+            {
+                "label": "Stuur Alles Naar Doel Kanaal",
+                "description": "Indien ingesteld, worden alle vembeds en media naar het doel kanaal verzonden in plaats van naar het oorspronkelijke kanaal."
+            },
+            {
+                "label": "Whitelist Rollen",
+                "description": "Indien ingesteld, worden de embeds van alleen gebruikers met een van deze rollen gefixt. Laat leeg om uit te schakelen."
+            },
+            {
+                "label": "Schakel de knop \"Originele link\" in",
+                "description": "Of er een knop moet worden weergegeven die naar het originele bericht linkt in fixed embed berichten."
+            },
+            {
+                "label": "Schakel het verwijderen van originele berichten in threads",
+                "description": "Omdat threads geen webhooks kunnen hebben, wordt het originele bericht bewaard om te weten wie het heeft verzonden. Door dit in te schakelen wordt het originele bericht in threads verwijderd na het verzenden van de gefixte embed."
+            },
+            {
+                "label": "Antwoorden in plaats van verwijderen",
+                "description": "Reageer met de gefixte embed op het originele bericht in plaats van verwijderen en opnieuw sturen."
+            }
+        ]
+    },
     "hosting": {
         "eyebrow": "Zelf hosten",
         "heading": "Privacy-fanaat? Open-source schiet te hulp.",

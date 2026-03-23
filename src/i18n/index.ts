@@ -47,8 +47,6 @@ export function getDictionary(locale: string | null | undefined): TranslationDic
     return dictionaries[normalizeLocale(locale)];
 }
 
-export const localeDictionaries = dictionaries;
-
 export function getLocaleFromHeaders(acceptLanguageHeader: string | null): LocaleCode {
     if (!acceptLanguageHeader) {
         return DEFAULT_LOCALE;

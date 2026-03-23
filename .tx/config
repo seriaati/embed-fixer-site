@@ -1,0 +1,12 @@
+[main]
+host = https://app.transifex.com
+
+[o:seria:p:embed-fixer:r:469aeff301f91e284ddae612dddf886b]
+file_filter            = tx/<lang>.json
+source_file            = tx/en.json
+type                   = STRUCTURED_JSON
+minimum_perc           = 0
+resource_name          = Website
+replace_edited_strings = false
+keep_translations      = false
+

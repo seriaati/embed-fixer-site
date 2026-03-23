@@ -393,8 +393,7 @@ const statValues = ["1200+", "150+"];
         return partial?.code ?? defaultLocale;
     };
 
-    const getLocaleHref = (localeCode) =>
-        localeCode === defaultLocale ? "/" : `/${localeCode}/`;
+    const getLocaleHref = (localeCode) => `/${localeCode}/`;
 
     // --- Dropdown helpers ---
 

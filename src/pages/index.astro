@@ -6,9 +6,7 @@ const preferredLocale = getLocaleFromHeaders(
     Astro.request.headers.get("accept-language"),
 );
 
-if (preferredLocale !== DEFAULT_LOCALE) {
-    return Astro.redirect(`/${preferredLocale}/`, 302);
-}
+return Astro.redirect(`/${preferredLocale}/`, 302);
 ---
 
 <App lang={DEFAULT_LOCALE} />

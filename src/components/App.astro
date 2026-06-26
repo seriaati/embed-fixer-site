@@ -31,7 +31,7 @@ const platforms = [
     { name: "PTT", slug: null },
     { name: "DeviantArt", slug: "deviantart" },
 ];
-const statValues = ["1200+", "150+"];
+const statValues = ["2400+", "180+"];
 ---
 
 <Layout
@@ -131,7 +131,9 @@ const statValues = ["1200+", "150+"];
 
         <section class="section split reveal delay-1">
             <div class="section-head">
-                <p class="eyebrow" id="features-eyebrow">{t.features.eyebrow}</p>
+                <p class="eyebrow" id="features-eyebrow">
+                    {t.features.eyebrow}
+                </p>
                 <h2 id="features-heading">{t.features.heading}</h2>
             </div>
             <div class="section-body">
@@ -200,7 +202,9 @@ const statValues = ["1200+", "150+"];
 
         <section class="section split reveal delay-2">
             <div class="section-head">
-                <p class="eyebrow" id="platforms-eyebrow">{t.platforms.eyebrow}</p>
+                <p class="eyebrow" id="platforms-eyebrow">
+                    {t.platforms.eyebrow}
+                </p>
                 <h2 id="platforms-heading">{t.platforms.heading}</h2>
             </div>
             <div class="section-body">
@@ -608,7 +612,8 @@ const statValues = ["1200+", "150+"];
         const sync = () => {
             const collapsed = grid.classList.contains("is-collapsed");
             toggle.setAttribute("aria-expanded", String(!collapsed));
-            if (labelEl) labelEl.textContent = collapsed ? labelMore : labelLess;
+            if (labelEl)
+                labelEl.textContent = collapsed ? labelMore : labelLess;
         };
 
         toggle.addEventListener("click", () => {

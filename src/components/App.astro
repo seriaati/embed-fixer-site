@@ -117,143 +117,168 @@ const statValues = ["1200+", "150+"];
             </aside>
         </section>
 
-        <section class="section problem reveal delay-1">
-            <div>
+        <section class="section split problem reveal delay-1">
+            <div class="section-head">
                 <p class="eyebrow" id="problem-eyebrow">{t.problem.eyebrow}</p>
                 <h2 id="problem-heading">{t.problem.heading}</h2>
             </div>
-            <ul class="problem-list" id="problem-list">
-                {t.problem.items.map((item) => <li>{item}</li>)}
-            </ul>
-        </section>
-
-        <section class="section reveal delay-1">
-            <p class="eyebrow" id="features-eyebrow">{t.features.eyebrow}</p>
-            <h2 id="features-heading" style="margin-top: 0.35rem;">
-                {t.features.heading}
-            </h2>
-            <div
-                class="feature-rail"
-                id="feature-rail"
-                style="margin-top: 1.1rem;"
-            >
-                {
-                    t.features.items.map((feature, index) => (
-                        <article class="feature">
-                            <div class="feature-index">
-                                {String(index + 1).padStart(2, "0")}
-                            </div>
-                            <p>{feature}</p>
-                        </article>
-                    ))
-                }
+            <div class="section-body">
+                <ul class="problem-list" id="problem-list">
+                    {t.problem.items.map((item) => <li>{item}</li>)}
+                </ul>
             </div>
         </section>
 
-        <section class="section customization reveal delay-1">
-            <p class="eyebrow" id="customization-eyebrow">
-                {t.customization.eyebrow}
-            </p>
-            <h2 id="customization-heading" style="margin-top: 0.35rem;">
-                {t.customization.heading}
-            </h2>
-            <p class="customization-intro" id="customization-body">
-                {t.customization.body}
-            </p>
-            <p class="customization-note" id="customization-reset-note">
-                {t.customization.resetNote}
-            </p>
-            <ul
-                class="customization-grid"
-                id="customization-grid"
-                aria-label={t.customization.ariaLabel}
-            >
-                {
-                    t.customization.settings.map((setting) => (
-                        <li class="customization-item">
-                            <h3>{setting.label}</h3>
-                            <p>{setting.description}</p>
-                        </li>
-                    ))
-                }
-            </ul>
-        </section>
-
-        <section class="section reveal delay-2">
-            <p class="eyebrow" id="platforms-eyebrow">{t.platforms.eyebrow}</p>
-            <h2 id="platforms-heading" style="margin-top: 0.35rem;">
-                {t.platforms.heading}
-            </h2>
-            <div
-                class="platform-grid"
-                id="platform-grid"
-                role="list"
-                aria-label={t.platforms.ariaLabel}
-            >
-                {
-                    platforms.map((platform) => (
-                        <div class="platform" role="listitem">
-                            {platform.slug ? (
-                                <img
-                                    class="platform-icon"
-                                    src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
-                                    alt=""
-                                    loading="lazy"
-                                    decoding="async"
-                                    aria-hidden="true"
-                                />
-                            ) : (
-                                <span
-                                    class="platform-icon platform-icon--fallback"
-                                    aria-hidden="true"
-                                >
-                                    {platform.name.charAt(0).toUpperCase()}
-                                </span>
-                            )}
-                            <span>{platform.name}</span>
-                        </div>
-                    ))
-                }
+        <section class="section split reveal delay-1">
+            <div class="section-head">
+                <p class="eyebrow" id="features-eyebrow">{t.features.eyebrow}</p>
+                <h2 id="features-heading">{t.features.heading}</h2>
+            </div>
+            <div class="section-body">
+                <div class="feature-rail" id="feature-rail">
+                    {
+                        t.features.items.map((feature, index) => (
+                            <article class="feature">
+                                <div class="feature-index">
+                                    {String(index + 1).padStart(2, "0")}
+                                </div>
+                                <p>{feature}</p>
+                            </article>
+                        ))
+                    }
+                </div>
             </div>
         </section>
 
-        <section class="section proof reveal delay-2">
-            <p class="eyebrow" id="proof-eyebrow">{t.proof.eyebrow}</p>
-            <h2 id="proof-heading" style="margin-top: 0.35rem;">
-                {t.proof.heading}
-            </h2>
-            <div
-                class="proof-grid"
-                id="proof-grid"
-                role="list"
-                aria-label={t.proof.ariaLabel}
-            >
-                {
-                    statValues.map((value, index) => (
-                        <article class="proof-card" role="listitem">
-                            <p class="proof-value">{value}</p>
-                            <p class="proof-label">
-                                {t.proof.statLabels[index]}
-                            </p>
-                        </article>
-                    ))
-                }
-            </div>
-        </section>
-
-        <section class="section hosting reveal delay-2">
-            <div>
-                <p class="eyebrow" id="hosting-eyebrow">{t.hosting.eyebrow}</p>
-                <h2 id="hosting-heading" style="margin-top: 0.35rem;">
-                    {t.hosting.heading}
-                </h2>
-                <p
-                    id="hosting-body"
-                    style="margin-top: 0.7rem; max-width: 60ch;"
-                >
-                    {t.hosting.body}
+        <section class="section split customization reveal delay-1">
+            <div class="section-head">
+                <p class="eyebrow" id="customization-eyebrow">
+                    {t.customization.eyebrow}
                 </p>
-                <div class="cta-row" style="margin-top: 1rem;">
+                <h2 id="customization-heading">
+                    {t.customization.heading}
+                </h2>
+                <p class="customization-intro" id="customization-body">
+                    {t.customization.body}
+                </p>
+                <p class="customization-note" id="customization-reset-note">
+                    {t.customization.resetNote}
+                </p>
+            </div>
+            <div class="section-body">
+                <ul
+                    class="customization-grid"
+                    id="customization-grid"
+                    aria-label={t.customization.ariaLabel}
+                >
+                    {
+                        t.customization.settings.map((setting) => (
+                            <li class="customization-item">
+                                <h3>{setting.label}</h3>
+                                <p>{setting.description}</p>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <button
+                    type="button"
+                    id="customization-toggle"
+                    class="customization-toggle"
+                    aria-controls="customization-grid"
+                    aria-expanded="false"
+                    data-label-more={t.customization.showAll}
+                    data-label-less={t.customization.showFewer}
+                    hidden
+                >
+                    <span data-toggle-label>{t.customization.showAll}</span>
+                    <span class="customization-toggle-caret" aria-hidden="true"
+                        >▾</span
+                    >
+                </button>
+            </div>
+        </section>
+
+        <section class="section split reveal delay-2">
+            <div class="section-head">
+                <p class="eyebrow" id="platforms-eyebrow">{t.platforms.eyebrow}</p>
+                <h2 id="platforms-heading">{t.platforms.heading}</h2>
+            </div>
+            <div class="section-body">
+                <div
+                    class="platform-grid"
+                    id="platform-grid"
+                    role="list"
+                    aria-label={t.platforms.ariaLabel}
+                >
+                    {
+                        platforms.map((platform) => (
+                            <div class="platform" role="listitem">
+                                {platform.slug ? (
+                                    <img
+                                        class="platform-icon"
+                                        src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
+                                        alt=""
+                                        loading="lazy"
+                                        decoding="async"
+                                        aria-hidden="true"
+                                    />
+                                ) : (
+                                    <span
+                                        class="platform-icon platform-icon--fallback"
+                                        aria-hidden="true"
+                                    >
+                                        {platform.name.charAt(0).toUpperCase()}
+                                    </span>
+                                )}
+                                <span>{platform.name}</span>
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <section class="section split proof reveal delay-2">
+            <div class="section-head">
+                <p class="eyebrow" id="proof-eyebrow">{t.proof.eyebrow}</p>
+                <h2 id="proof-heading">{t.proof.heading}</h2>
+            </div>
+            <div class="section-body">
+                <div
+                    class="proof-grid"
+                    id="proof-grid"
+                    role="list"
+                    aria-label={t.proof.ariaLabel}
+                >
+                    {
+                        statValues.map((value, index) => (
+                            <article class="proof-card" role="listitem">
+                                <p class="proof-value">{value}</p>
+                                <p class="proof-label">
+                                    {t.proof.statLabels[index]}
+                                </p>
+                            </article>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <section class="section split hosting reveal delay-2">
+            <div class="section-head">
+                <p class="eyebrow" id="hosting-eyebrow">{t.hosting.eyebrow}</p>
+                <h2 id="hosting-heading">{t.hosting.heading}</h2>
+            </div>
+            <div class="section-body">
+                <p id="hosting-body">{t.hosting.body}</p>
+                <div
+                    class="hosting-tags"
+                    id="hosting-tags"
+                    aria-label="Deployment options"
+                >
+                    {t.hosting.tags.map((tag) => <span>{tag}</span>)}
+                </div>
+                <div class="cta-row">
                     <a
                         href="https://github.com/seriaati/embed-fixer#self-hosting"
                         target="_blank"
@@ -272,17 +297,9 @@ const statValues = ["1200+", "150+"];
                     </a>
                 </div>
             </div>
-            <div
-                class="hosting-tags"
-                id="hosting-tags"
-                aria-label="Deployment options"
-            >
-                {t.hosting.tags.map((tag) => <span>{tag}</span>)}
-            </div>
         </section>
 
         <section class="closing reveal delay-2">
-            <p class="eyebrow" id="closing-eyebrow">{t.closing.eyebrow}</p>
             <h2 id="closing-heading">{t.closing.heading}</h2>
             <p id="closing-body">{t.closing.body}</p>
             <div class="cta-row">
@@ -571,4 +588,34 @@ const statValues = ["1200+", "150+"];
     } else {
         initLanguageSelector();
     }
+</script>
+
+<script is:inline>
+    // Collapse the customization list to a preview, with a show-all toggle.
+    // Progressive enhancement: with JS off, every setting stays visible.
+    (function () {
+        const grid = document.getElementById("customization-grid");
+        const toggle = document.getElementById("customization-toggle");
+        if (!grid || !toggle) return;
+
+        const labelEl = toggle.querySelector("[data-toggle-label]");
+        const labelMore = toggle.dataset.labelMore;
+        const labelLess = toggle.dataset.labelLess;
+
+        grid.classList.add("is-collapsed");
+        toggle.hidden = false;
+
+        const sync = () => {
+            const collapsed = grid.classList.contains("is-collapsed");
+            toggle.setAttribute("aria-expanded", String(!collapsed));
+            if (labelEl) labelEl.textContent = collapsed ? labelMore : labelLess;
+        };
+
+        toggle.addEventListener("click", () => {
+            grid.classList.toggle("is-collapsed");
+            sync();
+        });
+
+        sync();
+    })();
 </script>

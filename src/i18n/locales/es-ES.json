@@ -15,7 +15,7 @@
         "relay": {
             "ariaLabel": "Cómo funciona el reenvío por webhook",
             "incomingLabel": "entrada",
-            "incomingValue": "https://x.com/... (previsualización rota)",
+            "incomingValue": "https://x.com/...",
             "actionLabel": "acción",
             "actionValue": "Eliminar + reenviar vía webhook con tu avatar y nombre de usuario",
             "resultLabel": "resultado",
@@ -62,6 +62,8 @@
         "body": "La mayor fortaleza de Embed Fixer es que casi todo puede personalizarse o activarse y desactivarse según tus preferencias, incluyendo funciones de nicho creadas a partir de necesidades reales de usuarios.",
         "resetNote": "Todos los ajustes son únicos por servidor. Usa /reset para volver a los valores por defecto.",
         "ariaLabel": "Lista de ajustes personalizables",
+        "showAll": "Mostrar todos los ajustes",
+        "showFewer": "Mostrar menos",
         "settings": [
             {
                 "label": "Idioma",

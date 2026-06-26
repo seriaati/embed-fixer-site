@@ -15,7 +15,7 @@
         "relay": {
             "ariaLabel": "Webhook 转发工作原理",
             "incomingLabel": "输入",
-            "incomingValue": "https://x.com/... (预览失效)",
+            "incomingValue": "https://x.com/...",
             "actionLabel": "处理",
             "actionValue": "删除原消息，并利用你的头像和用户名通过 Webhook 重新发送",
             "resultLabel": "结果",
@@ -62,6 +62,8 @@
         "body": "Embed Fixer 最强大的地方在于，几乎每个行为都可以按需自定义或开关，甚至包含许多基于真实用户需求打造的小众功能。",
         "resetNote": "所有设置都按服务器独立保存。你可以使用 /reset 恢复默认值。",
         "ariaLabel": "可定制设置列表",
+        "showAll": "显示全部设置",
+        "showFewer": "收起",
         "settings": [
             {
                 "label": "语言",

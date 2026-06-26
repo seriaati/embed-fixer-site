@@ -15,7 +15,7 @@
         "relay": {
             "ariaLabel": "How webhook relay works",
             "incomingLabel": "incoming",
-            "incomingValue": "https://x.com/... (broken embed)",
+            "incomingValue": "https://x.com/...",
             "actionLabel": "action",
             "actionValue": "Delete + resend through webhook with your avatar and username",
             "resultLabel": "result",
@@ -62,6 +62,8 @@
         "body": "The most powerful part about Embed Fixer is that almost every behavior can be customized or toggled to your liking, including niche features shaped by real community needs.",
         "resetNote": "All settings are unique to each server. Use /reset to restore default values.",
         "ariaLabel": "Customizable settings list",
+        "showAll": "Show all settings",
+        "showFewer": "Show fewer",
         "settings": [
             {
                 "label": "Language",

@@ -15,7 +15,7 @@
         "relay": {
             "ariaLabel": "Hoe de webhook-relay werkt",
             "incomingLabel": "inkomend",
-            "incomingValue": "https://x.com/... (geen preview)",
+            "incomingValue": "https://x.com/...",
             "actionLabel": "actie",
             "actionValue": "Verwijderen + opnieuw verzenden via webhook met jouw avatar en naam",
             "resultLabel": "resultaat",
@@ -62,6 +62,8 @@
         "body": "Het sterkste punt van Embed Fixer is dat bijna elk gedrag aangepast of in- en uitgeschakeld kan worden, inclusief nichefuncties die uit echte gebruikersvragen zijn ontstaan.",
         "resetNote": "Alle instellingen zijn uniek per server. Gebruik /reset om terug te gaan naar de standaardwaarden.",
         "ariaLabel": "Lijst met aanpasbare instellingen",
+        "showAll": "Alle instellingen tonen",
+        "showFewer": "Minder tonen",
         "settings": [
             {
                 "label": "Taal",

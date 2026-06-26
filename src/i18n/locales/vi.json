@@ -15,7 +15,7 @@
         "relay": {
             "ariaLabel": "Cách thức hoạt động của webhook relay",
             "incomingLabel": "Đầu vào",
-            "incomingValue": "https://x.com/... (link bị lỗi hiển thị)",
+            "incomingValue": "https://x.com/...",
             "actionLabel": "Xử lý",
             "actionValue": "Xóa và đăng lại qua webhook bằng tên và avatar của bạn",
             "resultLabel": "Kết quả",
@@ -62,6 +62,8 @@
         "body": "Điểm mạnh nhất của Embed Fixer là gần như mọi hành vi đều có thể tùy chỉnh hoặc bật/tắt theo ý bạn, kể cả các tính năng ngách được tạo từ nhu cầu thực tế của người dùng.",
         "resetNote": "Mọi cài đặt đều tách biệt theo từng server. Dùng /reset để quay về mặc định.",
         "ariaLabel": "Danh sách cài đặt có thể tùy chỉnh",
+        "showAll": "Hiện tất cả cài đặt",
+        "showFewer": "Thu gọn",
         "settings": [
             {
                 "label": "Ngôn Ngữ",

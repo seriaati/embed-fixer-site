@@ -30,7 +30,7 @@
         "string": "incoming"
     },
     "hero.relay.incomingValue": {
-        "string": "https://x.com/... (broken embed)"
+        "string": "https://x.com/..."
     },
     "hero.relay.actionLabel": {
         "string": "action"
@@ -118,6 +118,12 @@
     },
     "customization.ariaLabel": {
         "string": "Customizable settings list"
+    },
+    "customization.showAll": {
+        "string": "Show all settings"
+    },
+    "customization.showFewer": {
+        "string": "Show fewer"
     },
     "customization.settings.0.label": {
         "string": "Language"

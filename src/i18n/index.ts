@@ -19,7 +19,8 @@ export const localeOptions = [
 export type LocaleCode = (typeof localeOptions)[number]["code"];
 export type TranslationDictionary = typeof en;
 
-const dictionaries: Record<LocaleCode, TranslationDictionary> = {
+// Translations may lag behind the English source, so their shape isn't guaranteed.
+const dictionaries: Record<LocaleCode, unknown> = {
     en,
     "zh-CN": zhCN,
     "zh-TW": zhTW,
@@ -52,8 +53,28 @@ export function normalizeLocale(locale: string | null | undefined): LocaleCode {
     return baseMatch?.code ?? DEFAULT_LOCALE;
 }
 
+// Fill keys a locale hasn't translated yet (or whose shape changed) with the English source.
+function withFallback(source: unknown, translated: unknown): unknown {
+    if (Array.isArray(source)) {
+        if (!Array.isArray(translated)) return source;
+        return source.map((item, i) => withFallback(item, translated[i]));
+    }
+    if (source && typeof source === "object") {
+        if (!translated || typeof translated !== "object" || Array.isArray(translated)) return source;
+        return Object.fromEntries(
+            Object.entries(source).map(([key, value]) => [
+                key,
+                withFallback(value, (translated as Record<string, unknown>)[key]),
+            ]),
+        );
+    }
+    return typeof translated === typeof source && translated !== "" ? translated : source;
+}
+
 export function getDictionary(locale: string | null | undefined): TranslationDictionary {
-    return dictionaries[normalizeLocale(locale)];
+    const code = normalizeLocale(locale);
+    if (code === DEFAULT_LOCALE) return en;
+    return withFallback(en, dictionaries[code]) as TranslationDictionary;
 }
 
 export function getLocaleFromHeaders(acceptLanguageHeader: string | null): LocaleCode {

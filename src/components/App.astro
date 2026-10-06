@@ -11,27 +11,33 @@ const t = getDictionary(lang);
 
 const brandName = "Embed Fixer";
 const logoPath = "/logo.png";
-const platformIconMonochrome = "DCEBFF";
-const githubIconMonochrome = "DCEBFF";
+const inviteUrl = "https://discord.com/oauth2/authorize?client_id=770144963735453696";
+const repoUrl = "https://github.com/seriaati/embed-fixer";
+const cloneCommand = `git clone ${repoUrl}`;
 const platforms = [
-    { name: "Twitter/X", slug: "x" },
-    { name: "Pixiv", slug: "pixiv" },
-    { name: "TikTok", slug: "tiktok" },
-    { name: "Reddit", slug: "reddit" },
-    { name: "Instagram", slug: "instagram" },
-    { name: "FurAffinity", slug: "furaffinity" },
-    { name: "Twitch Clips", slug: "twitch" },
-    { name: "Iwara", slug: null },
-    { name: "Bluesky", slug: "bluesky" },
-    { name: "Kemono", slug: null },
-    { name: "Facebook", slug: "facebook" },
-    { name: "Bilibili", slug: "bilibili" },
-    { name: "Tumblr", slug: "tumblr" },
-    { name: "Threads", slug: "threads" },
-    { name: "PTT", slug: null },
-    { name: "DeviantArt", slug: "deviantart" },
+    "Twitter/X",
+    "Pixiv",
+    "TikTok",
+    "Reddit",
+    "Instagram",
+    "FurAffinity",
+    "Twitch Clips",
+    "Iwara",
+    "Bluesky",
+    "Kemono",
+    "Facebook",
+    "Bilibili",
+    "Tumblr",
+    "Threads",
+    "PTT",
+    "DeviantArt",
 ];
 const statValues = ["3700+", "210+"];
+const settingsCount = String(t.customization.settings.length);
+const withCount = (text: string, count: string) => text.replace("{count}", count);
+// Split copy so slash commands like /fix and /reset can be set in code type.
+const commandParts = (text: string) =>
+    text.split(/(\/[a-z]+)/).map((part) => ({ text: part, code: /^\/[a-z]+$/.test(part) }));
 ---
 
 <Layout
@@ -40,201 +46,56 @@ const statValues = ["3700+", "210+"];
     description={t.meta.description}
     ogImage="/og-image.png"
 >
-    <main class="shell">
-        <section class="section hero reveal">
-            <div class="hero-copy">
-                <div class="brand-row">
-                    <div
-                        class="logo-slot logo-slot--circle logo-slot--filled"
-                        aria-label="Embed Fixer logo"
-                    >
-                        <img
-                            src={logoPath}
-                            alt="Embed Fixer logo"
-                            class="logo-image"
-                            loading="lazy"
-                        />
-                    </div>
+    <header class="hero">
+        <div class="wrap">
+            <div class="brand">
+                <img src={logoPath} alt="" width="28" height="28" />
+                <span>{brandName}</span>
+            </div>
+            <h1
+                class="hero-word kinetic"
+                id="hero-word"
+                aria-label={t.hero.headingLines.join(" ")}
+            >
+                {
+                    t.hero.headingLines.map((line) => (
+                        <span class="hero-line" aria-hidden="true">
+                            {line}
+                        </span>
+                    ))
+                }
+            </h1>
+            <div class="hero-base">
+                <div>
+                    <p class="hero-lede">{t.hero.tagline}</p>
+                    <p class="hero-sites">
+                        {withCount(t.hero.sitesLead, String(platforms.length))}{" "}
+                        <span class="roll" id="roll">{platforms[0]}</span>
+                    </p>
                 </div>
-                <p class="eyebrow" id="brand-name">{brandName}</p>
-                <h1 id="hero-heading">{t.hero.heading}</h1>
-                <p class="hero-tagline" id="hero-tagline">
-                    {t.hero.tagline}
-                </p>
-                <div class="cta-row">
-                    <a
-                        href="https://discord.com/oauth2/authorize?client_id=770144963735453696"
-                        target="_blank"
-                        rel="noreferrer"
-                        class="cta cta--primary"
-                    >
-                        <span id="cta-add-top">{t.hero.ctaAdd}</span>
+                <div class="btns">
+                    <a class="btn" href={inviteUrl} target="_blank" rel="noreferrer">
+                        {t.hero.ctaAdd} <span aria-hidden="true">↗</span>
                     </a>
-                    <a
-                        href="https://github.com/seriaati/embed-fixer"
-                        target="_blank"
-                        rel="noreferrer"
-                        class="cta cta--secondary"
-                    >
-                        <img
-                            src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
-                            alt=""
-                            aria-hidden="true"
-                            class="cta-icon"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <span id="cta-github-top">{t.hero.ctaGithub}</span>
+                    <a class="btn btn--alt" href={repoUrl} target="_blank" rel="noreferrer">
+                        {t.hero.ctaGithub} <span aria-hidden="true">↗</span>
                     </a>
                 </div>
             </div>
+        </div>
+    </header>
 
-            <aside class="relay" id="relay" aria-label={t.hero.relay.ariaLabel}>
-                <div class="relay-row">
-                    <span class="relay-label" id="relay-incoming-label"
-                        >{t.hero.relay.incomingLabel}</span
-                    >
-                    <span id="relay-incoming-value"
-                        >{t.hero.relay.incomingValue}</span
-                    >
-                </div>
-                <div class="relay-row">
-                    <span class="relay-label" id="relay-action-label"
-                        >{t.hero.relay.actionLabel}</span
-                    >
-                    <span id="relay-action-value"
-                        >{t.hero.relay.actionValue}</span
-                    >
-                </div>
-                <div class="relay-row">
-                    <span class="relay-label" id="relay-result-label"
-                        >{t.hero.relay.resultLabel}</span
-                    >
-                    <span id="relay-result-value"
-                        >{t.hero.relay.resultValue}</span
-                    >
-                </div>
-            </aside>
-        </section>
-
-        <section class="section split problem reveal delay-1">
-            <div class="section-head">
-                <p class="eyebrow" id="problem-eyebrow">{t.problem.eyebrow}</p>
-                <h2 id="problem-heading">{t.problem.heading}</h2>
-            </div>
-            <div class="section-body">
-                <ul class="problem-list" id="problem-list">
-                    {t.problem.items.map((item) => <li>{item}</li>)}
-                </ul>
-            </div>
-        </section>
-
-        <section class="section split reveal delay-1">
-            <div class="section-head">
-                <p class="eyebrow" id="features-eyebrow">
-                    {t.features.eyebrow}
-                </p>
-                <h2 id="features-heading">{t.features.heading}</h2>
-            </div>
-            <div class="section-body">
-                <div class="feature-rail" id="feature-rail">
+    <main>
+        <section class="sec" aria-labelledby="problem-heading">
+            <div class="wrap">
+                <p class="eyebrow">{t.problem.eyebrow}</p>
+                <h2 class="h2" id="problem-heading">{t.problem.heading}</h2>
+                <div class="breaks">
                     {
-                        t.features.items.map((feature, index) => (
-                            <article class="feature">
-                                <div class="feature-index">
-                                    {String(index + 1).padStart(2, "0")}
-                                </div>
-                                <p>{feature}</p>
-                            </article>
-                        ))
-                    }
-                </div>
-            </div>
-        </section>
-
-        <section class="section split customization reveal delay-1">
-            <div class="section-head">
-                <p class="eyebrow" id="customization-eyebrow">
-                    {t.customization.eyebrow}
-                </p>
-                <h2 id="customization-heading">
-                    {t.customization.heading}
-                </h2>
-                <p class="customization-intro" id="customization-body">
-                    {t.customization.body}
-                </p>
-                <p class="customization-note" id="customization-reset-note">
-                    {t.customization.resetNote}
-                </p>
-            </div>
-            <div class="section-body">
-                <ul
-                    class="customization-grid"
-                    id="customization-grid"
-                    aria-label={t.customization.ariaLabel}
-                >
-                    {
-                        t.customization.settings.map((setting) => (
-                            <li class="customization-item">
-                                <h3>{setting.label}</h3>
-                                <p>{setting.description}</p>
-                            </li>
-                        ))
-                    }
-                </ul>
-                <button
-                    type="button"
-                    id="customization-toggle"
-                    class="customization-toggle"
-                    aria-controls="customization-grid"
-                    aria-expanded="false"
-                    data-label-more={t.customization.showAll}
-                    data-label-less={t.customization.showFewer}
-                    hidden
-                >
-                    <span data-toggle-label>{t.customization.showAll}</span>
-                    <span class="customization-toggle-caret" aria-hidden="true"
-                        >▾</span
-                    >
-                </button>
-            </div>
-        </section>
-
-        <section class="section split reveal delay-2">
-            <div class="section-head">
-                <p class="eyebrow" id="platforms-eyebrow">
-                    {t.platforms.eyebrow}
-                </p>
-                <h2 id="platforms-heading">{t.platforms.heading}</h2>
-            </div>
-            <div class="section-body">
-                <div
-                    class="platform-grid"
-                    id="platform-grid"
-                    role="list"
-                    aria-label={t.platforms.ariaLabel}
-                >
-                    {
-                        platforms.map((platform) => (
-                            <div class="platform" role="listitem">
-                                {platform.slug ? (
-                                    <img
-                                        class="platform-icon"
-                                        src={`https://cdn.simpleicons.org/${platform.slug}/${platformIconMonochrome}?viewbox=auto`}
-                                        alt=""
-                                        loading="lazy"
-                                        decoding="async"
-                                        aria-hidden="true"
-                                    />
-                                ) : (
-                                    <span
-                                        class="platform-icon platform-icon--fallback"
-                                        aria-hidden="true"
-                                    >
-                                        {platform.name.charAt(0).toUpperCase()}
-                                    </span>
-                                )}
-                                <span>{platform.name}</span>
+                        t.problem.cards.map((card) => (
+                            <div class="break">
+                                <span class="break-name">{card.name}</span>
+                                <p>{card.text}</p>
                             </div>
                         ))
                     }
@@ -242,101 +103,167 @@ const statValues = ["3700+", "210+"];
             </div>
         </section>
 
-        <section class="section split proof reveal delay-2">
-            <div class="section-head">
-                <p class="eyebrow" id="proof-eyebrow">{t.proof.eyebrow}</p>
-                <h2 id="proof-heading">{t.proof.heading}</h2>
+        <section class="sec" aria-labelledby="features-heading">
+            <div class="wrap">
+                <p class="eyebrow">{t.features.eyebrow}</p>
+                <h2 class="h2" id="features-heading">{t.features.heading}</h2>
+                <ul class="feats">
+                    {
+                        t.features.list.map((feature) => (
+                            <li class="feat">
+                                <h3>{feature.title}</h3>
+                                <p>
+                                    {commandParts(withCount(feature.text, settingsCount)).map((part) =>
+                                        part.code ? <code>{part.text}</code> : part.text,
+                                    )}
+                                </p>
+                                <small>{feature.tag}</small>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
-            <div class="section-body">
-                <div
-                    class="proof-grid"
-                    id="proof-grid"
-                    role="list"
-                    aria-label={t.proof.ariaLabel}
-                >
+        </section>
+
+        <section class="sec" aria-labelledby="platforms-heading">
+            <div class="wrap">
+                <p class="eyebrow">{t.platforms.eyebrow}</p>
+                <h2 class="h2" id="platforms-heading">{t.platforms.heading}</h2>
+                <p class="wall" id="wall" role="list" aria-label={t.platforms.ariaLabel}>
+                    {
+                        platforms.map((name, index) => (
+                            <>
+                                <span role="listitem">{name}</span>
+                                {index < platforms.length - 1 && (
+                                    <>
+                                        {" "}
+                                        <i aria-hidden="true">/</i>{" "}
+                                    </>
+                                )}
+                            </>
+                        ))
+                    }
+                </p>
+            </div>
+        </section>
+
+        <section class="sec" aria-labelledby="proof-heading">
+            <div class="wrap">
+                <p class="eyebrow" id="proof-heading">{t.proof.heading}</p>
+                <div class="stats" role="list" aria-label={t.proof.ariaLabel}>
                     {
                         statValues.map((value, index) => (
-                            <article class="proof-card" role="listitem">
-                                <p class="proof-value">{value}</p>
-                                <p class="proof-label">
-                                    {t.proof.statLabels[index]}
-                                </p>
-                            </article>
+                            <div class="stat" role="listitem">
+                                <strong data-count={parseInt(value, 10)}>
+                                    {Number.parseInt(value, 10).toLocaleString("en-US")}+
+                                </strong>
+                                <span>{t.proof.statLabels[index]}</span>
+                            </div>
                         ))
                     }
                 </div>
             </div>
         </section>
 
-        <section class="section split hosting reveal delay-2">
-            <div class="section-head">
-                <p class="eyebrow" id="hosting-eyebrow">{t.hosting.eyebrow}</p>
-                <h2 id="hosting-heading">{t.hosting.heading}</h2>
-            </div>
-            <div class="section-body">
-                <p id="hosting-body">{t.hosting.body}</p>
-                <div
-                    class="hosting-tags"
-                    id="hosting-tags"
-                    aria-label="Deployment options"
-                >
-                    {t.hosting.tags.map((tag) => <span>{tag}</span>)}
+        <section class="sec" aria-labelledby="customization-heading">
+            <div class="wrap">
+                <p class="eyebrow">{t.customization.eyebrow}</p>
+                <h2 class="h2" id="customization-heading">
+                    {t.customization.heading}
+                </h2>
+                <p class="lead">{t.customization.body}</p>
+                <div class="cust-tools">
+                    <div class="search">
+                        <label for="customization-search" class="visually-hidden">
+                            {t.customization.searchLabel}
+                        </label>
+                        <input
+                            id="customization-search"
+                            type="search"
+                            autocomplete="off"
+                            placeholder={withCount(t.customization.searchPlaceholder, settingsCount)}
+                        />
+                    </div>
                 </div>
-                <div class="cta-row">
+                <ul
+                    class="settings"
+                    id="customization-grid"
+                    aria-label={t.customization.ariaLabel}
+                >
+                    {
+                        t.customization.settings.map((setting) => (
+                            <li class="setting">
+                                <h3>{setting.label}</h3>
+                                <p>{setting.description}</p>
+                            </li>
+                        ))
+                    }
+                </ul>
+                <p class="cust-empty" id="customization-empty" hidden>
+                    {t.customization.noResults}
+                </p>
+                <button
+                    type="button"
+                    id="customization-toggle"
+                    class="cust-more"
+                    aria-controls="customization-grid"
+                    aria-expanded="false"
+                    data-label-more={withCount(t.customization.showAll, settingsCount)}
+                    data-label-less={t.customization.showFewer}
+                    hidden
+                >
+                    {withCount(t.customization.showAll, settingsCount)}
+                </button>
+            </div>
+        </section>
+
+        <section class="sec" aria-labelledby="hosting-heading">
+            <div class="wrap host">
+                <div>
+                    <p class="eyebrow">{t.hosting.eyebrow}</p>
+                    <h2 class="h2" id="hosting-heading">{t.hosting.heading}</h2>
+                    <p class="lead">{t.hosting.body}</p>
+                </div>
+                <div class="host-actions">
+                    <div class="cmd">
+                        <code id="clone-command">{cloneCommand}</code>
+                        <button
+                            type="button"
+                            id="clone-copy"
+                            data-label-copied={t.hosting.copied}
+                        >
+                            {t.hosting.copy}
+                        </button>
+                    </div>
                     <a
-                        href="https://github.com/seriaati/embed-fixer#self-hosting"
+                        class="btn btn--alt"
+                        href={`${repoUrl}#self-hosting`}
                         target="_blank"
                         rel="noreferrer"
-                        class="cta cta--secondary"
                     >
-                        <img
-                            src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
-                            alt=""
-                            aria-hidden="true"
-                            class="cta-icon"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                        <span id="hosting-cta">{t.hosting.cta}</span>
+                        {t.hosting.cta} <span aria-hidden="true">↗</span>
                     </a>
                 </div>
             </div>
         </section>
 
-        <section class="closing reveal delay-2">
-            <h2 id="closing-heading">{t.closing.heading}</h2>
-            <p id="closing-body">{t.closing.body}</p>
-            <div class="cta-row">
-                <a
-                    href="https://discord.com/oauth2/authorize?client_id=770144963735453696"
-                    target="_blank"
-                    rel="noreferrer"
-                    class="cta cta--primary"
-                >
-                    <span id="cta-add-bottom">{t.hero.ctaAdd}</span>
-                </a>
-                <a
-                    href="https://github.com/seriaati/embed-fixer"
-                    target="_blank"
-                    rel="noreferrer"
-                    class="cta cta--secondary"
-                >
-                    <img
-                        src={`https://cdn.simpleicons.org/github/${githubIconMonochrome}?viewbox=auto`}
-                        alt=""
-                        aria-hidden="true"
-                        class="cta-icon"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                    <span id="cta-github-bottom">{t.hero.ctaGithub}</span>
-                </a>
+        <section class="close" aria-labelledby="closing-heading">
+            <div class="wrap">
+                <h2 class="close-word kinetic" id="closing-heading">
+                    {t.closing.heading}
+                </h2>
+                <div class="btns">
+                    <a class="btn" href={inviteUrl} target="_blank" rel="noreferrer">
+                        {t.hero.ctaAdd} <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
             </div>
         </section>
 
         <footer class="site-footer" aria-label="Site footer">
             <div class="site-footer-row">
                 <p id="footer-copyright">{t.footer.copyright}</p>
+                <a class="footer-link" href={repoUrl} target="_blank" rel="noreferrer">GitHub</a>
                 <div
                     class="language-selector"
                     role="group"
@@ -595,32 +522,327 @@ const statValues = ["3700+", "210+"];
 </script>
 
 <script is:inline>
-    // Collapse the customization list to a preview, with a show-all toggle.
-    // Progressive enhancement: with JS off, every setting stays visible.
+    // Page interactions. Everything renders complete without JS; this only adds motion and filtering.
     (function () {
-        const grid = document.getElementById("customization-grid");
-        const toggle = document.getElementById("customization-toggle");
-        if (!grid || !toggle) return;
+        const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        const rnd = (a, b) => a + Math.random() * (b - a);
 
-        const labelEl = toggle.querySelector("[data-toggle-label]");
-        const labelMore = toggle.dataset.labelMore;
-        const labelLess = toggle.dataset.labelLess;
+        // --- Kinetic letters ---
+        // Broken letters only change transforms, so the layout never reflows while they repair.
 
-        grid.classList.add("is-collapsed");
-        toggle.hidden = false;
+        // Space-separated scripts split into words; scripts without spaces (CJK) wrap per character.
+        const splitWords = (text) =>
+            /\s/.test(text.trim()) ? text.trim().split(/\s+/) : [...text.trim()];
 
-        const sync = () => {
-            const collapsed = grid.classList.contains("is-collapsed");
-            toggle.setAttribute("aria-expanded", String(!collapsed));
-            if (labelEl)
-                labelEl.textContent = collapsed ? labelMore : labelLess;
+        const makeWord = (word) => {
+            const el = document.createElement("span");
+            el.className = "k-wd";
+            el.setAttribute("aria-hidden", "true");
+            [...word].forEach((c) => {
+                const ch = document.createElement("span");
+                ch.className = "k-ch";
+                ch.textContent = c;
+                el.appendChild(ch);
+            });
+            return el;
         };
 
-        toggle.addEventListener("click", () => {
-            grid.classList.toggle("is-collapsed");
-            sync();
+        // Replace an element's text with word/letter spans; returns the letters.
+        const letterize = (el) => {
+            const text = el.textContent;
+            const spaced = /\s/.test(text.trim());
+            const words = splitWords(text).map(makeWord);
+            el.textContent = "";
+            words.forEach((w, i) => {
+                if (i && spaced) el.appendChild(document.createTextNode(" "));
+                el.appendChild(w);
+            });
+            const label = document.createElement("span");
+            label.className = "visually-hidden";
+            label.textContent = text.trim();
+            el.appendChild(label);
+            return words.flatMap((w) => [...w.children]);
+        };
+
+        const scramble = (c, strength) => {
+            c.dataset.ok = "";
+            c.style.setProperty("--x", rnd(-0.06, 0.06) * strength + "em");
+            c.style.setProperty("--y", rnd(-0.12, 0.12) * strength + "em");
+            c.style.setProperty("--r", rnd(-10, 10) * strength + "deg");
+            c.style.setProperty("--s", (1 + rnd(-0.28, 0.28) * strength).toFixed(2));
+        };
+
+        const repair = (c) => {
+            if (c.dataset.ok) return;
+            c.dataset.ok = "1";
+            c.classList.remove("tofu");
+            ["--x", "--y", "--r", "--s"].forEach((p) => c.style.removeProperty(p));
+        };
+
+        // Repair letters under the pointer; once the visitor stops, sweep the rest in reading order.
+        const makeRepairable = (el, chars) => {
+            let idle;
+            const sweep = (delay) => {
+                clearTimeout(idle);
+                idle = setTimeout(function step() {
+                    const c = chars.find((c) => !c.dataset.ok);
+                    if (!c) return;
+                    repair(c);
+                    idle = setTimeout(step, 60);
+                }, delay);
+            };
+            el.addEventListener("pointermove", (e) => {
+                chars.forEach((c) => {
+                    if (c.dataset.ok) return;
+                    const r = c.getBoundingClientRect();
+                    const d = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2));
+                    if (d < r.height * 0.7) repair(c);
+                });
+                sweep(3500);
+            });
+            return sweep;
+        };
+
+        // --- Hero headline: lines from the copy on wide screens, one word per line on narrow ones ---
+
+        const hero = document.getElementById("hero-word");
+        if (hero) {
+            const lines = [...hero.querySelectorAll(".hero-line")].map((l) => {
+                const spaced = /\s/.test(l.textContent.trim());
+                return { spaced, words: splitWords(l.textContent).map(makeWord) };
+            });
+            const chars = lines.flatMap((l) => l.words.flatMap((w) => [...w.children]));
+            let layout = null;
+            let lastWidth = 0;
+
+            const build = (narrow) => {
+                hero.textContent = "";
+                const groups = narrow
+                    ? lines.flatMap((l) => (l.spaced ? l.words.map((w) => ({ spaced: true, words: [w] })) : [l]))
+                    : lines;
+                groups.forEach((g) => {
+                    const line = document.createElement("span");
+                    line.className = "hero-line";
+                    line.setAttribute("aria-hidden", "true");
+                    g.words.forEach((w, i) => {
+                        if (i && g.spaced) line.appendChild(document.createTextNode(" "));
+                        line.appendChild(w);
+                    });
+                    hero.appendChild(line);
+                });
+            };
+
+            // Fill the width, or the height left between the brand and the base row, whichever runs out first.
+            let lastHeight = 0;
+            const fit = (force) => {
+                const width = hero.clientWidth;
+                hero.style.fontSize = "1px";
+                const height = hero.clientHeight;
+                if (width === lastWidth && height === lastHeight && force !== true) {
+                    hero.style.fontSize = hero.dataset.fitted;
+                    return;
+                }
+                lastWidth = width;
+                lastHeight = height;
+                const next = width < 620 ? "narrow" : "wide";
+                if (next !== layout) {
+                    layout = next;
+                    build(layout === "narrow");
+                }
+                hero.style.fontSize = "100px";
+                const widest = Math.max(...[...hero.children].map((l) => l.offsetWidth));
+                const byHeight = height / (hero.children.length * 0.8);
+                hero.dataset.fitted = Math.max(40, Math.min((100 * width) / widest, byHeight)).toFixed(2) + "px";
+                hero.style.fontSize = hero.dataset.fitted;
+            };
+
+            fit(true);
+            new ResizeObserver(() => fit()).observe(hero);
+            addEventListener("resize", () => fit(true));
+            document.fonts.ready.then(() => fit(true));
+
+            if (!reduce) {
+                const sweep = makeRepairable(hero, chars);
+                const breakHero = () => {
+                    chars.forEach((c) => {
+                        scramble(c, 1);
+                        c.classList.toggle("tofu", Math.random() < 0.2);
+                    });
+                    sweep(4000);
+                };
+                hero.addEventListener("click", breakHero);
+                breakHero();
+            }
+        }
+
+        // --- Rolling site name ---
+
+        const roll = document.getElementById("roll");
+        const sites = [...document.querySelectorAll("#wall [role='listitem']")].map((s) => s.textContent);
+        if (roll && sites.length && !reduce) {
+            let index = 0;
+            let current = document.createElement("span");
+            current.textContent = roll.textContent;
+            roll.textContent = "";
+            roll.appendChild(current);
+            setInterval(() => {
+                index = (index + 1) % sites.length;
+                const next = document.createElement("span");
+                next.textContent = sites[index];
+                next.className = "next";
+                roll.appendChild(next);
+                void next.offsetWidth;
+                next.className = "";
+                current.className = "prev";
+                const old = current;
+                setTimeout(() => old.remove(), 550);
+                current = next;
+            }, 1600);
+        }
+
+        // --- Problem cards: a missing letter or two, repaired while hovered ---
+
+        document.querySelectorAll(".break-name").forEach((el) => {
+            const chars = letterize(el).filter((c) => /\p{L}/u.test(c.textContent));
+            const picks = chars.length > 8 ? [0.3, 0.75] : [0.45];
+            const broken = [...new Set(picks.map((p) => chars[Math.floor(p * (chars.length - 1))]))];
+            const breakIt = () =>
+                broken.forEach((c) => {
+                    scramble(c, 0.6);
+                    c.classList.add("tofu");
+                });
+            if (reduce) return;
+            breakIt();
+            const card = el.closest(".break");
+            card.addEventListener("pointerenter", () => broken.forEach(repair));
+            card.addEventListener("pointerleave", breakIt);
         });
 
-        sync();
+        // --- Supported sites: a slow highlight walks the list ---
+
+        const wall = document.getElementById("wall");
+        if (wall && !reduce) {
+            const names = [...wall.querySelectorAll("[role='listitem']")];
+            let lit = 0;
+            let hovering = false;
+            names[0].classList.add("lit");
+            wall.addEventListener("pointerenter", () => {
+                hovering = true;
+                names.forEach((n) => n.classList.remove("lit"));
+            });
+            wall.addEventListener("pointerleave", () => (hovering = false));
+            setInterval(() => {
+                if (hovering) return;
+                names[lit].classList.remove("lit");
+                lit = (lit + 1) % names.length;
+                names[lit].classList.add("lit");
+            }, 900);
+        }
+
+        // --- Stats count up once when they scroll into view ---
+
+        if (!reduce) {
+            const io = new IntersectionObserver(
+                (entries) =>
+                    entries.forEach((entry) => {
+                        if (!entry.isIntersecting) return;
+                        io.unobserve(entry.target);
+                        const el = entry.target;
+                        const end = Number(el.dataset.count);
+                        const t0 = performance.now();
+                        (function step(t) {
+                            const p = Math.min(1, (t - t0) / 1100);
+                            el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))).toLocaleString("en-US") + "+";
+                            if (p < 1) requestAnimationFrame(step);
+                        })(t0);
+                    }),
+                { threshold: 0.6 },
+            );
+            document.querySelectorAll("[data-count]").forEach((el) => io.observe(el));
+        }
+
+        // --- Customization: searchable list, collapsed to a preview ---
+
+        const grid = document.getElementById("customization-grid");
+        const search = document.getElementById("customization-search");
+        const toggle = document.getElementById("customization-toggle");
+        const empty = document.getElementById("customization-empty");
+        if (grid && search && toggle && empty) {
+            const rows = [...grid.children].map((li) => ({
+                li,
+                parts: [...li.children].map((el) => ({ el, text: el.textContent })),
+            }));
+            const escape = (s) => s.replace(/[&<>]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" })[c]);
+            const highlight = (text, term) => {
+                const i = term ? text.toLowerCase().indexOf(term) : -1;
+                if (i < 0) return escape(text);
+                return escape(text.slice(0, i)) + "<mark>" + escape(text.slice(i, i + term.length)) + "</mark>" + escape(text.slice(i + term.length));
+            };
+            const render = () => {
+                const term = search.value.trim().toLowerCase();
+                let shown = 0;
+                rows.forEach(({ li, parts }) => {
+                    const hit = !term || parts.some((p) => p.text.toLowerCase().includes(term));
+                    li.hidden = !hit;
+                    if (hit) shown++;
+                    parts.forEach((p) => (p.el.innerHTML = highlight(p.text, term)));
+                });
+                empty.hidden = shown > 0;
+                toggle.hidden = !!term;
+                grid.classList.toggle("is-collapsed", !term && toggle.getAttribute("aria-expanded") === "false");
+            };
+            search.addEventListener("input", render);
+            toggle.addEventListener("click", () => {
+                const open = toggle.getAttribute("aria-expanded") === "true";
+                toggle.setAttribute("aria-expanded", String(!open));
+                toggle.textContent = open ? toggle.dataset.labelMore : toggle.dataset.labelLess;
+                render();
+            });
+            render();
+        }
+
+        // --- Copy the clone command ---
+
+        const copy = document.getElementById("clone-copy");
+        const command = document.getElementById("clone-command");
+        if (copy && command) {
+            const label = copy.textContent.trim();
+            copy.addEventListener("click", () => {
+                const done = () => {
+                    copy.textContent = copy.dataset.labelCopied;
+                    setTimeout(() => (copy.textContent = label), 1600);
+                };
+                navigator.clipboard.writeText(command.textContent).then(done, () => {
+                    const range = document.createRange();
+                    range.selectNodeContents(command);
+                    const sel = getSelection();
+                    sel.removeAllRanges();
+                    sel.addRange(range);
+                });
+            });
+        }
+
+        // --- Closing line: broken like the hero, repaired by the cursor or after a while on screen ---
+
+        const closing = document.getElementById("closing-heading");
+        if (closing && !reduce) {
+            // Break about two in five letters; three of those become missing-glyph boxes.
+            const chars = letterize(closing);
+            chars.forEach((c) => (c.dataset.ok = "1"));
+            const letters = chars.filter((c) => /\p{L}/u.test(c.textContent)).sort(() => Math.random() - 0.5);
+            letters.slice(0, Math.round(letters.length * 0.4)).forEach((c, i) => {
+                scramble(c, 1);
+                if (i < 3) c.classList.add("tofu");
+            });
+            const sweep = makeRepairable(closing, chars);
+            new IntersectionObserver(
+                (entries, observer) => {
+                    if (!entries[0].isIntersecting) return;
+                    sweep(5000);
+                    observer.disconnect();
+                },
+                { threshold: 0.6 },
+            ).observe(closing);
+        }
     })();
 </script>

@@ -8,48 +8,71 @@
         "ariaLabel": "Choose site language"
     },
     "hero": {
-        "heading": "The link looked broken. The conversation shouldn’t.",
-        "tagline": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord.",
+        "headingLines": [
+            "Links that",
+            "actually",
+            "embed."
+        ],
+        "tagline": "Embed Fixer reposts broken social links so the full post shows, right in Discord.",
+        "sitesLead": "{count} sites, including",
         "ctaAdd": "Add to Discord",
-        "ctaGithub": "View on GitHub",
-        "relay": {
-            "ariaLabel": "How webhook relay works",
-            "incomingLabel": "incoming",
-            "incomingValue": "https://x.com/...",
-            "actionLabel": "action",
-            "actionValue": "Delete + resend through webhook with your avatar and username",
-            "resultLabel": "result",
-            "resultValue": "Playable media, full previews, readable content"
-        }
+        "ctaGithub": "View on GitHub"
     },
     "problem": {
         "eyebrow": "Problem",
         "heading": "Discord strips the point out of shared posts.",
-        "items": [
-            "Twitter/X previews fail or load partially.",
-            "Pixiv and Instagram often hide core media.",
-            "TikTok and Reddit links lose playable videos.",
-            "Broken link forces users to leave Discord."
+        "cards": [
+            {
+                "name": "Twitter/X",
+                "text": "Previews fail or load halfway."
+            },
+            {
+                "name": "Pixiv, Instagram",
+                "text": "The image you shared is often missing."
+            },
+            {
+                "name": "TikTok, Reddit",
+                "text": "Videos arrive without playback."
+            },
+            {
+                "name": "Your members",
+                "text": "Leave Discord just to see what you posted."
+            }
         ]
     },
     "features": {
         "eyebrow": "Features",
-        "heading": "Features that are well-thoughtout and actually useful.",
-        "items": [
-            "Automatic fixing through webhook reposting with your username + avatar.",
-            "Manual fixings with /fix in DMs and unsupported servers.",
-            "Media extraction for supported links in a gallery-like view.",
-            "Numerous settings to customize behavior and tailor to your server’s needs."
+        "heading": "Well thought out, and actually useful.",
+        "list": [
+            {
+                "title": "Automatic",
+                "text": "Broken links are reposted through a webhook with the sender’s name and avatar. Nobody has to do anything.",
+                "tag": "Webhook relay"
+            },
+            {
+                "title": "Fix by hand",
+                "text": "Use /fix in DMs or in servers where the bot isn’t installed.",
+                "tag": "Slash command"
+            },
+            {
+                "title": "Media extraction",
+                "text": "Pull images and videos out of supported links into a gallery-style view.",
+                "tag": "X, Pixiv"
+            },
+            {
+                "title": "Your rules",
+                "text": "{count} settings decide where, when and how links get fixed in your server.",
+                "tag": "Per server"
+            }
         ]
     },
     "platforms": {
-        "eyebrow": "Supported Platforms",
-        "heading": "From mainstream to niche, if the embed is broken, we’ll fix it.",
+        "eyebrow": "Supported sites",
+        "heading": "From mainstream to niche. If the embed is broken, we fix it.",
         "ariaLabel": "Supported platform list"
     },
     "proof": {
-        "eyebrow": "Social Proof",
-        "heading": "Trusted by the communities.",
+        "heading": "Trusted by communities",
         "ariaLabel": "Embed Fixer usage stats",
         "statLabels": [
             "Discord servers",
@@ -57,12 +80,14 @@
         ]
     },
     "customization": {
-        "eyebrow": "Very Customizable",
+        "eyebrow": "Customization",
         "heading": "Tune almost every behavior to fit your server.",
-        "body": "The most powerful part about Embed Fixer is that almost every behavior can be customized or toggled to your liking, including niche features shaped by real community needs.",
-        "resetNote": "All settings are unique to each server. Use /reset to restore default values.",
+        "body": "Nearly everything can be changed or switched off, including niche options that came from real community requests.",
         "ariaLabel": "Customizable settings list",
-        "showAll": "Show all settings",
+        "searchLabel": "Filter settings",
+        "searchPlaceholder": "Search",
+        "noResults": "No setting matches that. Try “role”, “channel” or “webhook”.",
+        "showAll": "Show all",
         "showFewer": "Show fewer",
         "settings": [
             {
@@ -70,86 +95,82 @@
                 "description": "Change the language used by the bot."
             },
             {
-                "label": "Disable Embed Fixes for Websites",
-                "description": "Disable embed fixes for specific websites."
+                "label": "Disable embed fixes for websites",
+                "description": "Turn off fixes for specific websites."
             },
             {
-                "label": "Media Extraction Channels",
-                "description": "Extract images/videos from Twitter/X or Pixiv links in selected channels."
+                "label": "Media extraction channels",
+                "description": "Extract images and videos from X or Pixiv links in selected channels."
             },
             {
-                "label": "Embed Fix Channel Blacklist",
-                "description": "Channels here will not receive embed fixes."
+                "label": "Channel blacklist",
+                "description": "Channels here never receive embed fixes."
             },
             {
-                "label": "Embed Fix Channel Whitelist",
-                "description": "Only selected channels receive embed fixes, and this overrides blacklist rules."
+                "label": "Channel whitelist",
+                "description": "Only selected channels receive embed fixes. Overrides the blacklist."
             },
             {
-                "label": "Toggle Webhook Reply",
-                "description": "Toggle pinging the original author when replying via webhook."
+                "label": "Webhook reply ping",
+                "description": "Choose whether replying through the webhook pings the original author."
             },
             {
-                "label": "Disable Automatic Spoilering in NSFW Channels",
+                "label": "NSFW auto-spoiler",
                 "description": "Skip automatic spoiler tags for extracted media in selected NSFW channels."
             },
             {
-                "label": "Toggle Delete Message Reaction",
-                "description": "Add reactions so original authors can delete webhook messages."
+                "label": "Delete reaction",
+                "description": "Add a reaction the original author can use to delete the webhook message."
             },
             {
-                "label": "Show Post Content Channels",
-                "description": "Show post text content in selected channels when media extraction is enabled."
+                "label": "Show post text",
+                "description": "Show the post’s text in selected channels when media extraction is on."
             },
             {
-                "label": "Change Delete Message Reaction Emoji",
+                "label": "Delete reaction emoji",
                 "description": "Choose which emoji is used for delete-by-reaction."
             },
             {
-                "label": "Choose Embed Fix Service",
-                "description": "Choose the embed fix service used for different websites."
+                "label": "Embed fix service",
+                "description": "Choose which fix service is used for each website."
             },
             {
-                "label": "Bot Visibility",
-                "description": "Choose whether links sent by other bots should also be fixed."
+                "label": "Bot visibility",
+                "description": "Choose whether links sent by other bots are fixed too."
             },
             {
-                "label": "Funnel to Target Channel",
-                "description": "Send fixed embeds and extracted media to a target channel instead of the source channel."
+                "label": "Funnel to target channel",
+                "description": "Send fixed embeds and extracted media to one channel instead of the source."
             },
             {
-                "label": "Whitelist Roles",
-                "description": "Only users with selected roles get embed fixes. Leave empty to disable."
+                "label": "Whitelist roles",
+                "description": "Only members with selected roles get fixes. Leave empty to disable."
             },
             {
-                "label": "Toggle Original Link Button",
-                "description": "Show or hide a button linking to the original post."
+                "label": "Original link button",
+                "description": "Show or hide a button that links to the original post."
             },
             {
-                "label": "Toggle Deleting Original Messages in Threads",
-                "description": "Delete original thread messages after sending fixed embeds through supported flow."
+                "label": "Delete originals in threads",
+                "description": "Delete the original thread message after the fixed embed is sent."
             },
             {
-                "label": "Reply Instead of Delete",
-                "description": "Reply to the original message with the fixed embed instead of deleting and resending."
+                "label": "Reply instead of delete",
+                "description": "Reply with the fixed embed instead of deleting and resending."
             }
         ]
     },
     "hosting": {
         "eyebrow": "Self-hosting",
-        "heading": "Care about privacy? Open source comes to the rescue.",
-        "body": "Run Embed Fixer on your own machine if you want maximum control over your data and configuration.",
+        "heading": "Care about privacy? Run it yourself.",
+        "body": "Embed Fixer is open source. Host it on your own machine for full control over your data and configuration.",
         "cta": "Self-hosting Instructions",
-        "tags": [
-            "Docker + SQLite/PostgreSQL",
-            "Local via uv",
-            "Optional Redis"
-        ]
+        "copy": "Copy",
+        "copied": "Copied"
     },
     "closing": {
         "eyebrow": "Call to action",
-        "heading": "If your server shares links, this belongs in it.",
-        "body": "Stop leaving Discord for broken embeds. Add Embed Fixer and keep every conversation intact."
+        "heading": "If your server shares links, this belongs in it."
     },
     "footer": {
         "copyright": "Copyright © 2026 Seria Ati. All rights reserved."

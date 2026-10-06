@@ -75,7 +75,7 @@
             },
             {
                 "label": "Kênh Trích Xuất Phương Tiện",
-                "description": "Hình ảnh/Video từ các liên kết Twitter/X/Pixiv được gửi trong các kênh này sẽ được trích xuất."
+                "description": "Trích xuất hình ảnh và video từ các liên kết được hỗ trợ trong các kênh đã chọn."
             },
             {
                 "label": "Danh Sách Đen Kênh Nhúng Sửa",
@@ -130,8 +130,16 @@
                 "description": "Vì chủ đề không thể có webhook, tin nhắn gốc được giữ lại để biết ai đã gửi. Bật tính năng này sẽ xóa tin nhắn gốc trong chủ đề sau khi gửi nhúng đã sửa."
             },
             {
-                "label": "Trả lời thay vì xóa",
-                "description": "Trả lời tin nhắn gốc bằng embed đã sửa thay vì xóa rồi gửi lại."
+                "label": "Chế Độ Sửa",
+                "description": "Xóa rồi gửi lại qua webhook, trả lời tin nhắn gốc, hoặc gửi lại dưới tên bot."
+            },
+            {
+                "label": "Tự Động Gỡ Biểu Cảm Xóa",
+                "description": "Gỡ biểu cảm xóa sau số giây đã đặt."
+            },
+            {
+                "label": "Biểu Cảm Đổi Dịch Vụ Sửa",
+                "description": "Thêm biểu cảm 🔄 để tác giả gốc có thể chuyển sang dịch vụ Nhúng Sửa tiếp theo."
             }
         ]
     },

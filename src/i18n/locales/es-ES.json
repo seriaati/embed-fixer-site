@@ -75,7 +75,7 @@
             },
             {
                 "label": "Canales Con Extracción Multimedia",
-                "description": "La extracción de multimedia para los enlaces de Twitter/X/Pixiv está habilitada para los siguientes canales."
+                "description": "Extrae imágenes y vídeos de los enlaces compatibles en los canales seleccionados."
             },
             {
                 "label": "Ajustar Canales No Permitidos Para Embed Fixer",
@@ -130,8 +130,16 @@
                 "description": "Por limitaciones técnicas, los hilos no soportan webhooks; por lo tanto el mensaje original se mantendrá. Activando esta opción hará que el mensaje sea eliminado y posteriormente se publicará el enlace corregido."
             },
             {
-                "label": "Responder en lugar de borrar",
-                "description": "Responde al mensaje original con el embed arreglado en lugar de borrar y reenviar."
+                "label": "Modo De Arreglo",
+                "description": "Borra y reenvía mediante un webhook, responde al mensaje original o reenvía como el bot."
+            },
+            {
+                "label": "Quitar Automáticamente La Reacción Para Eliminar",
+                "description": "Quita la reacción para eliminar tras el número de segundos indicado."
+            },
+            {
+                "label": "Reacción Para Cambiar De Servicio",
+                "description": "Añade una reacción 🔄 que el autor original puede usar para cambiar al siguiente servicio de embed fix."
             }
         ]
     },

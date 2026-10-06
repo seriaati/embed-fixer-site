@@ -100,7 +100,7 @@
             },
             {
                 "label": "Media extraction channels",
-                "description": "Extract images and videos from X or Pixiv links in selected channels."
+                "description": "Extract images and videos from supported links in selected channels."
             },
             {
                 "label": "Channel blacklist",
@@ -155,8 +155,16 @@
                 "description": "Delete the original thread message after the fixed embed is sent."
             },
             {
-                "label": "Reply instead of delete",
-                "description": "Reply with the fixed embed instead of deleting and resending."
+                "label": "Fix mode",
+                "description": "Delete and resend through a webhook, reply to the original, or resend as the bot."
+            },
+            {
+                "label": "Auto-remove delete reaction",
+                "description": "Remove the delete reaction after a set number of seconds."
+            },
+            {
+                "label": "Rotate fix reaction",
+                "description": "Add a 🔄 reaction the original author can use to switch to the next fix service."
             }
         ]
     },

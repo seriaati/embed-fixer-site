@@ -75,7 +75,7 @@
             },
             {
                 "label": "Media Extractie Kanalen",
-                "description": "Afbeeldingen/video's van Twitter/X/Pixiv-links die in deze kanalen worden verzonden, worden geëxtraheerd."
+                "description": "Haal afbeeldingen en video's uit ondersteunde links in geselecteerde kanalen."
             },
             {
                 "label": "Embed Fix Kanalen Blacklist",
@@ -130,8 +130,16 @@
                 "description": "Omdat threads geen webhooks kunnen hebben, wordt het originele bericht bewaard om te weten wie het heeft verzonden. Door dit in te schakelen wordt het originele bericht in threads verwijderd na het verzenden van de gefixte embed."
             },
             {
-                "label": "Antwoorden in plaats van verwijderen",
-                "description": "Reageer met de gefixte embed op het originele bericht in plaats van verwijderen en opnieuw sturen."
+                "label": "Fix Modus",
+                "description": "Verwijder en stuur opnieuw via een webhook, antwoord op het originele bericht, of stuur opnieuw als de bot."
+            },
+            {
+                "label": "Verwijder Reactie Automatisch Weghalen",
+                "description": "Haal de verwijderreactie weg na een ingesteld aantal seconden."
+            },
+            {
+                "label": "Wissel Fix Reactie",
+                "description": "Voeg een 🔄-reactie toe waarmee de oorspronkelijke auteur naar de volgende Embed Fix service kan wisselen."
             }
         ]
     },

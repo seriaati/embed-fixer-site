@@ -1,163 +1,184 @@
 {
     "meta": {
-        "title": "Embed Fixer | Discord bot die social media embeds fixt",
-        "description": "Embed Fixer herkent kapotte social media links en plaatst ze opnieuw via webhooks, zodat previews wél goed laden in Discord. Ondersteunt alle populaire platforms, wordt vertrouwd door 1200+ servers en is open-source voor eigen hosting."
+        "title": "Embed Fixer | Discord-bot voor het herstellen van link-previews van sociale media",
+        "description": "Embed Fixer plaatst links van X, Pixiv, TikTok, Instagram, Reddit en meer opnieuw, zodat previews wél goed laden in Discord. Gebruikt in 3700+ servers, open-source en zelf te hosten."
     },
     "languageSelector": {
         "label": "Taal",
         "ariaLabel": "Kies websitetaal"
     },
     "hero": {
-        "heading": "De link is stuk. Je gesprek hoeft dat niet te zijn.",
-        "tagline": "Embed Fixer onderschept kapotte social media links en plaatst ze opnieuw via webhooks, zodat embeds altijd correct worden weergegeven in Discord.",
+        "headingLines": [
+            "Links die",
+            "wél echt",
+            "goed laden."
+        ],
+        "tagline": "Wanneer een social link geen goede preview toont, plaatst Embed Fixer deze opnieuw met een werkende voorvertoning, onder de naam van de afzender.",
+        "sitesLead": "{count} websites, waaronder",
         "ctaAdd": "Toevoegen aan Discord",
-        "ctaGithub": "Bekijk op GitHub",
-        "relay": {
-            "ariaLabel": "Hoe de webhook-relay werkt",
-            "incomingLabel": "inkomend",
-            "incomingValue": "https://x.com/...",
-            "actionLabel": "actie",
-            "actionValue": "Verwijderen + opnieuw verzenden via webhook met jouw avatar en naam",
-            "resultLabel": "resultaat",
-            "resultValue": "Afspeelbare media, volledige previews, leesbare content"
-        }
+        "ctaGithub": "Bekijk op GitHub"
     },
     "problem": {
-        "eyebrow": "Het Probleem",
-        "heading": "Discord haalt de lol uit gedeelde berichten.",
-        "items": [
-            "Twitter/X previews laden niet of slechts gedeeltelijk.",
-            "Pixiv en Instagram verbergen vaak de belangrijkste media.",
-            "TikTok- en Reddit-links verliezen hun afspeelbare video's.",
-            "Kapotte links dwingen gebruikers om Discord te verlaten."
+        "eyebrow": "Het probleem",
+        "heading": "Discords eigen previews missen vaak precies het deel dat je wilde delen.",
+        "cards": [
+            {
+                "name": "Twitter/X",
+                "text": "Soms is er helemaal geen preview, soms maar de helft."
+            },
+            {
+                "name": "Pixiv, Instagram",
+                "text": "Je krijgt een titelkaart te zien, maar niet de afbeelding."
+            },
+            {
+                "name": "TikTok, Reddit",
+                "text": "Video's verschijnen als een thumbnail die niet wil afspelen."
+            },
+            {
+                "name": "Je leden",
+                "text": "Moeten hun browser openen om te zien wat je nou eigenlijk deelde."
+            }
         ]
     },
     "features": {
-        "eyebrow": "Features",
-        "heading": "Functies die écht doordacht en nuttig zijn.",
-        "items": [
-            "Automatisch herstel via webhooks, met behoud van je eigen gebruikersnaam en avatar.",
-            "Handmatige fixes met /fix in DM's en niet-ondersteunde servers.",
-            "Media-extractie voor ondersteunde links in een overzichtelijke galerij.",
-            "Talloze instellingen om de bot aan te passen aan de behoeften van jouw server."
+        "eyebrow": "Functies",
+        "heading": "Fixt link-previews uit zichzelf, of handmatig wanneer jij dat wilt.",
+        "list": [
+            {
+                "title": "Automatisch",
+                "text": "Plaats een link zoals gewoonlijk. Embed Fixer plaatst hem opnieuw via een webhook met jouw naam en avatar, plus een reactie waarmee je hem weer kunt verwijderen.",
+                "tag": "Webhook-relay"
+            },
+            {
+                "title": "Handmatig herstellen",
+                "text": "Installeer hem als gebruikersapp om /fix of het rechtermuisknopmenu te gebruiken in DM's en servers waar de bot niet aanwezig is.",
+                "tag": "Slash-commando"
+            },
+            {
+                "title": "Media-extractie",
+                "text": "In geselecteerde kanalen worden afbeeldingen en video's van X, Pixiv, Bluesky en Kemono als bestanden verzonden. Gespoilerde links blijven netjes gespoilerd.",
+                "tag": "Per kanaal"
+            },
+            {
+                "title": "Jouw regels",
+                "text": "{count} instellingen bepalen welke sites, kanalen en rollen fixes ontvangen en hoe het herstelde bericht wordt verzonden. Leden kunnen zich afmelden met /ignore-me.",
+                "tag": "Per server"
+            }
         ]
     },
     "platforms": {
-        "eyebrow": "Ondersteunde Platformen",
-        "heading": "Van mainstream tot niche: als er een fixer bestaat, ondersteunen we het.",
-        "ariaLabel": "Lijst met ondersteunde platformen"
+        "eyebrow": "Ondersteunde sites",
+        "heading": "Grote platforms en niche-sites, de meeste met keuze uit meerdere fixerdiensten.",
+        "ariaLabel": "Lijst met ondersteunde platforms"
     },
     "proof": {
-        "eyebrow": "Social Proof",
-        "heading": "Vertrouwd door de community.",
-        "ariaLabel": "Embed Fixer statistieken",
+        "heading": "Tot nu toe",
+        "ariaLabel": "Embed Fixer gebruiksstatistieken",
         "statLabels": [
-            "Discord servers",
-            "GitHub stars"
+            "Discord-servers",
+            "GitHub-sterren"
         ]
     },
     "customization": {
-        "eyebrow": "Zeer aanpasbaar",
-        "heading": "Stel bijna elk gedrag af op jouw server.",
-        "body": "Het sterkste punt van Embed Fixer is dat bijna elk gedrag aangepast of in- en uitgeschakeld kan worden, inclusief nichefuncties die uit echte gebruikersvragen zijn ontstaan.",
-        "resetNote": "Alle instellingen zijn uniek per server. Gebruik /reset om terug te gaan naar de standaardwaarden.",
+        "eyebrow": "Aanpasbaarheid",
+        "heading": "Past een standaardwaarde niet bij je server? Pas hem aan.",
+        "body": "De meeste van deze instellingen zijn toegevoegd op verzoek van gebruikers. Stel ze direct in met /settings in Discord.",
         "ariaLabel": "Lijst met aanpasbare instellingen",
-        "showAll": "Alle instellingen tonen",
+        "searchLabel": "Instellingen filteren",
+        "searchPlaceholder": "Zoeken",
+        "noResults": "Geen overeenkomende instelling gevonden. Probeer “role”, “channel” of “webhook”.",
+        "showAll": "Alles tonen",
         "showFewer": "Minder tonen",
         "settings": [
             {
                 "label": "Taal",
-                "description": "Verander de taal van de bot."
+                "description": "Verander de taal die door de bot wordt gebruikt."
             },
             {
-                "label": "Schakel Embed Fixes Voor Websites Uit",
-                "description": "Schakel Embed Fixes uit voor specifieke websites."
+                "label": "Link-previews uitschakelen voor websites",
+                "description": "Schakel herstel van previews uit voor specifieke websites."
             },
             {
-                "label": "Media Extractie Kanalen",
+                "label": "Media-extractiekanalen",
                 "description": "Haal afbeeldingen en video's uit ondersteunde links in geselecteerde kanalen."
             },
             {
-                "label": "Embed Fix Kanalen Blacklist",
-                "description": "Kanalen hier ontvangen geen Embed Fixes, de whitelist heeft voorrang op de blacklist."
+                "label": "Kanalen-blacklist",
+                "description": "Kanalen in deze lijst ontvangen nooit herstelde link-previews."
             },
             {
-                "label": "Embed Fix Kanalen Whitelist",
-                "description": "Alleen kanalen die hier worden ingesteld, ontvangen Embed Fixes, de whitelist heeft voorrang op de blacklist."
+                "label": "Kanalen-whitelist",
+                "description": "Alleen geselecteerde kanalen ontvangen herstelde link-previews. Heeft voorrang op de blacklist."
             },
             {
-                "label": "Schakel Webhook Antwoord In",
-                "description": "Schakel de ping naar de oorspronkelijke auteur wanneer je op een webhook reageert."
+                "label": "Webhook-antwoord ping",
+                "description": "Kies of antwoorden via de webhook de oorspronkelijke auteur moeten pingen."
             },
             {
-                "label": "Schakel automatische spoilering uit in NSFW kanalen",
-                "description": "Voor de media extractie functie zullen de hier geselecteerde NSFW kanalen de media niet automatisch spoileren."
+                "label": "NSFW auto-spoiler",
+                "description": "Sla automatische spoiler-tags voor geëxtraheerde media over in geselecteerde NSFW-kanalen."
             },
             {
-                "label": "Schakel Bericht Verwijder Reactie",
-                "description": "Of emoji reacties moeten worden toegevoegd aan webhookberichten, zodat de oorspronkelijke auteur deze kan verwijderen door te reageren."
+                "label": "Verwijderreactie",
+                "description": "Voeg een reactie toe waarmee de oorspronkelijke auteur het webhookbericht kan verwijderen."
             },
             {
-                "label": "Kanalen Voor Embeds Tonen",
-                "description": "Als media extractie is ingeschakeld, tonen de hier geselecteerde kanalen de inhoud van het bericht."
+                "label": "Berichttakst tonen",
+                "description": "Toon de tekst van het bericht in geselecteerde kanalen wanneer media-extractie is ingeschakeld."
             },
             {
-                "label": "Wijzig Verwijder Bericht Reactie Emoji",
-                "description": "Wijzig de emoji die wordt gebruikt om berichten te verwijderen."
+                "label": "Verwijderreactie-emoji",
+                "description": "Kies welke emoji wordt gebruikt voor verwijderen via reactie."
             },
             {
-                "label": "Kies de Embed Fix service",
-                "description": "Kies de Embed Fix service die je voor verschillende websites wilt gebruiken."
+                "label": "Preview-hersteldienst",
+                "description": "Kies welke hersteldienst per website wordt gebruikt."
             },
             {
-                "label": "Bot Zichtbaarheid",
-                "description": "Indien ingeschakeld, repareert Embed Fixer embeds die door andere bots zijn verzonden. Indien uitgeschakeld, worden alleen embeds hersteld die door gebruikers zijn verzonden."
+                "label": "Bot-zichtbaarheid",
+                "description": "Kies of links die door andere bots zijn verzonden ook moeten worden hersteld."
             },
             {
-                "label": "Stuur Alles Naar Doel Kanaal",
-                "description": "Indien ingesteld, worden alle vembeds en media naar het doel kanaal verzonden in plaats van naar het oorspronkelijke kanaal."
+                "label": "Doorsluizen naar doelkanaal",
+                "description": "Stuur herstelde previews en geëxtraheerde media naar één kanaal in plaats van het bronkanaal."
             },
             {
-                "label": "Whitelist Rollen",
-                "description": "Indien ingesteld, worden de embeds van alleen gebruikers met een van deze rollen gefixt. Laat leeg om uit te schakelen."
+                "label": "Whitelist-rollen",
+                "description": "Alleen leden met geselecteerde rollen krijgen previews hersteld. Laat leeg om uit te schakelen."
             },
             {
-                "label": "Schakel de knop \"Originele link\" in",
-                "description": "Of er een knop moet worden weergegeven die naar het originele bericht linkt in fixed embed berichten."
+                "label": "Knop voor originele link",
+                "description": "Toon of verberg een knop die naar het oorspronkelijke bericht linkt."
             },
             {
-                "label": "Schakel het verwijderen van originele berichten in threads",
-                "description": "Omdat threads geen webhooks kunnen hebben, wordt het originele bericht bewaard om te weten wie het heeft verzonden. Door dit in te schakelen wordt het originele bericht in threads verwijderd na het verzenden van de gefixte embed."
+                "label": "Oorspronkelijke berichten in threads verwijderen",
+                "description": "Verwijder het oorspronkelijke threadbericht nadat de herstelde preview is verzonden."
             },
             {
-                "label": "Fix Modus",
-                "description": "Verwijder en stuur opnieuw via een webhook, antwoord op het originele bericht, of stuur opnieuw als de bot."
+                "label": "Herstelmodus",
+                "description": "Verwijder en stuur opnieuw via een webhook, antwoord op het origineel, of stuur opnieuw als bot."
             },
             {
-                "label": "Verwijder Reactie Automatisch Weghalen",
-                "description": "Haal de verwijderreactie weg na een ingesteld aantal seconden."
+                "label": "Verwijderreactie automatisch weghalen",
+                "description": "Verwijder de verwijderreactie na een ingesteld aantal seconden."
             },
             {
-                "label": "Wissel Fix Reactie",
-                "description": "Voeg een 🔄-reactie toe waarmee de oorspronkelijke auteur naar de volgende Embed Fix service kan wisselen."
+                "label": "Hersteldienst roteren via reactie",
+                "description": "Voeg een 🔄-reactie toe waarmee de oorspronkelijke auteur kan doorschakelen naar de volgende hersteldienst."
             }
         ]
     },
     "hosting": {
         "eyebrow": "Zelf hosten",
-        "heading": "Privacy-fanaat? Open-source schiet te hulp.",
-        "body": "Draai Embed Fixer op je eigen machine als je volledige controle wilt over je data en configuratie.",
+        "heading": "Houd je je gegevens liever in eigen beheer? Host hem zelf.",
+        "body": "Embed Fixer is open-source. Draai hem via Docker op SQLite of PostgreSQL, zodat al je serverinstellingen gewoon op je eigen machine blijven.",
         "cta": "Instructies voor zelf hosten",
-        "tags": [
-            "Docker + SQLite/PostgreSQL",
-            "Lokaal via uv",
-            "Optioneel Redis"
-        ]
+        "copy": "Kopiëren",
+        "copied": "Gekopieerd"
     },
     "closing": {
-        "eyebrow": "Aan de slag",
-        "heading": "Als er in je server links worden gedeeld, hoort deze bot erbij.",
-        "body": "Stop met het verlaten van Discord voor kapotte previews. Voeg Embed Fixer toe en houd elk gesprek intact."
+        "eyebrow": "Oproep tot actie",
+        "heading": "Eén keer toevoegen en gedeelde links laden voortaan altijd goed."
     },
     "footer": {
         "copyright": "Copyright © 2026 Seria Ati. Alle rechten voorbehouden."

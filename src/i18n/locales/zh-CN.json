@@ -1,163 +1,184 @@
 {
     "meta": {
-        "title": "Embed Fixer | 专为修复 Discord 社交媒体预览而生的机器人",
-        "description": "Embed Fixer 会拦截失效的社交媒体链接，并通过 Webhook 重新发布，确保预览在 Discord 中正常显示。支持各大热门平台，深受 1200+ 服务器信任，且完全开源，支持自托管。"
+        "title": "Embed Fixer | 专为修复社交媒体预览打造的 Discord 机器人",
+        "description": "Embed Fixer 会自动转发来自 X、Pixiv、TikTok、Instagram、Reddit 等平台的链接，确保预览能在 Discord 中正常显示。已被 3700+ 服务器采用，开源且支持自托管。"
     },
     "languageSelector": {
         "label": "语言",
         "ariaLabel": "选择网站语言"
     },
     "hero": {
-        "heading": "链接失效了，但对话不该因此中断。",
-        "tagline": "Embed Fixer 拦截失效的社交链接，并通过 Webhook 重新发布，让预览内容在 Discord 内完美呈现。",
+        "headingLines": [
+            "让链接",
+            "真正能够",
+            "正常显示预览。"
+        ],
+        "tagline": "当社交媒体链接无法正常预览时，Embed Fixer 会以发送者的名义，重新发送能正常显示预览的消息。",
+        "sitesLead": "支持 {count} 个平台，包括",
         "ctaAdd": "添加至 Discord",
-        "ctaGithub": "在 GitHub 上查看",
-        "relay": {
-            "ariaLabel": "Webhook 转发工作原理",
-            "incomingLabel": "输入",
-            "incomingValue": "https://x.com/...",
-            "actionLabel": "处理",
-            "actionValue": "删除原消息，并利用你的头像和用户名通过 Webhook 重新发送",
-            "resultLabel": "结果",
-            "resultValue": "可播放的媒体、完整的预览、清晰的内容"
-        }
+        "ctaGithub": "在 GitHub 上查看"
     },
     "problem": {
-        "eyebrow": "问题所在",
-        "heading": "Discord 的预览失效，让分享内容失去了意义。",
-        "items": [
-            "Twitter/X 预览失败或仅加载部分内容。",
-            "Pixiv 和 Instagram 经常隐藏核心媒体内容。",
-            "TikTok 和 Reddit 链接丢失了可播放的上下文。",
-            "损坏的链接迫使消息接收者必须离开 Discord 才能查看。"
+        "eyebrow": "常见痛点",
+        "heading": "Discord 原生的预览常常会遗漏你想分享的关键内容。",
+        "cards": [
+            {
+                "name": "Twitter/X",
+                "text": "有时完全没有预览，有时只加载出一半。"
+            },
+            {
+                "name": "Pixiv、Instagram",
+                "text": "只看到标题卡片，图片却完全刷不出来。"
+            },
+            {
+                "name": "TikTok、Reddit",
+                "text": "视频只显示为一张无法播放的缩略图。"
+            },
+            {
+                "name": "服务器成员",
+                "text": "为了看清你发了什么，还得专门打开浏览器。"
+            }
         ]
     },
     "features": {
-        "eyebrow": "功能特色",
-        "heading": "经过深思熟虑且真正实用的功能。",
-        "items": [
-            "通过 Webhook 以你的用户名和头像自动重新发布并修复预览。",
-            "支持在私聊或未添加机器人的服务器中，通过 /fix 进行手动修复。",
-            "为支持的链接提取媒体，并以画廊形式展示。",
-            "丰富的设置项，可根据服务器需求自定义机器人行为。"
+        "eyebrow": "功能特性",
+        "heading": "自动修复链接预览，也能在需要时随时手动处理。",
+        "list": [
+            {
+                "title": "全自动处理",
+                "text": "照常发送链接即可。Embed Fixer 会通过 Webhook 带着你的昵称与头像重新发送，并附带可用于删除该消息的表情反应。",
+                "tag": "Webhook 转发"
+            },
+            {
+                "title": "手动修复",
+                "text": "安装为用户应用后，即可在私聊或未添加机器人的服务器中通过 /fix 或右键菜单随时修复。",
+                "tag": "斜杠命令"
+            },
+            {
+                "title": "媒体提取",
+                "text": "在指定频道中，来自 X、Pixiv、Bluesky 和 Kemono 的图片与视频会以文件形式直接发送。带有剧透/防雷标记的链接将保持防剧透状态。",
+                "tag": "分频道设置"
+            },
+            {
+                "title": "规则完全由你定",
+                "text": "提供 {count} 项详细配置，涵盖支持的站点、生效频道、身份组以及修复消息的发送方式。成员可随时通过 /ignore-me 自主退出。",
+                "tag": "分服务器设置"
+            }
         ]
     },
     "platforms": {
-        "eyebrow": "支持平台",
-        "heading": "从主流到小众，只要有修复方案，我们便提供支持。",
+        "eyebrow": "支持网站",
+        "heading": "涵盖主流平台与小众社区，大部分站点更提供多种修复服务可供切换。",
         "ariaLabel": "支持平台列表"
     },
     "proof": {
-        "eyebrow": "社区口碑",
-        "heading": "深受广大社区信任。",
-        "ariaLabel": "Embed Fixer 使用统计",
+        "heading": "目前成绩",
+        "ariaLabel": "Embed Fixer 使用统计数据",
         "statLabels": [
-            "Discord 服务器",
-            "GitHub 星星数"
+            "个 Discord 服务器",
+            "个 GitHub Star"
         ]
     },
     "customization": {
-        "eyebrow": "高度可定制",
-        "heading": "几乎所有行为都能按你的服务器需求进行调整。",
-        "body": "Embed Fixer 最强大的地方在于，几乎每个行为都可以按需自定义或开关，甚至包含许多基于真实用户需求打造的小众功能。",
-        "resetNote": "所有设置都按服务器独立保存。你可以使用 /reset 恢复默认值。",
+        "eyebrow": "个性化定制",
+        "heading": "如果默认设置不合心意，随时都能按需调整。",
+        "body": "这些选项大部分都是根据用户的真实反馈添加的。在 Discord 中输入 /settings 即可完成配置。",
         "ariaLabel": "可定制设置列表",
-        "showAll": "显示全部设置",
-        "showFewer": "收起",
+        "searchLabel": "筛选设置",
+        "searchPlaceholder": "搜索",
+        "noResults": "未找到匹配的设置。尝试搜索“身份组”、“频道”或“webhook”。",
+        "showAll": "显示全部",
+        "showFewer": "收起部分",
         "settings": [
             {
                 "label": "语言",
                 "description": "更改机器人使用的语言。"
             },
             {
-                "label": "关闭网站的预览嵌入",
-                "description": "关闭特定网站的预览嵌入。"
+                "label": "关闭特定网站的链接预览修复",
+                "description": "关闭特定网站的预览修复功能。"
             },
             {
                 "label": "媒体提取频道",
-                "description": "在所选频道中提取受支持链接里的图片和视频。"
+                "description": "在所选频道中直接提取受支持链接里的图片和视频。"
             },
             {
-                "label": "预览嵌入频道黑名单",
-                "description": "这里的频道将不会接收预览嵌入，白名单优先于黑名单。"
+                "label": "频道黑名单",
+                "description": "黑名单中的频道将永远不会修复链接预览。"
             },
             {
-                "label": "预览嵌入频道白名单",
-                "description": "只有在这里设置的频道将接受预览嵌入，白名单优先于黑名单。"
+                "label": "频道白名单",
+                "description": "仅所选频道会修复链接预览。白名单优先级高于黑名单。"
             },
             {
-                "label": "切换 Webhook 回复",
-                "description": "开关回复 Webhook 时对原发布者的@。"
+                "label": "Webhook 回复 @ 提醒",
+                "description": "选择通过 Webhook 回复时是否提醒（Ping）原作者。"
             },
             {
-                "label": "关闭 NSFW 频道的自动剧透",
-                "description": "对于媒体提取功能，在这里选择的 NSFW 频道内的媒体将不会自动标为剧透。"
+                "label": "NSFW 自动防剧透",
+                "description": "在指定的 NSFW 频道中，提取出的媒体跳过自动添加防剧透遮罩。"
             },
             {
-                "label": "切换删除消息反应",
-                "description": "添加表情反应到webhook消息，便于发布者通过反应表情删除。"
+                "label": "删除消息反应",
+                "description": "添加一个表情反应，方便原作者点击直接删除该 Webhook 消息。"
             },
             {
-                "label": "显示帖子内容频道",
-                "description": "如果媒体提取已开启，则在这里的已选频道将显示帖子内容。"
+                "label": "显示帖子文字",
+                "description": "启用媒体提取后，在指定频道内同时显示帖子的文字内容。"
             },
             {
-                "label": "更改删除消息反应表情",
-                "description": "更改用于删除消息的表情。"
+                "label": "删除消息反应 Emoji",
+                "description": "自定义用于快捷删除消息的表情符号。"
             },
             {
-                "label": "选择预览嵌入服务",
-                "description": "选择用于不同网站的预览嵌入。"
+                "label": "链接预览修复服务",
+                "description": "针对不同网站选择所使用的具体修复解析服务。"
             },
             {
                 "label": "机器人可见性",
-                "description": "开启后， Embed Fixer 将会对来自其他机器人链接进行预览嵌入。关闭后，将只会对来自用户的链接进行预览嵌入。"
+                "description": "选择是否对其他机器人发送的链接也执行修复。"
             },
             {
-                "label": "转发到目标频道",
-                "description": "若已设置，所有的预览嵌入和媒体提取都会发送到被设置的频道，而非原消息的频道。"
+                "label": "汇聚至目标频道",
+                "description": "将所有修复后的预览消息与提取的媒体发送至统一目标频道，而非原发送频道。"
             },
             {
                 "label": "白名单身份组",
-                "description": "如有设置，则只有拥有这些身份组之一的用户才有预览嵌入。留空则关闭。"
+                "description": "仅拥有指定身份组的成员发送链接时才触发修复。留空则表示不作限制。"
             },
             {
-                "label": "切换原链接按钮",
-                "description": "是否在预览嵌入的消息中显示链接至原帖子的按钮。"
+                "label": "原链接跳转按钮",
+                "description": "在修复后的消息下方显示或隐藏跳转至原帖子的按钮。"
             },
             {
-                "label": "开关删除主题串中的原消息",
-                "description": "因为主题串无法使用 Webhook，原消息会被保留以识别发送者。启用此选项后，在发送修复后的链接预览后将删除主题串中的原消息。"
+                "label": "删除子区中的原消息",
+                "description": "发送修复后的预览消息后，自动删除子区（Thread）中的原消息。"
             },
             {
                 "label": "修复模式",
-                "description": "删除后通过 Webhook 重发、回复原消息，或以机器人身份重发。"
+                "description": "删除原消息并通过 Webhook 重新发送、直接回复原消息，或以机器人名义重新发送。"
             },
             {
                 "label": "自动移除删除反应",
-                "description": "在设定的秒数后移除删除反应。"
+                "description": "在设定的秒数后，自动移除用于删除消息的表情反应。"
             },
             {
                 "label": "轮换修复服务反应",
-                "description": "添加 🔄 反应，原发布者点击即可切换到下一个预览嵌入服务。"
+                "description": "添加 🔄 反应，原作者点击即可切换至下一个备选修复服务。"
             }
         ]
     },
     "hosting": {
         "eyebrow": "自托管",
-        "heading": "在意隐私？开源项目来帮忙。",
-        "body": "如果你想完全掌控数据和配置，可以在自己的机器上运行 Embed Fixer。",
+        "heading": "更想把数据留在本地？欢迎自行托管。",
+        "body": "Embed Fixer 完全开源。可通过 Docker 配合 SQLite 或 PostgreSQL 运行，服务器配置始终保留在自己的机器上。",
         "cta": "自托管教程",
-        "tags": [
-            "Docker + SQLite/PostgreSQL",
-            "通过 uv 本地运行",
-            "可选 Redis"
-        ]
+        "copy": "复制",
+        "copied": "已复制"
     },
     "closing": {
-        "eyebrow": "立即行动",
-        "heading": "只要你的服务器有人分享链接，它就属于那里。",
-        "body": "别再让失效的预览破坏聊天兴致。立即添加 Embed Fixer，保持每一次对话的完整性。"
+        "eyebrow": "立即加入",
+        "heading": "只需添加一次，从此分享链接再无预览失效烦恼。"
     },
     "footer": {
         "copyright": "Copyright © 2026 Seria Ati. 保留所有权利。"

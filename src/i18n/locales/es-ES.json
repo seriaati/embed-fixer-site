@@ -1,55 +1,78 @@
 {
     "meta": {
-        "title": "Embed Fixer | Bot de Discord para arreglar previsualizaciones de redes sociales",
-        "description": "Embed Fixer detecta enlaces rotos y los vuelve a publicar mediante webhooks para que se vean bien en Discord. Compatible con las plataformas más populares, usado en más de 1200 servidores y de código abierto."
+        "title": "Embed Fixer | Bot de Discord para corregir previsualizaciones de redes sociales",
+        "description": "Embed Fixer reenvía enlaces de X, Pixiv, TikTok, Instagram, Reddit y más para que sus previsualizaciones funcionen de verdad en Discord. Usado en más de 3700 servidores, de código abierto y autohospedable."
     },
     "languageSelector": {
         "label": "Idioma",
         "ariaLabel": "Elegir idioma del sitio"
     },
     "hero": {
-        "heading": "El enlace estaba roto. Tu conversación no tiene por qué estarlo.",
-        "tagline": "Embed Fixer intercepta los enlaces de redes sociales que fallan y los reenvía mediante webhooks para que las previsualizaciones carguen perfectamente en Discord.",
+        "headingLines": [
+            "Enlaces que",
+            "sí cargan",
+            "su previsualización."
+        ],
+        "tagline": "Cuando un enlace social no genera una previsualización adecuada, Embed Fixer lo reenvía con una vista previa funcional bajo el nombre de quien lo compartió.",
+        "sitesLead": "{count} sitios, incluyendo",
         "ctaAdd": "Añadir a Discord",
-        "ctaGithub": "Ver en GitHub",
-        "relay": {
-            "ariaLabel": "Cómo funciona el reenvío por webhook",
-            "incomingLabel": "entrada",
-            "incomingValue": "https://x.com/...",
-            "actionLabel": "acción",
-            "actionValue": "Eliminar + reenviar vía webhook con tu avatar y nombre de usuario",
-            "resultLabel": "resultado",
-            "resultValue": "Vídeos reproducibles, vistas previas completas y contenido legible"
-        }
+        "ctaGithub": "Ver en GitHub"
     },
     "problem": {
         "eyebrow": "El problema",
-        "heading": "Discord le quita toda la gracia a lo que compartes.",
-        "items": [
-            "Las previews de Twitter/X no cargan o se quedan a medias.",
-            "Pixiv e Instagram suelen ocultar el contenido principal.",
-            "Los enlaces de TikTok y Reddit pierden los vídeos reproducibles.",
-            "Un enlace roto obliga a los usuarios a salir de Discord."
+        "heading": "Las previsualizaciones nativas de Discord a menudo se dejan la parte que querías compartir.",
+        "cards": [
+            {
+                "name": "Twitter/X",
+                "text": "A veces no hay previsualización alguna; otras, solo carga la mitad."
+            },
+            {
+                "name": "Pixiv, Instagram",
+                "text": "Te muestra la tarjeta con el título, pero ni rastro de la imagen."
+            },
+            {
+                "name": "TikTok, Reddit",
+                "text": "Los vídeos aparecen como una miniatura estática que no se puede reproducir."
+            },
+            {
+                "name": "Tus miembros",
+                "text": "Tienen que abrir el navegador web solo para ver qué fue lo que compartiste."
+            }
         ]
     },
     "features": {
         "eyebrow": "Características",
-        "heading": "Funciones pensadas con cabeza y que sirven para algo.",
-        "items": [
-            "Corrección automática mediante webhooks manteniendo tu nombre y avatar.",
-            "Arreglos manuales con /fix en MDs y servidores no compatibles.",
-            "Extracción de contenido para enlaces compatibles en una vista tipo galería.",
-            "Un montón de ajustes para personalizar el bot a las necesidades de tu servidor."
+        "heading": "Corrige enlaces automáticamente o de forma manual cuando lo necesites.",
+        "list": [
+            {
+                "title": "Automático",
+                "text": "Comparte un enlace con normalidad. Embed Fixer lo reenvía mediante un webhook con tu nombre y avatar, además de una reacción con la que puedes borrarlo.",
+                "tag": "Reenvío por webhook"
+            },
+            {
+                "title": "Corrección manual",
+                "text": "Instálalo como aplicación de usuario para usar /fix o el menú contextual en mensajes directos y servidores que no tengan el bot.",
+                "tag": "Comando de barra (/)"
+            },
+            {
+                "title": "Extracción de multimedia",
+                "text": "En los canales que elijas, las imágenes y vídeos de publicaciones de X, Pixiv, Bluesky y Kemono se envían como archivos. Los enlaces con spoiler se mantienen ocultos.",
+                "tag": "Por canal"
+            },
+            {
+                "title": "Tus propias reglas",
+                "text": "{count} ajustes para configurar qué sitios, canales y roles reciben correcciones y cómo se envían los mensajes. Los miembros pueden excluirse con /ignore-me.",
+                "tag": "Por servidor"
+            }
         ]
     },
     "platforms": {
-        "eyebrow": "Plataformas compatibles",
-        "heading": "Desde lo más mainstream hasta lo más nicho: si se puede arreglar, lo cubrimos.",
+        "eyebrow": "Sitios compatibles",
+        "heading": "Grandes plataformas y sitios de nicho, la mayoría con varios servicios de corrección para elegir.",
         "ariaLabel": "Lista de plataformas compatibles"
     },
     "proof": {
-        "eyebrow": "Confianza",
-        "heading": "Usado por las mejores comunidades.",
+        "heading": "Hasta la fecha",
         "ariaLabel": "Estadísticas de uso de Embed Fixer",
         "statLabels": [
             "Servidores de Discord",
@@ -57,107 +80,105 @@
         ]
     },
     "customization": {
-        "eyebrow": "Muy personalizable",
-        "heading": "Ajusta casi cualquier comportamiento para tu servidor.",
-        "body": "La mayor fortaleza de Embed Fixer es que casi todo puede personalizarse o activarse y desactivarse según tus preferencias, incluyendo funciones de nicho creadas a partir de necesidades reales de usuarios.",
-        "resetNote": "Todos los ajustes son únicos por servidor. Usa /reset para volver a los valores por defecto.",
+        "eyebrow": "Personalización",
+        "heading": "Si la configuración por defecto no encaja con tu servidor, cámbiala.",
+        "body": "La gran mayoría de estos ajustes se añadieron porque alguien los pidió. Configúralos con /settings en Discord.",
         "ariaLabel": "Lista de ajustes personalizables",
-        "showAll": "Mostrar todos los ajustes",
+        "searchLabel": "Filtrar ajustes",
+        "searchPlaceholder": "Buscar",
+        "noResults": "Ningún ajuste coincide con eso. Prueba a buscar «rol», «canal» o «webhook».",
+        "showAll": "Mostrar todo",
         "showFewer": "Mostrar menos",
         "settings": [
             {
                 "label": "Idioma",
-                "description": "Cambiar el idioma del bot."
+                "description": "Cambia el idioma utilizado por el bot."
             },
             {
-                "label": "Deshabilitar Embed Fixer Para Sitios Web",
-                "description": "Deshabilitar Embed Fixer para sitios web específicos."
+                "label": "Desactivar correcciones para sitios web",
+                "description": "Desactiva la corrección de previsualizaciones para páginas web específicas."
             },
             {
-                "label": "Canales Con Extracción Multimedia",
+                "label": "Canales de extracción multimedia",
                 "description": "Extrae imágenes y vídeos de los enlaces compatibles en los canales seleccionados."
             },
             {
-                "label": "Ajustar Canales No Permitidos Para Embed Fixer",
-                "description": "Embed Fixer no corregirá en los canales de la lista de no permitidos. No tiene prioridad sobre la lista de permitidos."
+                "label": "Lista negra de canales",
+                "description": "Los canales incluidos aquí nunca recibirán correcciones de previsualizaciones."
             },
             {
-                "label": "Ajustar Canales Permitidos Para Embed Fixer",
-                "description": "Embed Fixer corregirá en los canales de la lista de permitidos. Tiene prioridad sobre la lista de no permitidos."
+                "label": "Lista blanca de canales",
+                "description": "Solo los canales seleccionados recibirán correcciones de previsualizaciones. Tiene prioridad sobre la lista negra."
             },
             {
-                "label": "Habilitar/Deshabilitar Mención al Webhook",
-                "description": "Habilitar/Deshabilitar la mención al autor original si respondes al webhook."
+                "label": "Mención al responder por webhook",
+                "description": "Elige si las respuestas mediante webhook deben mencionar al autor original."
             },
             {
-                "label": "Deshabilitar Marcar Como Spoiler Automáticamente en Canales NSFW",
-                "description": "Habilita la función de marcar como Spoiler de forma automática en archivos multimedia en estos canales."
+                "label": "Spoiler automático en canales NSFW",
+                "description": "Omite la etiqueta de spoiler automática en el contenido extraído dentro de canales NSFW seleccionados."
             },
             {
-                "label": "Habilitar/Deshabilitar Reacción Para Eliminar Mensajes",
-                "description": "Añade reacciones a los mensajes del webhook permitiendo así al autor original eliminarlos con dicha reacción."
+                "label": "Reacción para eliminar",
+                "description": "Añade una reacción con la que el autor original puede borrar el mensaje del webhook."
             },
             {
-                "label": "Mostrar Contenido Multimedia en Ciertos Canales",
-                "description": "Mientras la extracción de multimedia esté activa, estos canales mostrarán el contenido de la publicación."
+                "label": "Mostrar texto de la publicación",
+                "description": "Muestra el texto de la publicación en los canales seleccionados cuando la extracción de multimedia esté activa."
             },
             {
-                "label": "Elegir Emoji Para Eliminar Mensaje",
-                "description": "Elegir el emoji usado para eliminar el mensaje."
+                "label": "Emoji de reacción para eliminar",
+                "description": "Elige qué emoji se utilizará para la acción de borrar por reacción."
             },
             {
-                "label": "Elegir Servicio de Embed Fix",
-                "description": "Elegir qué tipo de embed fix se usará para los distintos sitios web."
+                "label": "Servicio de corrección de previsualizaciones",
+                "description": "Elige qué servicio de corrección se utilizará para cada sitio web."
             },
             {
-                "label": "Visibilidad Hacia Otros Bots",
-                "description": "Embed Fixer actuará sobre otros bots si está habilitado. Si no lo está, solo actuará sobre los usuarios."
+                "label": "Visibilidad de bots",
+                "description": "Decide si los enlaces enviados por otros bots también deben corregirse."
             },
             {
-                "label": "Canal de Destino Para Redirecciones",
-                "description": "Configurando esta opción, se enviarán los enlaces al canal establecido independientemente del canal de origen."
+                "label": "Canalizar a un canal objetivo",
+                "description": "Envía las previsualizaciones corregidas y la multimedia extraída a un solo canal en lugar del canal de origen."
             },
             {
-                "label": "Roles Permitidos",
-                "description": "Corregir los enlaces de los usuarios si poseen cualquier rol de esta lista. Déjalo en blanco para desactivarlo."
+                "label": "Lista blanca de roles",
+                "description": "Solo los miembros con los roles seleccionados recibirán correcciones. Déjalo vacío para desactivar."
             },
             {
-                "label": "Habilitar/Deshabilitar Botón de \"Enlace Original\"",
-                "description": "Se mostrará un botón de \"Enlace original\" en los mensajes de Embed Fixer."
+                "label": "Botón de enlace original",
+                "description": "Muestra u oculta un botón con enlace directo a la publicación original."
             },
             {
-                "label": "Habilitar/Deshabilitar el Borrado del Mensaje Original en Hilos",
-                "description": "Por limitaciones técnicas, los hilos no soportan webhooks; por lo tanto el mensaje original se mantendrá. Activando esta opción hará que el mensaje sea eliminado y posteriormente se publicará el enlace corregido."
+                "label": "Eliminar originales en hilos",
+                "description": "Elimina el mensaje original del hilo tras haber enviado la previsualización corregida."
             },
             {
-                "label": "Modo De Arreglo",
-                "description": "Borra y reenvía mediante un webhook, responde al mensaje original o reenvía como el bot."
+                "label": "Modo de corrección",
+                "description": "Eliminar y reenviar por webhook, responder al original o reenviar en nombre del bot."
             },
             {
-                "label": "Quitar Automáticamente La Reacción Para Eliminar",
-                "description": "Quita la reacción para eliminar tras el número de segundos indicado."
+                "label": "Quitar reacción de borrado automáticamente",
+                "description": "Retira la reacción de borrado transcurrido un número determinado de segundos."
             },
             {
-                "label": "Reacción Para Cambiar De Servicio",
-                "description": "Añade una reacción 🔄 que el autor original puede usar para cambiar al siguiente servicio de embed fix."
+                "label": "Reacción para alternar servicio",
+                "description": "Añade la reacción 🔄 para que el autor original pueda alternar al siguiente servicio de corrección."
             }
         ]
     },
     "hosting": {
-        "eyebrow": "Self-hosting",
-        "heading": "¿Te importa la privacidad? El código abierto al rescate.",
-        "body": "Ejecuta Embed Fixer en tu propia máquina si quieres tener el control total sobre tus datos y tu configuración.",
-        "cta": "Instrucciones para self-hosting",
-        "tags": [
-            "Docker + SQLite/PostgreSQL",
-            "Local mediante uv",
-            "Redis opcional"
-        ]
+        "eyebrow": "Autohospedaje",
+        "heading": "¿Prefieres conservar tus datos en casa? Hospédalo tú mismo.",
+        "body": "Embed Fixer es de código abierto. Ejecútalo con Docker sobre SQLite o PostgreSQL, y los ajustes de tu servidor se quedarán en tu propia máquina.",
+        "cta": "Instrucciones de autohospedaje",
+        "copy": "Copiar",
+        "copied": "Copiado"
     },
     "closing": {
         "eyebrow": "Llamada a la acción",
-        "heading": "Si en tu servidor se comparten enlaces, necesitas esto.",
-        "body": "Deja de salir de Discord por culpa de previsualizaciones rotas. Añade Embed Fixer y mantén el hilo de la conversación."
+        "heading": "Añádelo una vez y los enlaces compartidos se previsualizarán como es debido a partir de entonces."
     },
     "footer": {
         "copyright": "Copyright © 2026 Seria Ati. Todos los derechos reservados."

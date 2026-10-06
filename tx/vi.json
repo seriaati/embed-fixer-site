@@ -1,9 +1,9 @@
 {
     "meta.title": {
-        "string": "Embed Fixer | Bot Discord sửa lỗi hiển thị link mạng xã hội"
+        "string": "Embed Fixer | Bot Discord sửa lỗi xem trước link mạng xã hội"
     },
     "meta.description": {
-        "string": "Embed Fixer tự động xử lý các link mạng xã hội bị lỗi và đăng lại qua webhook để nội dung hiển thị chuẩn chỉnh ngay trong Discord. Hỗ trợ mọi nền tảng phổ biến, hơn 1200 server tin dùng và hoàn toàn mở nguồn cho việc tự vận hành."
+        "string": "Embed Fixer tự động đăng lại các link từ X, Pixiv, TikTok, Instagram, Reddit và nhiều nền tảng khác để phần xem trước hiển thị chuẩn chỉnh trên Discord. Được tin dùng trên 3700+ server, mã nguồn mở và hỗ trợ tự host."
     },
     "languageSelector.label": {
         "string": "Ngôn ngữ"
@@ -11,11 +11,20 @@
     "languageSelector.ariaLabel": {
         "string": "Chọn ngôn ngữ trang web"
     },
-    "hero.heading": {
-        "string": "Link có thể lỗi, nhưng mạch chuyện thì không."
+    "hero.headingLines.0": {
+        "string": "Link hiển thị"
+    },
+    "hero.headingLines.1": {
+        "string": "chuẩn chỉnh"
+    },
+    "hero.headingLines.2": {
+        "string": "như mong đợi."
     },
     "hero.tagline": {
-        "string": "Embed Fixer tự động bắt các link mạng xã hội bị lỗi hiển thị và đăng lại qua webhook, giúp nội dung hiện ra mượt mà ngay trên Discord."
+        "string": "Khi link mạng xã hội không hiện đúng xem trước, Embed Fixer sẽ đăng lại link kèm bản xem trước hoàn chỉnh dưới chính tên người gửi."
+    },
+    "hero.sitesLead": {
+        "string": "{count} trang web, bao gồm"
     },
     "hero.ctaAdd": {
         "string": "Thêm vào Discord"
@@ -23,77 +32,89 @@
     "hero.ctaGithub": {
         "string": "Xem trên GitHub"
     },
-    "hero.relay.ariaLabel": {
-        "string": "Cách thức hoạt động của webhook relay"
-    },
-    "hero.relay.incomingLabel": {
-        "string": "Đầu vào"
-    },
-    "hero.relay.incomingValue": {
-        "string": "https://x.com/..."
-    },
-    "hero.relay.actionLabel": {
-        "string": "Xử lý"
-    },
-    "hero.relay.actionValue": {
-        "string": "Xóa và đăng lại qua webhook bằng tên và avatar của bạn"
-    },
-    "hero.relay.resultLabel": {
-        "string": "Kết quả"
-    },
-    "hero.relay.resultValue": {
-        "string": "Xem được video, ảnh đầy đủ, nội dung rõ ràng"
-    },
     "problem.eyebrow": {
         "string": "Vấn đề"
     },
     "problem.heading": {
-        "string": "Discord đang làm mất đi cái hay của các link chia sẻ."
+        "string": "Tính năng xem trước mặc định của Discord thường bỏ sót phần bạn muốn chia sẻ."
     },
-    "problem.items.0": {
-        "string": "Link Twitter/X không hiện preview hoặc load nửa vời."
+    "problem.cards.0.name": {
+        "string": "Twitter/X"
     },
-    "problem.items.1": {
-        "string": "Pixiv và Instagram thường xuyên bị ẩn nội dung chính."
+    "problem.cards.0.text": {
+        "string": "Lúc thì không hiện bản xem trước, lúc thì chỉ tải được một nửa."
     },
-    "problem.items.2": {
-        "string": "Video trên TikTok và Reddit không thể xem trực tiếp."
+    "problem.cards.1.name": {
+        "string": "Pixiv, Instagram"
     },
-    "problem.items.3": {
-        "string": "Link lỗi khiến mọi người phải thoát Discord mới xem được nội dung."
+    "problem.cards.1.text": {
+        "string": "Hiện tiêu đề nhưng hình ảnh thì hoàn toàn biến mất."
+    },
+    "problem.cards.2.name": {
+        "string": "TikTok, Reddit"
+    },
+    "problem.cards.2.text": {
+        "string": "Video chỉ hiện ảnh đại diện thu nhỏ mà không bấm phát được."
+    },
+    "problem.cards.3.name": {
+        "string": "Thành viên của bạn"
+    },
+    "problem.cards.3.text": {
+        "string": "Phải mở trình duyệt ngoài chỉ để xem được nội dung bạn vừa gửi."
     },
     "features.eyebrow": {
         "string": "Tính năng"
     },
     "features.heading": {
-        "string": "Những tính năng thực tế, tinh tế và cực kỳ hữu dụng."
+        "string": "Tự động sửa xem trước link tức thì, hoặc sửa thủ công bất cứ khi nào bạn cần."
     },
-    "features.items.0": {
-        "string": "Tự động sửa lỗi bằng cách đăng lại qua Webhook với tên và avatar của chính bạn."
+    "features.list.0.title": {
+        "string": "Tự động hoàn toàn"
     },
-    "features.items.1": {
-        "string": "Sửa thủ công bằng lệnh /fix trong DM và các máy chủ không được hỗ trợ."
+    "features.list.0.text": {
+        "string": "Cứ gửi link như bình thường. Embed Fixer sẽ đăng lại qua webhook kèm tên và avatar của bạn, cùng một reaction để bạn có thể tự xóa tin nhắn."
     },
-    "features.items.2": {
-        "string": "Trích xuất hình ảnh/video từ link vào một giao diện dạng album dễ nhìn."
+    "features.list.0.tag": {
+        "string": "Webhook relay"
     },
-    "features.items.3": {
-        "string": "Hệ thống cài đặt đa dạng để tùy chỉnh theo đúng nhu cầu của server bạn."
+    "features.list.1.title": {
+        "string": "Sửa thủ công"
+    },
+    "features.list.1.text": {
+        "string": "Cài đặt dưới dạng User App để dùng lệnh /fix hoặc menu chuột phải trong tin nhắn riêng (DM) và các server chưa thêm bot."
+    },
+    "features.list.1.tag": {
+        "string": "Slash command"
+    },
+    "features.list.2.title": {
+        "string": "Trích xuất media"
+    },
+    "features.list.2.text": {
+        "string": "Tại các kênh được chỉ định, ảnh và video từ X, Pixiv, Bluesky và Kemono sẽ được gửi thẳng dưới dạng tệp. Link gắn spoiler vẫn giữ nguyên spoiler."
+    },
+    "features.list.2.tag": {
+        "string": "Theo từng kênh"
+    },
+    "features.list.3.title": {
+        "string": "Luật của riêng bạn"
+    },
+    "features.list.3.text": {
+        "string": "{count} cài đặt cho phép kiểm soát trang web, kênh và vai trò nào được sửa xem trước, cũng như cách tin nhắn được gửi đi. Thành viên có thể tắt bằng /ignore-me."
+    },
+    "features.list.3.tag": {
+        "string": "Theo từng server"
     },
     "platforms.eyebrow": {
-        "string": "Nền tảng hỗ trợ"
+        "string": "Trang web hỗ trợ"
     },
     "platforms.heading": {
-        "string": "Từ phổ biến đến ngách, chỉ cần có lỗi là chúng tôi hỗ trợ."
+        "string": "Từ nền tảng lớn đến các trang ngách, hầu hết đều có nhiều dịch vụ sửa lỗi để lựa chọn."
     },
     "platforms.ariaLabel": {
         "string": "Danh sách các nền tảng được hỗ trợ"
     },
-    "proof.eyebrow": {
-        "string": "Độ tin cậy"
-    },
     "proof.heading": {
-        "string": "Được các cộng đồng tin dùng."
+        "string": "Hiện tại"
     },
     "proof.ariaLabel": {
         "string": "Thống kê sử dụng Embed Fixer"
@@ -102,174 +123,174 @@
         "string": "Server Discord"
     },
     "proof.statLabels.1": {
-        "string": "Lượt sao GitHub"
+        "string": "GitHub star"
     },
     "customization.eyebrow": {
-        "string": "Tùy biến cực cao"
+        "string": "Tùy biến"
     },
     "customization.heading": {
-        "string": "Tinh chỉnh gần như mọi hành vi theo đúng server của bạn."
+        "string": "Nếu cài đặt mặc định chưa vừa ý server bạn, hãy chỉnh lại theo cách của mình."
     },
     "customization.body": {
-        "string": "Điểm mạnh nhất của Embed Fixer là gần như mọi hành vi đều có thể tùy chỉnh hoặc bật/tắt theo ý bạn, kể cả các tính năng ngách được tạo từ nhu cầu thực tế của người dùng."
-    },
-    "customization.resetNote": {
-        "string": "Mọi cài đặt đều tách biệt theo từng server. Dùng /reset để quay về mặc định."
+        "string": "Phần lớn các thiết lập này ra đời là nhờ người dùng yêu cầu. Hãy dùng lệnh /settings ngay trong Discord."
     },
     "customization.ariaLabel": {
         "string": "Danh sách cài đặt có thể tùy chỉnh"
     },
+    "customization.searchLabel": {
+        "string": "Lọc cài đặt"
+    },
+    "customization.searchPlaceholder": {
+        "string": "Tìm kiếm"
+    },
+    "customization.noResults": {
+        "string": "Không có cài đặt phù hợp. Thử tìm “role”, “channel” hoặc “webhook”."
+    },
     "customization.showAll": {
-        "string": "Hiện tất cả cài đặt"
+        "string": "Hiện tất cả"
     },
     "customization.showFewer": {
         "string": "Thu gọn"
     },
     "customization.settings.0.label": {
-        "string": "Ngôn Ngữ"
+        "string": "Ngôn ngữ"
     },
     "customization.settings.0.description": {
-        "string": "Thay đổi ngôn ngữ bot sử dụng."
+        "string": "Thay đổi ngôn ngữ hiển thị của bot."
     },
     "customization.settings.1.label": {
-        "string": "Tắt Sửa Nhúng Cho Các Trang Web"
+        "string": "Tắt sửa xem trước cho trang web"
     },
     "customization.settings.1.description": {
-        "string": "Tắt Nhúng Sửa cho các trang web cụ thể."
+        "string": "Tắt tính năng sửa xem trước link cho các trang web cụ thể."
     },
     "customization.settings.2.label": {
-        "string": "Kênh Trích Xuất Phương Tiện"
+        "string": "Kênh trích xuất media"
     },
     "customization.settings.2.description": {
-        "string": "Trích xuất hình ảnh và video từ các liên kết được hỗ trợ trong các kênh đã chọn."
+        "string": "Trích xuất ảnh và video từ các liên kết hỗ trợ trong kênh đã chọn."
     },
     "customization.settings.3.label": {
-        "string": "Danh Sách Đen Kênh Nhúng Sửa"
+        "string": "Danh sách đen kênh"
     },
     "customization.settings.3.description": {
-        "string": "Chỉ các kênh được đặt ở đây sẽ không nhận được Nhúng Sửa, danh sách trắng được ưu tiên hơn danh sách đen."
+        "string": "Các kênh trong danh sách này sẽ không bao giờ được sửa xem trước link."
     },
     "customization.settings.4.label": {
-        "string": "Danh Sách Trắng Kênh Nhúng Sửa"
+        "string": "Danh sách trắng kênh"
     },
     "customization.settings.4.description": {
-        "string": "Chỉ các kênh được đặt ở đây mới nhận được Nhúng Sửa, danh sách trắng được ưu tiên hơn danh sách đen."
+        "string": "Chỉ các kênh được chọn mới được sửa xem trước link. Ghi đè danh sách đen."
     },
     "customization.settings.5.label": {
-        "string": "Bật/Tắt Trả Lời Webhook"
+        "string": "Ping khi phản hồi Webhook"
     },
     "customization.settings.5.description": {
-        "string": "Bật/Tắt đề cập chủ tin nhắn gốc khi trả lời qua Webhook."
+        "string": "Tùy chọn việc trả lời qua webhook có tag (ping) tác giả ban đầu hay không."
     },
     "customization.settings.6.label": {
-        "string": "Tắt Tự Động Ẩn Nội Dung Trong Kênh NSFW"
+        "string": "Tự động spoiler trong kênh NSFW"
     },
     "customization.settings.6.description": {
-        "string": "Với tính năng Trình Xuất Phương Tiện, kênh NSFW được chọn sẽ không có Phượng tiện tự động ẩn."
+        "string": "Bỏ qua gắn thẻ spoiler tự động cho media được trích xuất trong các kênh NSFW đã chọn."
     },
     "customization.settings.7.label": {
-        "string": "Bật/Tắt Biểu Cảm Xóa"
+        "string": "Reaction xóa tin nhắn"
     },
     "customization.settings.7.description": {
-        "string": "Có nên thêm biểu cảm vào tin nhắn webhook để tác giả gốc có thể xóa chúng bằng biểu cảm xóa."
+        "string": "Thêm một reaction để tác giả gốc có thể nhấn vào tự xóa tin nhắn webhook."
     },
     "customization.settings.8.label": {
-        "string": "Hiển Thị Kênh Nội Dung Bài Đăng"
+        "string": "Hiện văn bản bài đăng"
     },
     "customization.settings.8.description": {
-        "string": "Hiển thị nội dung text của bài đăng ở các kênh đã chọn khi bật trích xuất media."
+        "string": "Hiển thị văn bản bài đăng trong các kênh đã chọn khi tính năng trích xuất media đang bật."
     },
     "customization.settings.9.label": {
-        "string": "Thay Đổi Biểu Cảm Xóa Tin Nhắn"
+        "string": "Emoji cho reaction xóa"
     },
     "customization.settings.9.description": {
-        "string": "Biểu cảm được sử dụng để xóa tin nhắn."
+        "string": "Chọn emoji dùng để xóa tin nhắn qua reaction."
     },
     "customization.settings.10.label": {
-        "string": "Chọn Dịch Vụ Nhúng Sửa"
+        "string": "Dịch vụ sửa xem trước"
     },
     "customization.settings.10.description": {
-        "string": "Chọn dịch vụ Nhúng Sửa cho các trang web khác nhau."
+        "string": "Chọn dịch vụ sửa xem trước được sử dụng cho từng trang web."
     },
     "customization.settings.11.label": {
-        "string": "Hiển Thị Của Bot"
+        "string": "Xử lý link từ bot"
     },
     "customization.settings.11.description": {
-        "string": "Nếu được bật, Embed Fixer sẽ sửa các bản nhúng do bot khác gửi. Nếu bị tắt, nó sẽ chỉ sửa các bản nhúng do người dùng gửi."
+        "string": "Tùy chọn bot có tự động sửa các link do bot khác gửi hay không."
     },
     "customization.settings.12.label": {
-        "string": "Phễu Đến Kênh Mục Tiêu"
+        "string": "Gom về kênh chỉ định"
     },
     "customization.settings.12.description": {
-        "string": "Nếu được thiết lập, tất cả các nội dung nhúng sửa và trích xuất phương tiện sẽ được gửi đến kênh đích thay vì kênh gốc."
+        "string": "Gửi các bản xem trước đã sửa và media trích xuất về một kênh cố định thay vì kênh gốc."
     },
     "customization.settings.13.label": {
-        "string": "Danh Sách Trắng Vai Trò"
+        "string": "Danh sách trắng vai trò"
     },
     "customization.settings.13.description": {
-        "string": "Nếu được thiết lập, chỉ những người dùng có một trong những vai trò này mới có thể sửa nhúng của họ. Để trống để tắt."
+        "string": "Chỉ thành viên có vai trò đã chọn mới được sửa xem trước link. Để trống để tắt giới hạn."
     },
     "customization.settings.14.label": {
-        "string": "Bật/Tắt Nút Link Gốc"
+        "string": "Nút link gốc"
     },
     "customization.settings.14.description": {
-        "string": "Hiển thị nút liên kết đến bài đăng gốc trong tin nhắn nhúng cố định không."
+        "string": "Ẩn hoặc hiện nút dẫn tới bài đăng gốc."
     },
     "customization.settings.15.label": {
-        "string": "Bật/Tắt Xóa Tin Nhắn Gốc Trong Chủ Đề"
+        "string": "Xóa tin nhắn gốc trong diễn đàn/thread"
     },
     "customization.settings.15.description": {
-        "string": "Vì chủ đề không thể có webhook, tin nhắn gốc được giữ lại để biết ai đã gửi. Bật tính năng này sẽ xóa tin nhắn gốc trong chủ đề sau khi gửi nhúng đã sửa."
+        "string": "Xóa tin nhắn thread gốc sau khi tin nhắn xem trước đã sửa được gửi."
     },
     "customization.settings.16.label": {
-        "string": "Chế Độ Sửa"
+        "string": "Chế độ sửa lỗi"
     },
     "customization.settings.16.description": {
-        "string": "Xóa rồi gửi lại qua webhook, trả lời tin nhắn gốc, hoặc gửi lại dưới tên bot."
+        "string": "Xóa và gửi lại qua webhook, trả lời tin gốc, hoặc đăng lại dưới tư cách bot."
     },
     "customization.settings.17.label": {
-        "string": "Tự Động Gỡ Biểu Cảm Xóa"
+        "string": "Tự gỡ reaction xóa"
     },
     "customization.settings.17.description": {
-        "string": "Gỡ biểu cảm xóa sau số giây đã đặt."
+        "string": "Tự động gỡ reaction xóa sau số giây được chỉ định."
     },
     "customization.settings.18.label": {
-        "string": "Biểu Cảm Đổi Dịch Vụ Sửa"
+        "string": "Reaction đổi dịch vụ sửa"
     },
     "customization.settings.18.description": {
-        "string": "Thêm biểu cảm 🔄 để tác giả gốc có thể chuyển sang dịch vụ Nhúng Sửa tiếp theo."
+        "string": "Thêm reaction 🔄 để tác giả gốc có thể bấm đổi sang dịch vụ sửa xem trước kế tiếp."
     },
     "hosting.eyebrow": {
-        "string": "Tự vận hành (Self-hosting)"
+        "string": "Tự host"
     },
     "hosting.heading": {
-        "string": "Bạn ưu tiên quyền riêng tư? Đã có mã nguồn mở."
+        "string": "Muốn lưu giữ dữ liệu nội bộ? Bạn hoàn toàn có thể tự vận hành."
     },
     "hosting.body": {
-        "string": "Bạn hoàn toàn có thể tự chạy Embed Fixer trên máy chủ riêng để kiểm soát tối đa dữ liệu và cấu hình theo ý muốn."
+        "string": "Embed Fixer là mã nguồn mở. Chạy bot bằng Docker kết hợp SQLite hoặc PostgreSQL, mọi cấu hình server sẽ nằm trọn trên máy chủ của bạn."
     },
     "hosting.cta": {
-        "string": "Hướng dẫn tự cài đặt"
+        "string": "Hướng dẫn tự host"
     },
-    "hosting.tags.0": {
-        "string": "Docker + SQLite/PostgreSQL"
+    "hosting.copy": {
+        "string": "Sao chép"
     },
-    "hosting.tags.1": {
-        "string": "Chạy cục bộ qua uv"
-    },
-    "hosting.tags.2": {
-        "string": "Hỗ trợ Redis (không bắt buộc)"
+    "hosting.copied": {
+        "string": "Đã sao chép"
     },
     "closing.eyebrow": {
         "string": "Bắt đầu ngay"
     },
     "closing.heading": {
-        "string": "Nếu server của bạn hay chia sẻ link, đây là công cụ không thể thiếu."
-    },
-    "closing.body": {
-        "string": "Đừng để những cái link lỗi làm gián đoạn cuộc vui. Thêm Embed Fixer ngay để giữ mạch trò chuyện luôn mượt mà."
+        "string": "Thêm bot một lần, mọi liên kết chia sẻ sẽ luôn hiển thị xem trước chuẩn đẹp."
     },
     "footer.copyright": {
-        "string": "Bản quyền © 2026 Seria Ati. Bảo lưu mọi quyền."
+        "string": "Bản quyền © 2026 Seria Ati. Mọi quyền được bảo lưu."
     }
 }

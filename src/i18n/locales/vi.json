@@ -1,165 +1,186 @@
 {
     "meta": {
-        "title": "Embed Fixer | Bot Discord sửa lỗi hiển thị link mạng xã hội",
-        "description": "Embed Fixer tự động xử lý các link mạng xã hội bị lỗi và đăng lại qua webhook để nội dung hiển thị chuẩn chỉnh ngay trong Discord. Hỗ trợ mọi nền tảng phổ biến, hơn 1200 server tin dùng và hoàn toàn mở nguồn cho việc tự vận hành."
+        "title": "Embed Fixer | Bot Discord sửa lỗi xem trước link mạng xã hội",
+        "description": "Embed Fixer tự động đăng lại các link từ X, Pixiv, TikTok, Instagram, Reddit và nhiều nền tảng khác để phần xem trước hiển thị chuẩn chỉnh trên Discord. Được tin dùng trên 3700+ server, mã nguồn mở và hỗ trợ tự host."
     },
     "languageSelector": {
         "label": "Ngôn ngữ",
         "ariaLabel": "Chọn ngôn ngữ trang web"
     },
     "hero": {
-        "heading": "Link có thể lỗi, nhưng mạch chuyện thì không.",
-        "tagline": "Embed Fixer tự động bắt các link mạng xã hội bị lỗi hiển thị và đăng lại qua webhook, giúp nội dung hiện ra mượt mà ngay trên Discord.",
+        "headingLines": [
+            "Link hiển thị",
+            "chuẩn chỉnh",
+            "như mong đợi."
+        ],
+        "tagline": "Khi link mạng xã hội không hiện đúng xem trước, Embed Fixer sẽ đăng lại link kèm bản xem trước hoàn chỉnh dưới chính tên người gửi.",
+        "sitesLead": "{count} trang web, bao gồm",
         "ctaAdd": "Thêm vào Discord",
-        "ctaGithub": "Xem trên GitHub",
-        "relay": {
-            "ariaLabel": "Cách thức hoạt động của webhook relay",
-            "incomingLabel": "Đầu vào",
-            "incomingValue": "https://x.com/...",
-            "actionLabel": "Xử lý",
-            "actionValue": "Xóa và đăng lại qua webhook bằng tên và avatar của bạn",
-            "resultLabel": "Kết quả",
-            "resultValue": "Xem được video, ảnh đầy đủ, nội dung rõ ràng"
-        }
+        "ctaGithub": "Xem trên GitHub"
     },
     "problem": {
         "eyebrow": "Vấn đề",
-        "heading": "Discord đang làm mất đi cái hay của các link chia sẻ.",
-        "items": [
-            "Link Twitter/X không hiện preview hoặc load nửa vời.",
-            "Pixiv và Instagram thường xuyên bị ẩn nội dung chính.",
-            "Video trên TikTok và Reddit không thể xem trực tiếp.",
-            "Link lỗi khiến mọi người phải thoát Discord mới xem được nội dung."
+        "heading": "Tính năng xem trước mặc định của Discord thường bỏ sót phần bạn muốn chia sẻ.",
+        "cards": [
+            {
+                "name": "Twitter/X",
+                "text": "Lúc thì không hiện bản xem trước, lúc thì chỉ tải được một nửa."
+            },
+            {
+                "name": "Pixiv, Instagram",
+                "text": "Hiện tiêu đề nhưng hình ảnh thì hoàn toàn biến mất."
+            },
+            {
+                "name": "TikTok, Reddit",
+                "text": "Video chỉ hiện ảnh đại diện thu nhỏ mà không bấm phát được."
+            },
+            {
+                "name": "Thành viên của bạn",
+                "text": "Phải mở trình duyệt ngoài chỉ để xem được nội dung bạn vừa gửi."
+            }
         ]
     },
     "features": {
         "eyebrow": "Tính năng",
-        "heading": "Những tính năng thực tế, tinh tế và cực kỳ hữu dụng.",
-        "items": [
-            "Tự động sửa lỗi bằng cách đăng lại qua Webhook với tên và avatar của chính bạn.",
-            "Sửa thủ công bằng lệnh /fix trong DM và các máy chủ không được hỗ trợ.",
-            "Trích xuất hình ảnh/video từ link vào một giao diện dạng album dễ nhìn.",
-            "Hệ thống cài đặt đa dạng để tùy chỉnh theo đúng nhu cầu của server bạn."
+        "heading": "Tự động sửa xem trước link tức thì, hoặc sửa thủ công bất cứ khi nào bạn cần.",
+        "list": [
+            {
+                "title": "Tự động hoàn toàn",
+                "text": "Cứ gửi link như bình thường. Embed Fixer sẽ đăng lại qua webhook kèm tên và avatar của bạn, cùng một reaction để bạn có thể tự xóa tin nhắn.",
+                "tag": "Webhook relay"
+            },
+            {
+                "title": "Sửa thủ công",
+                "text": "Cài đặt dưới dạng User App để dùng lệnh /fix hoặc menu chuột phải trong tin nhắn riêng (DM) và các server chưa thêm bot.",
+                "tag": "Slash command"
+            },
+            {
+                "title": "Trích xuất media",
+                "text": "Tại các kênh được chỉ định, ảnh và video từ X, Pixiv, Bluesky và Kemono sẽ được gửi thẳng dưới dạng tệp. Link gắn spoiler vẫn giữ nguyên spoiler.",
+                "tag": "Theo từng kênh"
+            },
+            {
+                "title": "Luật của riêng bạn",
+                "text": "{count} cài đặt cho phép kiểm soát trang web, kênh và vai trò nào được sửa xem trước, cũng như cách tin nhắn được gửi đi. Thành viên có thể tắt bằng /ignore-me.",
+                "tag": "Theo từng server"
+            }
         ]
     },
     "platforms": {
-        "eyebrow": "Nền tảng hỗ trợ",
-        "heading": "Từ phổ biến đến ngách, chỉ cần có lỗi là chúng tôi hỗ trợ.",
+        "eyebrow": "Trang web hỗ trợ",
+        "heading": "Từ nền tảng lớn đến các trang ngách, hầu hết đều có nhiều dịch vụ sửa lỗi để lựa chọn.",
         "ariaLabel": "Danh sách các nền tảng được hỗ trợ"
     },
     "proof": {
-        "eyebrow": "Độ tin cậy",
-        "heading": "Được các cộng đồng tin dùng.",
+        "heading": "Hiện tại",
         "ariaLabel": "Thống kê sử dụng Embed Fixer",
         "statLabels": [
             "Server Discord",
-            "Lượt sao GitHub"
+            "GitHub star"
         ]
     },
     "customization": {
-        "eyebrow": "Tùy biến cực cao",
-        "heading": "Tinh chỉnh gần như mọi hành vi theo đúng server của bạn.",
-        "body": "Điểm mạnh nhất của Embed Fixer là gần như mọi hành vi đều có thể tùy chỉnh hoặc bật/tắt theo ý bạn, kể cả các tính năng ngách được tạo từ nhu cầu thực tế của người dùng.",
-        "resetNote": "Mọi cài đặt đều tách biệt theo từng server. Dùng /reset để quay về mặc định.",
+        "eyebrow": "Tùy biến",
+        "heading": "Nếu cài đặt mặc định chưa vừa ý server bạn, hãy chỉnh lại theo cách của mình.",
+        "body": "Phần lớn các thiết lập này ra đời là nhờ người dùng yêu cầu. Hãy dùng lệnh /settings ngay trong Discord.",
         "ariaLabel": "Danh sách cài đặt có thể tùy chỉnh",
-        "showAll": "Hiện tất cả cài đặt",
+        "searchLabel": "Lọc cài đặt",
+        "searchPlaceholder": "Tìm kiếm",
+        "noResults": "Không có cài đặt phù hợp. Thử tìm “role”, “channel” hoặc “webhook”.",
+        "showAll": "Hiện tất cả",
         "showFewer": "Thu gọn",
         "settings": [
             {
-                "label": "Ngôn Ngữ",
-                "description": "Thay đổi ngôn ngữ bot sử dụng."
+                "label": "Ngôn ngữ",
+                "description": "Thay đổi ngôn ngữ hiển thị của bot."
             },
             {
-                "label": "Tắt Sửa Nhúng Cho Các Trang Web",
-                "description": "Tắt Nhúng Sửa cho các trang web cụ thể."
+                "label": "Tắt sửa xem trước cho trang web",
+                "description": "Tắt tính năng sửa xem trước link cho các trang web cụ thể."
             },
             {
-                "label": "Kênh Trích Xuất Phương Tiện",
-                "description": "Trích xuất hình ảnh và video từ các liên kết được hỗ trợ trong các kênh đã chọn."
+                "label": "Kênh trích xuất media",
+                "description": "Trích xuất ảnh và video từ các liên kết hỗ trợ trong kênh đã chọn."
             },
             {
-                "label": "Danh Sách Đen Kênh Nhúng Sửa",
-                "description": "Chỉ các kênh được đặt ở đây sẽ không nhận được Nhúng Sửa, danh sách trắng được ưu tiên hơn danh sách đen."
+                "label": "Danh sách đen kênh",
+                "description": "Các kênh trong danh sách này sẽ không bao giờ được sửa xem trước link."
             },
             {
-                "label": "Danh Sách Trắng Kênh Nhúng Sửa",
-                "description": "Chỉ các kênh được đặt ở đây mới nhận được Nhúng Sửa, danh sách trắng được ưu tiên hơn danh sách đen."
+                "label": "Danh sách trắng kênh",
+                "description": "Chỉ các kênh được chọn mới được sửa xem trước link. Ghi đè danh sách đen."
             },
             {
-                "label": "Bật/Tắt Trả Lời Webhook",
-                "description": "Bật/Tắt đề cập chủ tin nhắn gốc khi trả lời qua Webhook."
+                "label": "Ping khi phản hồi Webhook",
+                "description": "Tùy chọn việc trả lời qua webhook có tag (ping) tác giả ban đầu hay không."
             },
             {
-                "label": "Tắt Tự Động Ẩn Nội Dung Trong Kênh NSFW",
-                "description": "Với tính năng Trình Xuất Phương Tiện, kênh NSFW được chọn sẽ không có Phượng tiện tự động ẩn."
+                "label": "Tự động spoiler trong kênh NSFW",
+                "description": "Bỏ qua gắn thẻ spoiler tự động cho media được trích xuất trong các kênh NSFW đã chọn."
             },
             {
-                "label": "Bật/Tắt Biểu Cảm Xóa",
-                "description": "Có nên thêm biểu cảm vào tin nhắn webhook để tác giả gốc có thể xóa chúng bằng biểu cảm xóa."
+                "label": "Reaction xóa tin nhắn",
+                "description": "Thêm một reaction để tác giả gốc có thể nhấn vào tự xóa tin nhắn webhook."
             },
             {
-                "label": "Hiển Thị Kênh Nội Dung Bài Đăng",
-                "description": "Hiển thị nội dung text của bài đăng ở các kênh đã chọn khi bật trích xuất media."
+                "label": "Hiện văn bản bài đăng",
+                "description": "Hiển thị văn bản bài đăng trong các kênh đã chọn khi tính năng trích xuất media đang bật."
             },
             {
-                "label": "Thay Đổi Biểu Cảm Xóa Tin Nhắn",
-                "description": "Biểu cảm được sử dụng để xóa tin nhắn."
+                "label": "Emoji cho reaction xóa",
+                "description": "Chọn emoji dùng để xóa tin nhắn qua reaction."
             },
             {
-                "label": "Chọn Dịch Vụ Nhúng Sửa",
-                "description": "Chọn dịch vụ Nhúng Sửa cho các trang web khác nhau."
+                "label": "Dịch vụ sửa xem trước",
+                "description": "Chọn dịch vụ sửa xem trước được sử dụng cho từng trang web."
             },
             {
-                "label": "Hiển Thị Của Bot",
-                "description": "Nếu được bật, Embed Fixer sẽ sửa các bản nhúng do bot khác gửi. Nếu bị tắt, nó sẽ chỉ sửa các bản nhúng do người dùng gửi."
+                "label": "Xử lý link từ bot",
+                "description": "Tùy chọn bot có tự động sửa các link do bot khác gửi hay không."
             },
             {
-                "label": "Phễu Đến Kênh Mục Tiêu",
-                "description": "Nếu được thiết lập, tất cả các nội dung nhúng sửa và trích xuất phương tiện sẽ được gửi đến kênh đích thay vì kênh gốc."
+                "label": "Gom về kênh chỉ định",
+                "description": "Gửi các bản xem trước đã sửa và media trích xuất về một kênh cố định thay vì kênh gốc."
             },
             {
-                "label": "Danh Sách Trắng Vai Trò",
-                "description": "Nếu được thiết lập, chỉ những người dùng có một trong những vai trò này mới có thể sửa nhúng của họ. Để trống để tắt."
+                "label": "Danh sách trắng vai trò",
+                "description": "Chỉ thành viên có vai trò đã chọn mới được sửa xem trước link. Để trống để tắt giới hạn."
             },
             {
-                "label": "Bật/Tắt Nút Link Gốc",
-                "description": "Hiển thị nút liên kết đến bài đăng gốc trong tin nhắn nhúng cố định không."
+                "label": "Nút link gốc",
+                "description": "Ẩn hoặc hiện nút dẫn tới bài đăng gốc."
             },
             {
-                "label": "Bật/Tắt Xóa Tin Nhắn Gốc Trong Chủ Đề",
-                "description": "Vì chủ đề không thể có webhook, tin nhắn gốc được giữ lại để biết ai đã gửi. Bật tính năng này sẽ xóa tin nhắn gốc trong chủ đề sau khi gửi nhúng đã sửa."
+                "label": "Xóa tin nhắn gốc trong diễn đàn/thread",
+                "description": "Xóa tin nhắn thread gốc sau khi tin nhắn xem trước đã sửa được gửi."
             },
             {
-                "label": "Chế Độ Sửa",
-                "description": "Xóa rồi gửi lại qua webhook, trả lời tin nhắn gốc, hoặc gửi lại dưới tên bot."
+                "label": "Chế độ sửa lỗi",
+                "description": "Xóa và gửi lại qua webhook, trả lời tin gốc, hoặc đăng lại dưới tư cách bot."
             },
             {
-                "label": "Tự Động Gỡ Biểu Cảm Xóa",
-                "description": "Gỡ biểu cảm xóa sau số giây đã đặt."
+                "label": "Tự gỡ reaction xóa",
+                "description": "Tự động gỡ reaction xóa sau số giây được chỉ định."
             },
             {
-                "label": "Biểu Cảm Đổi Dịch Vụ Sửa",
-                "description": "Thêm biểu cảm 🔄 để tác giả gốc có thể chuyển sang dịch vụ Nhúng Sửa tiếp theo."
+                "label": "Reaction đổi dịch vụ sửa",
+                "description": "Thêm reaction 🔄 để tác giả gốc có thể bấm đổi sang dịch vụ sửa xem trước kế tiếp."
             }
         ]
     },
     "hosting": {
-        "eyebrow": "Tự vận hành (Self-hosting)",
-        "heading": "Bạn ưu tiên quyền riêng tư? Đã có mã nguồn mở.",
-        "body": "Bạn hoàn toàn có thể tự chạy Embed Fixer trên máy chủ riêng để kiểm soát tối đa dữ liệu và cấu hình theo ý muốn.",
-        "cta": "Hướng dẫn tự cài đặt",
-        "tags": [
-            "Docker + SQLite/PostgreSQL",
-            "Chạy cục bộ qua uv",
-            "Hỗ trợ Redis (không bắt buộc)"
-        ]
+        "eyebrow": "Tự host",
+        "heading": "Muốn lưu giữ dữ liệu nội bộ? Bạn hoàn toàn có thể tự vận hành.",
+        "body": "Embed Fixer là mã nguồn mở. Chạy bot bằng Docker kết hợp SQLite hoặc PostgreSQL, mọi cấu hình server sẽ nằm trọn trên máy chủ của bạn.",
+        "cta": "Hướng dẫn tự host",
+        "copy": "Sao chép",
+        "copied": "Đã sao chép"
     },
     "closing": {
         "eyebrow": "Bắt đầu ngay",
-        "heading": "Nếu server của bạn hay chia sẻ link, đây là công cụ không thể thiếu.",
-        "body": "Đừng để những cái link lỗi làm gián đoạn cuộc vui. Thêm Embed Fixer ngay để giữ mạch trò chuyện luôn mượt mà."
+        "heading": "Thêm bot một lần, mọi liên kết chia sẻ sẽ luôn hiển thị xem trước chuẩn đẹp."
     },
     "footer": {
-        "copyright": "Bản quyền © 2026 Seria Ati. Bảo lưu mọi quyền."
+        "copyright": "Bản quyền © 2026 Seria Ati. Mọi quyền được bảo lưu."
     }
 }

@@ -3,7 +3,7 @@
         "string": "Embed Fixer | Discord bot for fixing social media embeds"
     },
     "meta.description": {
-        "string": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord. Supports all the popular platforms, trusted by 1200+ servers, and open source for self-hosting."
+        "string": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord. Supports all the popular platforms, trusted by 3700+ servers, and open source for self-hosting."
     },
     "languageSelector.label": {
         "string": "Language"
@@ -11,11 +11,20 @@
     "languageSelector.ariaLabel": {
         "string": "Choose site language"
     },
-    "hero.heading": {
-        "string": "The link looked broken. The conversation shouldn’t."
+    "hero.headingLines.0": {
+        "string": "Links that"
+    },
+    "hero.headingLines.1": {
+        "string": "actually"
+    },
+    "hero.headingLines.2": {
+        "string": "embed."
     },
     "hero.tagline": {
-        "string": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord."
+        "string": "Embed Fixer reposts broken social links so the full post shows, right in Discord."
+    },
+    "hero.sitesLead": {
+        "string": "{count} sites, including"
     },
     "hero.ctaAdd": {
         "string": "Add to Discord"
@@ -23,77 +32,89 @@
     "hero.ctaGithub": {
         "string": "View on GitHub"
     },
-    "hero.relay.ariaLabel": {
-        "string": "How webhook relay works"
-    },
-    "hero.relay.incomingLabel": {
-        "string": "incoming"
-    },
-    "hero.relay.incomingValue": {
-        "string": "https://x.com/..."
-    },
-    "hero.relay.actionLabel": {
-        "string": "action"
-    },
-    "hero.relay.actionValue": {
-        "string": "Delete + resend through webhook with your avatar and username"
-    },
-    "hero.relay.resultLabel": {
-        "string": "result"
-    },
-    "hero.relay.resultValue": {
-        "string": "Playable media, full previews, readable content"
-    },
     "problem.eyebrow": {
         "string": "Problem"
     },
     "problem.heading": {
         "string": "Discord strips the point out of shared posts."
     },
-    "problem.items.0": {
-        "string": "Twitter/X previews fail or load partially."
+    "problem.cards.0.name": {
+        "string": "Twitter/X"
     },
-    "problem.items.1": {
-        "string": "Pixiv and Instagram often hide core media."
+    "problem.cards.0.text": {
+        "string": "Previews fail or load halfway."
     },
-    "problem.items.2": {
-        "string": "TikTok and Reddit links lose playable videos."
+    "problem.cards.1.name": {
+        "string": "Pixiv, Instagram"
     },
-    "problem.items.3": {
-        "string": "Broken link forces users to leave Discord."
+    "problem.cards.1.text": {
+        "string": "The image you shared is often missing."
+    },
+    "problem.cards.2.name": {
+        "string": "TikTok, Reddit"
+    },
+    "problem.cards.2.text": {
+        "string": "Videos arrive without playback."
+    },
+    "problem.cards.3.name": {
+        "string": "Your members"
+    },
+    "problem.cards.3.text": {
+        "string": "Leave Discord just to see what you posted."
     },
     "features.eyebrow": {
         "string": "Features"
     },
     "features.heading": {
-        "string": "Features that are well-thoughtout and actually useful."
+        "string": "Well thought out, and actually useful."
     },
-    "features.items.0": {
-        "string": "Automatic fixing through webhook reposting with your username + avatar."
+    "features.list.0.title": {
+        "string": "Automatic"
     },
-    "features.items.1": {
-        "string": "Manual fixings with /fix in DMs and unsupported servers."
+    "features.list.0.text": {
+        "string": "Broken links are reposted through a webhook with the sender’s name and avatar. Nobody has to do anything."
     },
-    "features.items.2": {
-        "string": "Media extraction for supported links in a gallery-like view."
+    "features.list.0.tag": {
+        "string": "Webhook relay"
     },
-    "features.items.3": {
-        "string": "Numerous settings to customize behavior and tailor to your server’s needs."
+    "features.list.1.title": {
+        "string": "Fix by hand"
+    },
+    "features.list.1.text": {
+        "string": "Use /fix in DMs or in servers where the bot isn’t installed."
+    },
+    "features.list.1.tag": {
+        "string": "Slash command"
+    },
+    "features.list.2.title": {
+        "string": "Media extraction"
+    },
+    "features.list.2.text": {
+        "string": "Pull images and videos out of supported links into a gallery-style view."
+    },
+    "features.list.2.tag": {
+        "string": "X, Pixiv"
+    },
+    "features.list.3.title": {
+        "string": "Your rules"
+    },
+    "features.list.3.text": {
+        "string": "{count} settings decide where, when and how links get fixed in your server."
+    },
+    "features.list.3.tag": {
+        "string": "Per server"
     },
     "platforms.eyebrow": {
-        "string": "Supported Platforms"
+        "string": "Supported sites"
     },
     "platforms.heading": {
-        "string": "From mainstream to niche, if the embed is broken, we’ll fix it."
+        "string": "From mainstream to niche. If the embed is broken, we fix it."
     },
     "platforms.ariaLabel": {
         "string": "Supported platform list"
     },
-    "proof.eyebrow": {
-        "string": "Social Proof"
-    },
     "proof.heading": {
-        "string": "Trusted by the communities."
+        "string": "Trusted by communities"
     },
     "proof.ariaLabel": {
         "string": "Embed Fixer usage stats"
@@ -105,22 +126,28 @@
         "string": "GitHub stars"
     },
     "customization.eyebrow": {
-        "string": "Very Customizable"
+        "string": "Customization"
     },
     "customization.heading": {
         "string": "Tune almost every behavior to fit your server."
     },
     "customization.body": {
-        "string": "The most powerful part about Embed Fixer is that almost every behavior can be customized or toggled to your liking, including niche features shaped by real community needs."
-    },
-    "customization.resetNote": {
-        "string": "All settings are unique to each server. Use /reset to restore default values."
+        "string": "Nearly everything can be changed or switched off, including niche options that came from real community requests."
     },
     "customization.ariaLabel": {
         "string": "Customizable settings list"
     },
+    "customization.searchLabel": {
+        "string": "Filter settings"
+    },
+    "customization.searchPlaceholder": {
+        "string": "Search"
+    },
+    "customization.noResults": {
+        "string": "No setting matches that. Try “role”, “channel” or “webhook”."
+    },
     "customization.showAll": {
-        "string": "Show all settings"
+        "string": "Show all"
     },
     "customization.showFewer": {
         "string": "Show fewer"
@@ -132,130 +159,124 @@
         "string": "Change the language used by the bot."
     },
     "customization.settings.1.label": {
-        "string": "Disable Embed Fixes for Websites"
+        "string": "Disable embed fixes for websites"
     },
     "customization.settings.1.description": {
-        "string": "Disable embed fixes for specific websites."
+        "string": "Turn off fixes for specific websites."
     },
     "customization.settings.2.label": {
-        "string": "Media Extraction Channels"
+        "string": "Media extraction channels"
     },
     "customization.settings.2.description": {
-        "string": "Extract images/videos from Twitter/X or Pixiv links in selected channels."
+        "string": "Extract images and videos from X or Pixiv links in selected channels."
     },
     "customization.settings.3.label": {
-        "string": "Embed Fix Channel Blacklist"
+        "string": "Channel blacklist"
     },
     "customization.settings.3.description": {
-        "string": "Channels here will not receive embed fixes."
+        "string": "Channels here never receive embed fixes."
     },
     "customization.settings.4.label": {
-        "string": "Embed Fix Channel Whitelist"
+        "string": "Channel whitelist"
     },
     "customization.settings.4.description": {
-        "string": "Only selected channels receive embed fixes, and this overrides blacklist rules."
+        "string": "Only selected channels receive embed fixes. Overrides the blacklist."
     },
     "customization.settings.5.label": {
-        "string": "Toggle Webhook Reply"
+        "string": "Webhook reply ping"
     },
     "customization.settings.5.description": {
-        "string": "Toggle pinging the original author when replying via webhook."
+        "string": "Choose whether replying through the webhook pings the original author."
     },
     "customization.settings.6.label": {
-        "string": "Disable Automatic Spoilering in NSFW Channels"
+        "string": "NSFW auto-spoiler"
     },
     "customization.settings.6.description": {
         "string": "Skip automatic spoiler tags for extracted media in selected NSFW channels."
     },
     "customization.settings.7.label": {
-        "string": "Toggle Delete Message Reaction"
+        "string": "Delete reaction"
     },
     "customization.settings.7.description": {
-        "string": "Add reactions so original authors can delete webhook messages."
+        "string": "Add a reaction the original author can use to delete the webhook message."
     },
     "customization.settings.8.label": {
-        "string": "Show Post Content Channels"
+        "string": "Show post text"
     },
     "customization.settings.8.description": {
-        "string": "Show post text content in selected channels when media extraction is enabled."
+        "string": "Show the post’s text in selected channels when media extraction is on."
     },
     "customization.settings.9.label": {
-        "string": "Change Delete Message Reaction Emoji"
+        "string": "Delete reaction emoji"
     },
     "customization.settings.9.description": {
         "string": "Choose which emoji is used for delete-by-reaction."
     },
     "customization.settings.10.label": {
-        "string": "Choose Embed Fix Service"
+        "string": "Embed fix service"
     },
     "customization.settings.10.description": {
-        "string": "Choose the embed fix service used for different websites."
+        "string": "Choose which fix service is used for each website."
     },
     "customization.settings.11.label": {
-        "string": "Bot Visibility"
+        "string": "Bot visibility"
     },
     "customization.settings.11.description": {
-        "string": "Choose whether links sent by other bots should also be fixed."
+        "string": "Choose whether links sent by other bots are fixed too."
     },
     "customization.settings.12.label": {
-        "string": "Funnel to Target Channel"
+        "string": "Funnel to target channel"
     },
     "customization.settings.12.description": {
-        "string": "Send fixed embeds and extracted media to a target channel instead of the source channel."
+        "string": "Send fixed embeds and extracted media to one channel instead of the source."
     },
     "customization.settings.13.label": {
-        "string": "Whitelist Roles"
+        "string": "Whitelist roles"
     },
     "customization.settings.13.description": {
-        "string": "Only users with selected roles get embed fixes. Leave empty to disable."
+        "string": "Only members with selected roles get fixes. Leave empty to disable."
     },
     "customization.settings.14.label": {
-        "string": "Toggle Original Link Button"
+        "string": "Original link button"
     },
     "customization.settings.14.description": {
-        "string": "Show or hide a button linking to the original post."
+        "string": "Show or hide a button that links to the original post."
     },
     "customization.settings.15.label": {
-        "string": "Toggle Deleting Original Messages in Threads"
+        "string": "Delete originals in threads"
     },
     "customization.settings.15.description": {
-        "string": "Delete original thread messages after sending fixed embeds through supported flow."
+        "string": "Delete the original thread message after the fixed embed is sent."
     },
     "customization.settings.16.label": {
-        "string": "Reply Instead of Delete"
+        "string": "Reply instead of delete"
     },
     "customization.settings.16.description": {
-        "string": "Reply to the original message with the fixed embed instead of deleting and resending."
+        "string": "Reply with the fixed embed instead of deleting and resending."
     },
     "hosting.eyebrow": {
         "string": "Self-hosting"
     },
     "hosting.heading": {
-        "string": "Care about privacy? Open source comes to the rescue."
+        "string": "Care about privacy? Run it yourself."
     },
     "hosting.body": {
-        "string": "Run Embed Fixer on your own machine if you want maximum control over your data and configuration."
+        "string": "Embed Fixer is open source. Host it on your own machine for full control over your data and configuration."
     },
     "hosting.cta": {
         "string": "Self-hosting Instructions"
     },
-    "hosting.tags.0": {
-        "string": "Docker + SQLite/PostgreSQL"
+    "hosting.copy": {
+        "string": "Copy"
     },
-    "hosting.tags.1": {
-        "string": "Local via uv"
-    },
-    "hosting.tags.2": {
-        "string": "Optional Redis"
+    "hosting.copied": {
+        "string": "Copied"
     },
     "closing.eyebrow": {
         "string": "Call to action"
     },
     "closing.heading": {
         "string": "If your server shares links, this belongs in it."
-    },
-    "closing.body": {
-        "string": "Stop leaving Discord for broken embeds. Add Embed Fixer and keep every conversation intact."
     },
     "footer.copyright": {
         "string": "Copyright © 2026 Seria Ati. All rights reserved."

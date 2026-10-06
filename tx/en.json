@@ -3,7 +3,7 @@
         "string": "Embed Fixer | Discord bot for fixing social media embeds"
     },
     "meta.description": {
-        "string": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord. Supports all the popular platforms, trusted by 3700+ servers, and open source for self-hosting."
+        "string": "Embed Fixer reposts links from X, Pixiv, TikTok, Instagram, Reddit and more so their previews actually show up in Discord. Used in 3700+ servers, open source, and self-hostable."
     },
     "languageSelector.label": {
         "string": "Language"
@@ -21,7 +21,7 @@
         "string": "embed."
     },
     "hero.tagline": {
-        "string": "Embed Fixer reposts broken social links so the full post shows, right in Discord."
+        "string": "When a social link doesn’t preview properly, Embed Fixer reposts it with a working embed, under the sender’s name."
     },
     "hero.sitesLead": {
         "string": "{count} sites, including"
@@ -36,43 +36,43 @@
         "string": "Problem"
     },
     "problem.heading": {
-        "string": "Discord strips the point out of shared posts."
+        "string": "Discord’s own previews often miss the part you wanted to share."
     },
     "problem.cards.0.name": {
         "string": "Twitter/X"
     },
     "problem.cards.0.text": {
-        "string": "Previews fail or load halfway."
+        "string": "Sometimes there’s no preview at all, sometimes half of one."
     },
     "problem.cards.1.name": {
         "string": "Pixiv, Instagram"
     },
     "problem.cards.1.text": {
-        "string": "The image you shared is often missing."
+        "string": "You get a title card, but not the image."
     },
     "problem.cards.2.name": {
         "string": "TikTok, Reddit"
     },
     "problem.cards.2.text": {
-        "string": "Videos arrive without playback."
+        "string": "Videos show up as a thumbnail that won’t play."
     },
     "problem.cards.3.name": {
         "string": "Your members"
     },
     "problem.cards.3.text": {
-        "string": "Leave Discord just to see what you posted."
+        "string": "Have to open a browser just to see what you posted."
     },
     "features.eyebrow": {
         "string": "Features"
     },
     "features.heading": {
-        "string": "Well thought out, and actually useful."
+        "string": "Fixes links on its own, or by hand when you need it."
     },
     "features.list.0.title": {
         "string": "Automatic"
     },
     "features.list.0.text": {
-        "string": "Broken links are reposted through a webhook with the sender’s name and avatar. Nobody has to do anything."
+        "string": "Post a link as usual. Embed Fixer reposts it through a webhook with your name and avatar, plus a reaction you can use to delete it."
     },
     "features.list.0.tag": {
         "string": "Webhook relay"
@@ -81,7 +81,7 @@
         "string": "Fix by hand"
     },
     "features.list.1.text": {
-        "string": "Use /fix in DMs or in servers where the bot isn’t installed."
+        "string": "Install it as a user app to use /fix or the right-click menu in DMs and servers that don’t have the bot."
     },
     "features.list.1.tag": {
         "string": "Slash command"
@@ -90,16 +90,16 @@
         "string": "Media extraction"
     },
     "features.list.2.text": {
-        "string": "Pull images and videos out of supported links into a gallery-style view."
+        "string": "In channels you pick, images and videos from X, Pixiv, Bluesky and Kemono posts are sent as files. Spoilered links stay spoilered."
     },
     "features.list.2.tag": {
-        "string": "X, Pixiv"
+        "string": "Per channel"
     },
     "features.list.3.title": {
         "string": "Your rules"
     },
     "features.list.3.text": {
-        "string": "{count} settings decide where, when and how links get fixed in your server."
+        "string": "{count} settings cover which sites, channels and roles get fixes, and how the fixed message is sent. Members can opt out with /ignore-me."
     },
     "features.list.3.tag": {
         "string": "Per server"
@@ -108,13 +108,13 @@
         "string": "Supported sites"
     },
     "platforms.heading": {
-        "string": "From mainstream to niche. If the embed is broken, we fix it."
+        "string": "Big platforms and niche ones, most with several fix services to choose from."
     },
     "platforms.ariaLabel": {
         "string": "Supported platform list"
     },
     "proof.heading": {
-        "string": "Trusted by communities"
+        "string": "So far"
     },
     "proof.ariaLabel": {
         "string": "Embed Fixer usage stats"
@@ -129,10 +129,10 @@
         "string": "Customization"
     },
     "customization.heading": {
-        "string": "Tune almost every behavior to fit your server."
+        "string": "If a default doesn’t suit your server, change it."
     },
     "customization.body": {
-        "string": "Nearly everything can be changed or switched off, including niche options that came from real community requests."
+        "string": "Most of these settings were added because someone asked for them. Set them with /settings in Discord."
     },
     "customization.ariaLabel": {
         "string": "Customizable settings list"
@@ -168,7 +168,7 @@
         "string": "Media extraction channels"
     },
     "customization.settings.2.description": {
-        "string": "Extract images and videos from X or Pixiv links in selected channels."
+        "string": "Extract images and videos from supported links in selected channels."
     },
     "customization.settings.3.label": {
         "string": "Channel blacklist"
@@ -249,19 +249,31 @@
         "string": "Delete the original thread message after the fixed embed is sent."
     },
     "customization.settings.16.label": {
-        "string": "Reply instead of delete"
+        "string": "Fix mode"
     },
     "customization.settings.16.description": {
-        "string": "Reply with the fixed embed instead of deleting and resending."
+        "string": "Delete and resend through a webhook, reply to the original, or resend as the bot."
+    },
+    "customization.settings.17.label": {
+        "string": "Auto-remove delete reaction"
+    },
+    "customization.settings.17.description": {
+        "string": "Remove the delete reaction after a set number of seconds."
+    },
+    "customization.settings.18.label": {
+        "string": "Rotate fix reaction"
+    },
+    "customization.settings.18.description": {
+        "string": "Add a 🔄 reaction the original author can use to switch to the next fix service."
     },
     "hosting.eyebrow": {
         "string": "Self-hosting"
     },
     "hosting.heading": {
-        "string": "Care about privacy? Run it yourself."
+        "string": "Rather keep your data in-house? Host it yourself."
     },
     "hosting.body": {
-        "string": "Embed Fixer is open source. Host it on your own machine for full control over your data and configuration."
+        "string": "Embed Fixer is open source. Run it with Docker on SQLite or PostgreSQL, and your server settings stay on your own machine."
     },
     "hosting.cta": {
         "string": "Self-hosting Instructions"
@@ -276,7 +288,7 @@
         "string": "Call to action"
     },
     "closing.heading": {
-        "string": "If your server shares links, this belongs in it."
+        "string": "Add it once, and shared links preview properly from then on."
     },
     "footer.copyright": {
         "string": "Copyright © 2026 Seria Ati. All rights reserved."

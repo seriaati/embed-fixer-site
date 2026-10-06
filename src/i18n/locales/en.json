@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Embed Fixer | Discord bot for fixing social media embeds",
-        "description": "Embed Fixer intercepts broken social links and reposts them through webhooks so embeds render correctly inside Discord. Supports all the popular platforms, trusted by 3700+ servers, and open source for self-hosting."
+        "description": "Embed Fixer reposts links from X, Pixiv, TikTok, Instagram, Reddit and more so their previews actually show up in Discord. Used in 3700+ servers, open source, and self-hostable."
     },
     "languageSelector": {
         "label": "Language",
@@ -13,66 +13,66 @@
             "actually",
             "embed."
         ],
-        "tagline": "Embed Fixer reposts broken social links so the full post shows, right in Discord.",
+        "tagline": "When a social link doesn’t preview properly, Embed Fixer reposts it with a working embed, under the sender’s name.",
         "sitesLead": "{count} sites, including",
         "ctaAdd": "Add to Discord",
         "ctaGithub": "View on GitHub"
     },
     "problem": {
         "eyebrow": "Problem",
-        "heading": "Discord strips the point out of shared posts.",
+        "heading": "Discord’s own previews often miss the part you wanted to share.",
         "cards": [
             {
                 "name": "Twitter/X",
-                "text": "Previews fail or load halfway."
+                "text": "Sometimes there’s no preview at all, sometimes half of one."
             },
             {
                 "name": "Pixiv, Instagram",
-                "text": "The image you shared is often missing."
+                "text": "You get a title card, but not the image."
             },
             {
                 "name": "TikTok, Reddit",
-                "text": "Videos arrive without playback."
+                "text": "Videos show up as a thumbnail that won’t play."
             },
             {
                 "name": "Your members",
-                "text": "Leave Discord just to see what you posted."
+                "text": "Have to open a browser just to see what you posted."
             }
         ]
     },
     "features": {
         "eyebrow": "Features",
-        "heading": "Well thought out, and actually useful.",
+        "heading": "Fixes links on its own, or by hand when you need it.",
         "list": [
             {
                 "title": "Automatic",
-                "text": "Broken links are reposted through a webhook with the sender’s name and avatar. Nobody has to do anything.",
+                "text": "Post a link as usual. Embed Fixer reposts it through a webhook with your name and avatar, plus a reaction you can use to delete it.",
                 "tag": "Webhook relay"
             },
             {
                 "title": "Fix by hand",
-                "text": "Use /fix in DMs or in servers where the bot isn’t installed.",
+                "text": "Install it as a user app to use /fix or the right-click menu in DMs and servers that don’t have the bot.",
                 "tag": "Slash command"
             },
             {
                 "title": "Media extraction",
-                "text": "Pull images and videos out of supported links into a gallery-style view.",
-                "tag": "X, Pixiv"
+                "text": "In channels you pick, images and videos from X, Pixiv, Bluesky and Kemono posts are sent as files. Spoilered links stay spoilered.",
+                "tag": "Per channel"
             },
             {
                 "title": "Your rules",
-                "text": "{count} settings decide where, when and how links get fixed in your server.",
+                "text": "{count} settings cover which sites, channels and roles get fixes, and how the fixed message is sent. Members can opt out with /ignore-me.",
                 "tag": "Per server"
             }
         ]
     },
     "platforms": {
         "eyebrow": "Supported sites",
-        "heading": "From mainstream to niche. If the embed is broken, we fix it.",
+        "heading": "Big platforms and niche ones, most with several fix services to choose from.",
         "ariaLabel": "Supported platform list"
     },
     "proof": {
-        "heading": "Trusted by communities",
+        "heading": "So far",
         "ariaLabel": "Embed Fixer usage stats",
         "statLabels": [
             "Discord servers",
@@ -81,8 +81,8 @@
     },
     "customization": {
         "eyebrow": "Customization",
-        "heading": "Tune almost every behavior to fit your server.",
-        "body": "Nearly everything can be changed or switched off, including niche options that came from real community requests.",
+        "heading": "If a default doesn’t suit your server, change it.",
+        "body": "Most of these settings were added because someone asked for them. Set them with /settings in Discord.",
         "ariaLabel": "Customizable settings list",
         "searchLabel": "Filter settings",
         "searchPlaceholder": "Search",
@@ -162,15 +162,15 @@
     },
     "hosting": {
         "eyebrow": "Self-hosting",
-        "heading": "Care about privacy? Run it yourself.",
-        "body": "Embed Fixer is open source. Host it on your own machine for full control over your data and configuration.",
+        "heading": "Rather keep your data in-house? Host it yourself.",
+        "body": "Embed Fixer is open source. Run it with Docker on SQLite or PostgreSQL, and your server settings stay on your own machine.",
         "cta": "Self-hosting Instructions",
         "copy": "Copy",
         "copied": "Copied"
     },
     "closing": {
         "eyebrow": "Call to action",
-        "heading": "If your server shares links, this belongs in it."
+        "heading": "Add it once, and shared links preview properly from then on."
     },
     "footer": {
         "copyright": "Copyright © 2026 Seria Ati. All rights reserved."

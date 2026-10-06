@@ -37,7 +37,7 @@ const settingsCount = String(t.customization.settings.length);
 const withCount = (text: string, count: string) => text.replace("{count}", count);
 // Split copy so slash commands like /fix and /reset can be set in code type.
 const commandParts = (text: string) =>
-    text.split(/(\/[a-z]+)/).map((part) => ({ text: part, code: /^\/[a-z]+$/.test(part) }));
+    text.split(/(\/[a-z-]+)/).map((part) => ({ text: part, code: /^\/[a-z-]+$/.test(part) }));
 ---
 
 <Layout

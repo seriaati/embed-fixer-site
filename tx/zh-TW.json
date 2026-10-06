@@ -30,7 +30,7 @@
         "string": "輸入"
     },
     "hero.relay.incomingValue": {
-        "string": "https://x.com/... (預覽失效)"
+        "string": "https://x.com/..."
     },
     "hero.relay.actionLabel": {
         "string": "處理"
@@ -119,6 +119,12 @@
     "customization.ariaLabel": {
         "string": "可自訂設定列表"
     },
+    "customization.showAll": {
+        "string": "顯示全部設定"
+    },
+    "customization.showFewer": {
+        "string": "收起"
+    },
     "customization.settings.0.label": {
         "string": "語言"
     },
@@ -135,7 +141,7 @@
         "string": "媒體擷取頻道"
     },
     "customization.settings.2.description": {
-        "string": "在這些頻道中發送的 Twitter/X/Pixiv 鏈接的圖片/影片將被提取。"
+        "string": "在所選頻道中擷取支援連結內的圖片和影片。"
     },
     "customization.settings.3.label": {
         "string": "連結預覽修復頻道黑名單"
@@ -216,10 +222,22 @@
         "string": "由於討論串中不能有 Webhook，原訊息將被保留，以用於展示誰傳送了原本的訊息。開啟此選項將在討論串中修復連結預覽後刪除原訊息。"
     },
     "customization.settings.16.label": {
-        "string": "改為回覆而非刪除"
+        "string": "修復模式"
     },
     "customization.settings.16.description": {
-        "string": "若啟用，機器人將在修復訊息時回覆你的訊息，而非刪除訊息並通過 webhook 重新發送修復。"
+        "string": "刪除後透過 Webhook 重新傳送、回覆原訊息，或以機器人身分重新傳送。"
+    },
+    "customization.settings.17.label": {
+        "string": "自動移除刪除反應"
+    },
+    "customization.settings.17.description": {
+        "string": "在設定的秒數後移除刪除反應。"
+    },
+    "customization.settings.18.label": {
+        "string": "輪替修復服務反應"
+    },
+    "customization.settings.18.description": {
+        "string": "新增 🔄 反應，原訊息作者點擊即可切換到下一個預覽修復服務。"
     },
     "hosting.eyebrow": {
         "string": "自行架設"

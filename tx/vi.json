@@ -30,7 +30,7 @@
         "string": "Đầu vào"
     },
     "hero.relay.incomingValue": {
-        "string": "https://x.com/... (link bị lỗi hiển thị)"
+        "string": "https://x.com/..."
     },
     "hero.relay.actionLabel": {
         "string": "Xử lý"
@@ -119,6 +119,12 @@
     "customization.ariaLabel": {
         "string": "Danh sách cài đặt có thể tùy chỉnh"
     },
+    "customization.showAll": {
+        "string": "Hiện tất cả cài đặt"
+    },
+    "customization.showFewer": {
+        "string": "Thu gọn"
+    },
     "customization.settings.0.label": {
         "string": "Ngôn Ngữ"
     },
@@ -135,7 +141,7 @@
         "string": "Kênh Trích Xuất Phương Tiện"
     },
     "customization.settings.2.description": {
-        "string": "Hình ảnh/Video từ các liên kết Twitter/X/Pixiv được gửi trong các kênh này sẽ được trích xuất."
+        "string": "Trích xuất hình ảnh và video từ các liên kết được hỗ trợ trong các kênh đã chọn."
     },
     "customization.settings.3.label": {
         "string": "Danh Sách Đen Kênh Nhúng Sửa"
@@ -216,10 +222,22 @@
         "string": "Vì chủ đề không thể có webhook, tin nhắn gốc được giữ lại để biết ai đã gửi. Bật tính năng này sẽ xóa tin nhắn gốc trong chủ đề sau khi gửi nhúng đã sửa."
     },
     "customization.settings.16.label": {
-        "string": "Trả lời thay vì xóa"
+        "string": "Chế Độ Sửa"
     },
     "customization.settings.16.description": {
-        "string": "Trả lời tin nhắn gốc bằng embed đã sửa thay vì xóa rồi gửi lại."
+        "string": "Xóa rồi gửi lại qua webhook, trả lời tin nhắn gốc, hoặc gửi lại dưới tên bot."
+    },
+    "customization.settings.17.label": {
+        "string": "Tự Động Gỡ Biểu Cảm Xóa"
+    },
+    "customization.settings.17.description": {
+        "string": "Gỡ biểu cảm xóa sau số giây đã đặt."
+    },
+    "customization.settings.18.label": {
+        "string": "Biểu Cảm Đổi Dịch Vụ Sửa"
+    },
+    "customization.settings.18.description": {
+        "string": "Thêm biểu cảm 🔄 để tác giả gốc có thể chuyển sang dịch vụ Nhúng Sửa tiếp theo."
     },
     "hosting.eyebrow": {
         "string": "Tự vận hành (Self-hosting)"

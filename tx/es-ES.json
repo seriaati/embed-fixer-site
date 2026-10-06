@@ -30,7 +30,7 @@
         "string": "entrada"
     },
     "hero.relay.incomingValue": {
-        "string": "https://x.com/... (previsualización rota)"
+        "string": "https://x.com/..."
     },
     "hero.relay.actionLabel": {
         "string": "acción"
@@ -119,6 +119,12 @@
     "customization.ariaLabel": {
         "string": "Lista de ajustes personalizables"
     },
+    "customization.showAll": {
+        "string": "Mostrar todos los ajustes"
+    },
+    "customization.showFewer": {
+        "string": "Mostrar menos"
+    },
     "customization.settings.0.label": {
         "string": "Idioma"
     },
@@ -135,7 +141,7 @@
         "string": "Canales Con Extracción Multimedia"
     },
     "customization.settings.2.description": {
-        "string": "La extracción de multimedia para los enlaces de Twitter/X/Pixiv está habilitada para los siguientes canales."
+        "string": "Extrae imágenes y vídeos de los enlaces compatibles en los canales seleccionados."
     },
     "customization.settings.3.label": {
         "string": "Ajustar Canales No Permitidos Para Embed Fixer"
@@ -216,10 +222,22 @@
         "string": "Por limitaciones técnicas, los hilos no soportan webhooks; por lo tanto el mensaje original se mantendrá. Activando esta opción hará que el mensaje sea eliminado y posteriormente se publicará el enlace corregido."
     },
     "customization.settings.16.label": {
-        "string": "Responder en lugar de borrar"
+        "string": "Modo De Arreglo"
     },
     "customization.settings.16.description": {
-        "string": "Responde al mensaje original con el embed arreglado en lugar de borrar y reenviar."
+        "string": "Borra y reenvía mediante un webhook, responde al mensaje original o reenvía como el bot."
+    },
+    "customization.settings.17.label": {
+        "string": "Quitar Automáticamente La Reacción Para Eliminar"
+    },
+    "customization.settings.17.description": {
+        "string": "Quita la reacción para eliminar tras el número de segundos indicado."
+    },
+    "customization.settings.18.label": {
+        "string": "Reacción Para Cambiar De Servicio"
+    },
+    "customization.settings.18.description": {
+        "string": "Añade una reacción 🔄 que el autor original puede usar para cambiar al siguiente servicio de embed fix."
     },
     "hosting.eyebrow": {
         "string": "Self-hosting"

@@ -30,7 +30,7 @@
         "string": "输入"
     },
     "hero.relay.incomingValue": {
-        "string": "https://x.com/... (预览失效)"
+        "string": "https://x.com/..."
     },
     "hero.relay.actionLabel": {
         "string": "处理"
@@ -119,6 +119,12 @@
     "customization.ariaLabel": {
         "string": "可定制设置列表"
     },
+    "customization.showAll": {
+        "string": "显示全部设置"
+    },
+    "customization.showFewer": {
+        "string": "收起"
+    },
     "customization.settings.0.label": {
         "string": "语言"
     },
@@ -135,7 +141,7 @@
         "string": "媒体提取频道"
     },
     "customization.settings.2.description": {
-        "string": "在这个频道里发送的 Twitter/X/Pixiv 链接的图片/视频都会被提取。"
+        "string": "在所选频道中提取受支持链接里的图片和视频。"
     },
     "customization.settings.3.label": {
         "string": "预览嵌入频道黑名单"
@@ -216,10 +222,22 @@
         "string": "因为主题串无法使用 Webhook，原消息会被保留以识别发送者。启用此选项后，在发送修复后的链接预览后将删除主题串中的原消息。"
     },
     "customization.settings.16.label": {
-        "string": "转换时以回复替代删除"
+        "string": "修复模式"
     },
     "customization.settings.16.description": {
-        "string": "该功能启用时，Embed Fixer将不会删除原始消息，通过Webhook重发，而是通过对你的原始消息回复并预览嵌入。"
+        "string": "删除后通过 Webhook 重发、回复原消息，或以机器人身份重发。"
+    },
+    "customization.settings.17.label": {
+        "string": "自动移除删除反应"
+    },
+    "customization.settings.17.description": {
+        "string": "在设定的秒数后移除删除反应。"
+    },
+    "customization.settings.18.label": {
+        "string": "轮换修复服务反应"
+    },
+    "customization.settings.18.description": {
+        "string": "添加 🔄 反应，原发布者点击即可切换到下一个预览嵌入服务。"
     },
     "hosting.eyebrow": {
         "string": "自托管"

@@ -30,7 +30,7 @@
         "string": "inkomend"
     },
     "hero.relay.incomingValue": {
-        "string": "https://x.com/... (geen preview)"
+        "string": "https://x.com/..."
     },
     "hero.relay.actionLabel": {
         "string": "actie"
@@ -119,6 +119,12 @@
     "customization.ariaLabel": {
         "string": "Lijst met aanpasbare instellingen"
     },
+    "customization.showAll": {
+        "string": "Alle instellingen tonen"
+    },
+    "customization.showFewer": {
+        "string": "Minder tonen"
+    },
     "customization.settings.0.label": {
         "string": "Taal"
     },
@@ -135,7 +141,7 @@
         "string": "Media Extractie Kanalen"
     },
     "customization.settings.2.description": {
-        "string": "Afbeeldingen/video's van Twitter/X/Pixiv-links die in deze kanalen worden verzonden, worden geëxtraheerd."
+        "string": "Haal afbeeldingen en video's uit ondersteunde links in geselecteerde kanalen."
     },
     "customization.settings.3.label": {
         "string": "Embed Fix Kanalen Blacklist"
@@ -216,10 +222,22 @@
         "string": "Omdat threads geen webhooks kunnen hebben, wordt het originele bericht bewaard om te weten wie het heeft verzonden. Door dit in te schakelen wordt het originele bericht in threads verwijderd na het verzenden van de gefixte embed."
     },
     "customization.settings.16.label": {
-        "string": "Antwoorden in plaats van verwijderen"
+        "string": "Fix Modus"
     },
     "customization.settings.16.description": {
-        "string": "Reageer met de gefixte embed op het originele bericht in plaats van verwijderen en opnieuw sturen."
+        "string": "Verwijder en stuur opnieuw via een webhook, antwoord op het originele bericht, of stuur opnieuw als de bot."
+    },
+    "customization.settings.17.label": {
+        "string": "Verwijder Reactie Automatisch Weghalen"
+    },
+    "customization.settings.17.description": {
+        "string": "Haal de verwijderreactie weg na een ingesteld aantal seconden."
+    },
+    "customization.settings.18.label": {
+        "string": "Wissel Fix Reactie"
+    },
+    "customization.settings.18.description": {
+        "string": "Voeg een 🔄-reactie toe waarmee de oorspronkelijke auteur naar de volgende Embed Fix service kan wisselen."
     },
     "hosting.eyebrow": {
         "string": "Zelf hosten"

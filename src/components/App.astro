@@ -651,7 +651,8 @@ const commandParts = (text: string) =>
                 }
                 hero.style.fontSize = "100px";
                 const widest = Math.max(...[...hero.children].map((l) => l.offsetWidth));
-                const byHeight = height / (hero.children.length * 0.8);
+                const lineHeight = parseFloat(getComputedStyle(hero).lineHeight) / 100;
+                const byHeight = height / (hero.children.length * lineHeight);
                 hero.dataset.fitted = Math.max(40, Math.min((100 * width) / widest, byHeight)).toFixed(2) + "px";
                 hero.style.fontSize = hero.dataset.fitted;
             };

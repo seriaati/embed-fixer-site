@@ -14,24 +14,30 @@ const logoPath = "/logo.png";
 const inviteUrl = "https://discord.com/oauth2/authorize?client_id=770144963735453696";
 const repoUrl = "https://github.com/seriaati/embed-fixer";
 const cloneCommand = `git clone ${repoUrl}`;
+// Fix services per site, default first. Mirrors embed_fixer/fixes.py in the bot repo.
 const platforms = [
-    "Twitter/X",
-    "Pixiv",
-    "TikTok",
-    "Reddit",
-    "Instagram",
-    "FurAffinity",
-    "Twitch Clips",
-    "Iwara",
-    "Bluesky",
-    "Kemono",
-    "Facebook",
-    "Bilibili",
-    "Tumblr",
-    "Threads",
-    "PTT",
-    "DeviantArt",
+    { name: "Twitter/X", services: ["FxEmbed", "BetterTwitFix", "EmbedEZ"] },
+    { name: "Pixiv", services: ["Phixiv"] },
+    { name: "TikTok", services: ["fxTikTok", "EmbedEZ", "KKTikTok"] },
+    { name: "Reddit", services: ["FixReddit", "vxReddit", "EmbedEZ"] },
+    {
+        name: "Instagram",
+        services: ["OGInstagram", "InstaFix", "EmbedEZ", "KKInstagram", "vxinstagram", "InstaEmbedRouter"],
+    },
+    { name: "FurAffinity", services: ["xfuraffinity", "fxraffinity"] },
+    { name: "Twitch Clips", services: ["fxtwitch"] },
+    { name: "Iwara", services: ["fxiwara"] },
+    { name: "Bluesky", services: ["VixBluesky", "FxEmbed"] },
+    { name: "Kemono", services: [] },
+    { name: "Facebook", services: ["facebed", "EmbedEZ", "fxfacebook"] },
+    { name: "Bilibili", services: ["fxbilibili", "EmbedEZ", "BiliFix"] },
+    { name: "Tumblr", services: ["fxtumblr"] },
+    { name: "Threads", services: ["FixThreads", "vxThreads", "FixEmbed"] },
+    { name: "PTT", services: ["fxptt"] },
+    { name: "DeviantArt", services: ["fxdeviantart"] },
 ];
+// Sites with no fix service are embedded by the bot itself.
+const serviceList = (services: string[]) => services.join(", ") || t.platforms.builtIn;
 const statValues = ["3700+", "210+"];
 const settingsCount = String(t.customization.settings.length);
 const withCount = (text: string, count: string) => text.replace("{count}", count);
@@ -70,7 +76,7 @@ const commandParts = (text: string) =>
                     <p class="hero-lede">{t.hero.tagline}</p>
                     <p class="hero-sites">
                         {withCount(t.hero.sitesLead, String(platforms.length))}{" "}
-                        <span class="roll" id="roll">{platforms[0]}</span>
+                        <span class="roll" id="roll">{platforms[0].name}</span>
                     </p>
                 </div>
                 <div class="btns">
@@ -131,9 +137,11 @@ const commandParts = (text: string) =>
                 <h2 class="h2" id="platforms-heading">{t.platforms.heading}</h2>
                 <p class="wall" id="wall" role="list" aria-label={t.platforms.ariaLabel}>
                     {
-                        platforms.map((name, index) => (
+                        platforms.map(({ name, services }, index) => (
                             <>
-                                <span role="listitem">{name}</span>
+                                <span role="listitem" data-site={name} class:list={{ lit: index === 0 }}>
+                                    {name}<span class="sr-only">: {serviceList(services)}</span>
+                                </span>
                                 {index < platforms.length - 1 && (
                                     <>
                                         {" "}
@@ -141,6 +149,15 @@ const commandParts = (text: string) =>
                                     </>
                                 )}
                             </>
+                        ))
+                    }
+                </p>
+                <p class="wall-detail" id="wall-detail" aria-hidden="true">
+                    {
+                        platforms.map(({ name, services }, index) => (
+                            <span class:list={{ lit: index === 0 }}>
+                                <span>{name}</span> <i>→</i> {serviceList(services)}
+                            </span>
                         ))
                     }
                 </p>
@@ -681,7 +698,7 @@ const commandParts = (text: string) =>
         // --- Rolling site name ---
 
         const roll = document.getElementById("roll");
-        const sites = [...document.querySelectorAll("#wall [role='listitem']")].map((s) => s.textContent);
+        const sites = [...document.querySelectorAll("#wall [role='listitem']")].map((s) => s.dataset.site);
         if (roll && sites.length && !reduce) {
             let index = 0;
             let current = document.createElement("span");
@@ -721,25 +738,37 @@ const commandParts = (text: string) =>
             card.addEventListener("pointerleave", breakIt);
         });
 
-        // --- Supported sites: a slow highlight walks the list ---
+        // --- Supported sites: a slow highlight walks the list, the line below names its fix services ---
 
         const wall = document.getElementById("wall");
-        if (wall && !reduce) {
+        if (wall) {
             const names = [...wall.querySelectorAll("[role='listitem']")];
+            const details = [...document.querySelectorAll("#wall-detail > span")];
             let lit = 0;
             let hovering = false;
-            names[0].classList.add("lit");
-            wall.addEventListener("pointerenter", () => {
-                hovering = true;
-                names.forEach((n) => n.classList.remove("lit"));
-            });
-            wall.addEventListener("pointerleave", () => (hovering = false));
-            setInterval(() => {
-                if (hovering) return;
+            let pickedAt = 0;
+            const light = (index) => {
                 names[lit].classList.remove("lit");
-                lit = (lit + 1) % names.length;
+                details[lit].classList.remove("lit");
+                lit = index;
                 names[lit].classList.add("lit");
-            }, 900);
+                details[lit].classList.add("lit");
+            };
+            // pointerover also fires on tap, so touch users can pick a site too.
+            wall.addEventListener("pointerover", (event) => {
+                const index = names.indexOf(event.target.closest("[role='listitem']"));
+                if (index < 0) return;
+                pickedAt = performance.now();
+                light(index);
+            });
+            wall.addEventListener("pointerenter", () => (hovering = true));
+            wall.addEventListener("pointerleave", () => (hovering = false));
+            if (!reduce) {
+                setInterval(() => {
+                    if (hovering || performance.now() - pickedAt < 3000) return;
+                    light((lit + 1) % names.length);
+                }, 900);
+            }
         }
 
         // --- Stats count up once when they scroll into view ---

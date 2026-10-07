@@ -417,6 +417,32 @@ code {
     color: rgba(238, 240, 255, 0.2);
 }
 
+/* Every site's line sits in one grid cell, so the row keeps the tallest height as the highlight moves. */
+.wall-detail {
+    display: grid;
+    margin: 28px 0 0;
+    font: 400 13px/1.5 var(--mono);
+    color: var(--dim);
+}
+
+.wall-detail > span {
+    grid-area: 1 / 1;
+    visibility: hidden;
+}
+
+.wall-detail > span.lit {
+    visibility: visible;
+}
+
+.wall-detail span span {
+    color: var(--paper);
+}
+
+.wall-detail i {
+    font-style: normal;
+    color: var(--muted);
+}
+
 /* ---------- Social proof ---------- */
 
 .stats {

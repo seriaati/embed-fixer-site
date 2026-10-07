@@ -35,6 +35,8 @@ const platforms = [
     { name: "Threads", services: ["FixThreads", "vxThreads", "FixEmbed"] },
     { name: "PTT", services: ["fxptt"] },
     { name: "DeviantArt", services: ["fxdeviantart"] },
+    { name: "Pinterest", services: ["EmbedEZ"] },
+    { name: "YouTube", services: ["Koutube"] },
 ];
 // Sites with no fix service are embedded by the bot itself.
 const serviceList = (services: string[]) => services.join(", ") || t.platforms.builtIn;

@@ -3,7 +3,7 @@
         "string": "Embed Fixer | 專為修復社群媒體預覽打造的 Discord 機器人"
     },
     "meta.description": {
-        "string": "Embed Fixer 會自動轉發來自 X、Pixiv、TikTok、Instagram、Reddit 等平台的連結，確保預覽能在 Discord 中正常顯示。已有超過 3,700 個伺服器使用，開源且支援自行託管。"
+        "string": "Embed Fixer 會自動轉發來自 X、Pixiv、TikTok、Instagram、Reddit 等平台的連結，確保預覽能在 Discord 中正常顯示。已有超過 3,700 個伺服器使用，開源且支援自行架設。"
     },
     "languageSelector.label": {
         "string": "語言"
@@ -18,7 +18,7 @@
         "string": "真正能夠"
     },
     "hero.headingLines.2": {
-        "string": "正常顯示預覽。"
+        "string": "正常顯示預覽"
     },
     "hero.tagline": {
         "string": "當社群連結無法正常預覽時，Embed Fixer 會以發送者的名義，重新發送能正常顯示預覽的訊息。"
@@ -27,16 +27,16 @@
         "string": "支援 {count} 個網站，包括"
     },
     "hero.ctaAdd": {
-        "string": "加入 Discord"
+        "string": "新增至 Discord"
     },
     "hero.ctaGithub": {
         "string": "在 GitHub 上查看"
     },
     "problem.eyebrow": {
-        "string": "常見問題"
+        "string": "常見痛點"
     },
     "problem.heading": {
-        "string": "Discord 自帶的預覽往往會遺漏你想分享的重點。"
+        "string": "Discord 內建的預覽往往會遺漏你想分享的重點。"
     },
     "problem.cards.0.name": {
         "string": "Twitter/X"
@@ -57,7 +57,7 @@
         "string": "影片只顯示為一張無法播放的縮圖。"
     },
     "problem.cards.3.name": {
-        "string": "你的成員"
+        "string": "伺服器成員"
     },
     "problem.cards.3.text": {
         "string": "為了看清你發了什麼，還得特地打開瀏覽器。"
@@ -90,10 +90,10 @@
         "string": "媒體擷取"
     },
     "features.list.2.text": {
-        "string": "在指定的頻道中，來自 X、Pixiv、Bluesky 和 Kemono 的圖片與影片會以檔案形式直接發送。設有防雷／防劇透標記的連結也會保留標記。"
+        "string": "在指定的頻道中，來自 X、Pixiv、Bluesky 和 Kemono 的圖片與影片會以檔案形式直接發送。設有防雷標記的連結也會保留防雷遮罩。"
     },
     "features.list.2.tag": {
-        "string": "按頻道獨立設定"
+        "string": "依頻道設定"
     },
     "features.list.3.title": {
         "string": "自訂你的規則"
@@ -102,7 +102,7 @@
         "string": "提供 {count} 項設定，涵蓋哪些網站、頻道與身分組適用修復，以及修復訊息的發送方式。成員亦可使用 /ignore-me 自行退出。"
     },
     "features.list.3.tag": {
-        "string": "按伺服器獨立設定"
+        "string": "依伺服器設定"
     },
     "platforms.eyebrow": {
         "string": "支援網站"
@@ -114,7 +114,7 @@
         "string": "支援平台清單"
     },
     "proof.heading": {
-        "string": "目前成果"
+        "string": "截至目前"
     },
     "proof.ariaLabel": {
         "string": "Embed Fixer 使用統計數據"
@@ -123,7 +123,7 @@
         "string": "個 Discord 伺服器"
     },
     "proof.statLabels.1": {
-        "string": "個 GitHub 星星數"
+        "string": "個 GitHub Star"
     },
     "customization.eyebrow": {
         "string": "個人化自訂"
@@ -132,7 +132,7 @@
         "string": "如果不符合伺服器的預設偏好，隨時都能調整。"
     },
     "customization.body": {
-        "string": "這裡的大多數設定都是應社群需求而加入的。可在 Discord 中透過 /settings 進行配置。"
+        "string": "這裡的大多數設定都是應社群需求而加入的。可在 Discord 中透過 /settings 進行設定。"
     },
     "customization.ariaLabel": {
         "string": "可自訂設定清單"
@@ -159,7 +159,7 @@
         "string": "變更機器人使用的語言。"
     },
     "customization.settings.1.label": {
-        "string": "停用特定網站的連結預覽修復"
+        "string": "停用特定網站的預覽修復"
     },
     "customization.settings.1.description": {
         "string": "關閉特定網站的預覽修復功能。"
@@ -174,28 +174,28 @@
         "string": "頻道黑名單"
     },
     "customization.settings.3.description": {
-        "string": "此名單中的頻道將永遠不會修復連結預覽。"
+        "string": "列入此名單的頻道一律不修復連結預覽。"
     },
     "customization.settings.4.label": {
         "string": "頻道白名單"
     },
     "customization.settings.4.description": {
-        "string": "只有此處選取的頻道會修復連結預覽。優先於黑名單。"
+        "string": "僅所選頻道會修復連結預覽。優先度高於黑名單。"
     },
     "customization.settings.5.label": {
-        "string": "Webhook 回覆 Tag 提醒"
+        "string": "Webhook 回覆標記提醒"
     },
     "customization.settings.5.description": {
         "string": "選擇透過 Webhook 回覆時是否標記（Ping）原始作者。"
     },
     "customization.settings.6.label": {
-        "string": "NSFW 自動防劇透/防雷"
+        "string": "NSFW 自動防雷"
     },
     "customization.settings.6.description": {
-        "string": "在指定的 NSFW 頻道中，擷取出的媒體略過自動防劇透標籤。"
+        "string": "在指定的 NSFW 頻道中，擷取媒體時略過自動防雷標記。"
     },
     "customization.settings.7.label": {
-        "string": "刪除訊息反應"
+        "string": "快捷刪除反應"
     },
     "customization.settings.7.description": {
         "string": "新增一個表情符號反應，讓原作者可以點擊刪除該 Webhook 訊息。"
@@ -207,10 +207,10 @@
         "string": "開啟媒體擷取時，在指定頻道中同時顯示貼文文字。"
     },
     "customization.settings.9.label": {
-        "string": "刪除訊息反應 Emoji"
+        "string": "快捷刪除 Emoji"
     },
     "customization.settings.9.description": {
-        "string": "選擇用於點擊刪除的表情符號。"
+        "string": "選擇用於快速刪除訊息的表情符號。"
     },
     "customization.settings.10.label": {
         "string": "連結預覽修復服務"
@@ -219,10 +219,10 @@
         "string": "針對各個網站選擇欲使用的修復服務來源。"
     },
     "customization.settings.11.label": {
-        "string": "機器人可見度"
+        "string": "其他機器人訊息處理"
     },
     "customization.settings.11.description": {
-        "string": "選擇是否也修復由其他機器人發送的連結。"
+        "string": "選擇是否一併修復由其他機器人發送的連結。"
     },
     "customization.settings.12.label": {
         "string": "集中傳送至目標頻道"
@@ -240,7 +240,7 @@
         "string": "原始連結按鈕"
     },
     "customization.settings.14.description": {
-        "string": "顯示或隱藏通往原始貼文的連結按鈕。"
+        "string": "在修復後的訊息中顯示或隱藏前往原始貼文的連結按鈕。"
     },
     "customization.settings.15.label": {
         "string": "刪除討論串中的原訊息"
@@ -270,13 +270,13 @@
         "string": "自行架設"
     },
     "hosting.heading": {
-        "string": "更想把資料留在內部？歡迎自行託管。"
+        "string": "更想把資料留在內部？歡迎自行架設。"
     },
     "hosting.body": {
-        "string": "Embed Fixer 完全開源。可使用 Docker 搭配 SQLite 或 PostgreSQL 運作，讓伺服器設定全權留在你自己的主機上。"
+        "string": "Embed Fixer 完全開源。可使用 Docker 搭配 SQLite 或 PostgreSQL 運作，讓伺服器設定完全保留在自己的主機上。"
     },
     "hosting.cta": {
-        "string": "自行託管教學"
+        "string": "自行架設說明"
     },
     "hosting.copy": {
         "string": "複製"

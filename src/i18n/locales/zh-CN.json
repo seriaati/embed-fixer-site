@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Embed Fixer | 专为修复社交媒体预览打造的 Discord 机器人",
-        "description": "Embed Fixer 会自动转发来自 X、Pixiv、TikTok、Instagram、Reddit 等平台的链接，确保预览能在 Discord 中正常显示。已被 3700+ 服务器采用，开源且支持自托管。"
+        "description": "Embed Fixer 会自动转发来自 X、Pixiv、TikTok、Instagram、Reddit 等平台的链接，确保预览能在 Discord 中正常显示。已被 3,700+ 个服务器采用，开源且支持自托管。"
     },
     "languageSelector": {
         "label": "语言",
@@ -11,7 +11,7 @@
         "headingLines": [
             "让链接",
             "真正能够",
-            "正常显示预览。"
+            "正常显示预览"
         ],
         "tagline": "当社交媒体链接无法正常预览时，Embed Fixer 会以发送者的名义，重新发送能正常显示预览的消息。",
         "sitesLead": "支持 {count} 个平台，包括",
@@ -46,7 +46,7 @@
         "list": [
             {
                 "title": "全自动处理",
-                "text": "照常发送链接即可。Embed Fixer 会通过 Webhook 带着你的昵称与头像重新发送，并附带可用于删除该消息的表情反应。",
+                "text": "照常发送链接即可。Embed Fixer 会通过 Webhook 以你的昵称与头像重新发送，并附带可用于删除该消息的表情反应。",
                 "tag": "Webhook 转发"
             },
             {
@@ -56,7 +56,7 @@
             },
             {
                 "title": "媒体提取",
-                "text": "在指定频道中，来自 X、Pixiv、Bluesky 和 Kemono 的图片与视频会以文件形式直接发送。带有剧透/防雷标记的链接将保持防剧透状态。",
+                "text": "在指定频道中，来自 X、Pixiv、Bluesky 和 Kemono 的图片与视频会以文件形式直接发送。带有剧透标记的链接将保持防剧透状态。",
                 "tag": "分频道设置"
             },
             {
@@ -72,7 +72,7 @@
         "ariaLabel": "支持平台列表"
     },
     "proof": {
-        "heading": "目前成绩",
+        "heading": "截至目前",
         "ariaLabel": "Embed Fixer 使用统计数据",
         "statLabels": [
             "个 Discord 服务器",
@@ -95,8 +95,8 @@
                 "description": "更改机器人使用的语言。"
             },
             {
-                "label": "关闭特定网站的链接预览修复",
-                "description": "关闭特定网站的预览修复功能。"
+                "label": "停用特定网站的预览修复",
+                "description": "关闭特定网站的链接预览修复功能。"
             },
             {
                 "label": "媒体提取频道",
@@ -104,7 +104,7 @@
             },
             {
                 "label": "频道黑名单",
-                "description": "黑名单中的频道将永远不会修复链接预览。"
+                "description": "列入黑名单的频道一律不进行链接预览修复。"
             },
             {
                 "label": "频道白名单",
@@ -116,10 +116,10 @@
             },
             {
                 "label": "NSFW 自动防剧透",
-                "description": "在指定的 NSFW 频道中，提取出的媒体跳过自动添加防剧透遮罩。"
+                "description": "在指定的 NSFW 频道中，提取媒体时跳过自动添加防剧透遮罩。"
             },
             {
-                "label": "删除消息反应",
+                "label": "快捷删除反应",
                 "description": "添加一个表情反应，方便原作者点击直接删除该 Webhook 消息。"
             },
             {
@@ -127,7 +127,7 @@
                 "description": "启用媒体提取后，在指定频道内同时显示帖子的文字内容。"
             },
             {
-                "label": "删除消息反应 Emoji",
+                "label": "快捷删除 Emoji",
                 "description": "自定义用于快捷删除消息的表情符号。"
             },
             {
@@ -135,7 +135,7 @@
                 "description": "针对不同网站选择所使用的具体修复解析服务。"
             },
             {
-                "label": "机器人可见性",
+                "label": "其他机器人消息响应",
                 "description": "选择是否对其他机器人发送的链接也执行修复。"
             },
             {
@@ -172,7 +172,7 @@
         "eyebrow": "自托管",
         "heading": "更想把数据留在本地？欢迎自行托管。",
         "body": "Embed Fixer 完全开源。可通过 Docker 配合 SQLite 或 PostgreSQL 运行，服务器配置始终保留在自己的机器上。",
-        "cta": "自托管教程",
+        "cta": "自托管指南",
         "copy": "复制",
         "copied": "已复制"
     },

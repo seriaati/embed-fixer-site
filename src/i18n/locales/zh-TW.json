@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Embed Fixer | 專為修復社群媒體預覽打造的 Discord 機器人",
-        "description": "Embed Fixer 會自動轉發來自 X、Pixiv、TikTok、Instagram、Reddit 等平台的連結，確保預覽能在 Discord 中正常顯示。已有超過 3,700 個伺服器使用，開源且支援自行託管。"
+        "description": "Embed Fixer 會自動轉發來自 X、Pixiv、TikTok、Instagram、Reddit 等平台的連結，確保預覽能在 Discord 中正常顯示。已有超過 3,700 個伺服器使用，開源且支援自行架設。"
     },
     "languageSelector": {
         "label": "語言",
@@ -11,16 +11,16 @@
         "headingLines": [
             "讓連結",
             "真正能夠",
-            "正常顯示預覽。"
+            "正常顯示預覽"
         ],
         "tagline": "當社群連結無法正常預覽時，Embed Fixer 會以發送者的名義，重新發送能正常顯示預覽的訊息。",
         "sitesLead": "支援 {count} 個網站，包括",
-        "ctaAdd": "加入 Discord",
+        "ctaAdd": "新增至 Discord",
         "ctaGithub": "在 GitHub 上查看"
     },
     "problem": {
-        "eyebrow": "常見問題",
-        "heading": "Discord 自帶的預覽往往會遺漏你想分享的重點。",
+        "eyebrow": "常見痛點",
+        "heading": "Discord 內建的預覽往往會遺漏你想分享的重點。",
         "cards": [
             {
                 "name": "Twitter/X",
@@ -35,7 +35,7 @@
                 "text": "影片只顯示為一張無法播放的縮圖。"
             },
             {
-                "name": "你的成員",
+                "name": "伺服器成員",
                 "text": "為了看清你發了什麼，還得特地打開瀏覽器。"
             }
         ]
@@ -56,13 +56,13 @@
             },
             {
                 "title": "媒體擷取",
-                "text": "在指定的頻道中，來自 X、Pixiv、Bluesky 和 Kemono 的圖片與影片會以檔案形式直接發送。設有防雷／防劇透標記的連結也會保留標記。",
-                "tag": "按頻道獨立設定"
+                "text": "在指定的頻道中，來自 X、Pixiv、Bluesky 和 Kemono 的圖片與影片會以檔案形式直接發送。設有防雷標記的連結也會保留防雷遮罩。",
+                "tag": "依頻道設定"
             },
             {
                 "title": "自訂你的規則",
                 "text": "提供 {count} 項設定，涵蓋哪些網站、頻道與身分組適用修復，以及修復訊息的發送方式。成員亦可使用 /ignore-me 自行退出。",
-                "tag": "按伺服器獨立設定"
+                "tag": "依伺服器設定"
             }
         ]
     },
@@ -72,17 +72,17 @@
         "ariaLabel": "支援平台清單"
     },
     "proof": {
-        "heading": "目前成果",
+        "heading": "截至目前",
         "ariaLabel": "Embed Fixer 使用統計數據",
         "statLabels": [
             "個 Discord 伺服器",
-            "個 GitHub 星星數"
+            "個 GitHub Star"
         ]
     },
     "customization": {
         "eyebrow": "個人化自訂",
         "heading": "如果不符合伺服器的預設偏好，隨時都能調整。",
-        "body": "這裡的大多數設定都是應社群需求而加入的。可在 Discord 中透過 /settings 進行配置。",
+        "body": "這裡的大多數設定都是應社群需求而加入的。可在 Discord 中透過 /settings 進行設定。",
         "ariaLabel": "可自訂設定清單",
         "searchLabel": "篩選設定",
         "searchPlaceholder": "搜尋",
@@ -95,7 +95,7 @@
                 "description": "變更機器人使用的語言。"
             },
             {
-                "label": "停用特定網站的連結預覽修復",
+                "label": "停用特定網站的預覽修復",
                 "description": "關閉特定網站的預覽修復功能。"
             },
             {
@@ -104,22 +104,22 @@
             },
             {
                 "label": "頻道黑名單",
-                "description": "此名單中的頻道將永遠不會修復連結預覽。"
+                "description": "列入此名單的頻道一律不修復連結預覽。"
             },
             {
                 "label": "頻道白名單",
-                "description": "只有此處選取的頻道會修復連結預覽。優先於黑名單。"
+                "description": "僅所選頻道會修復連結預覽。優先度高於黑名單。"
             },
             {
-                "label": "Webhook 回覆 Tag 提醒",
+                "label": "Webhook 回覆標記提醒",
                 "description": "選擇透過 Webhook 回覆時是否標記（Ping）原始作者。"
             },
             {
-                "label": "NSFW 自動防劇透/防雷",
-                "description": "在指定的 NSFW 頻道中，擷取出的媒體略過自動防劇透標籤。"
+                "label": "NSFW 自動防雷",
+                "description": "在指定的 NSFW 頻道中，擷取媒體時略過自動防雷標記。"
             },
             {
-                "label": "刪除訊息反應",
+                "label": "快捷刪除反應",
                 "description": "新增一個表情符號反應，讓原作者可以點擊刪除該 Webhook 訊息。"
             },
             {
@@ -127,16 +127,16 @@
                 "description": "開啟媒體擷取時，在指定頻道中同時顯示貼文文字。"
             },
             {
-                "label": "刪除訊息反應 Emoji",
-                "description": "選擇用於點擊刪除的表情符號。"
+                "label": "快捷刪除 Emoji",
+                "description": "選擇用於快速刪除訊息的表情符號。"
             },
             {
                 "label": "連結預覽修復服務",
                 "description": "針對各個網站選擇欲使用的修復服務來源。"
             },
             {
-                "label": "機器人可見度",
-                "description": "選擇是否也修復由其他機器人發送的連結。"
+                "label": "其他機器人訊息處理",
+                "description": "選擇是否一併修復由其他機器人發送的連結。"
             },
             {
                 "label": "集中傳送至目標頻道",
@@ -148,7 +148,7 @@
             },
             {
                 "label": "原始連結按鈕",
-                "description": "顯示或隱藏通往原始貼文的連結按鈕。"
+                "description": "在修復後的訊息中顯示或隱藏前往原始貼文的連結按鈕。"
             },
             {
                 "label": "刪除討論串中的原訊息",
@@ -170,9 +170,9 @@
     },
     "hosting": {
         "eyebrow": "自行架設",
-        "heading": "更想把資料留在內部？歡迎自行託管。",
-        "body": "Embed Fixer 完全開源。可使用 Docker 搭配 SQLite 或 PostgreSQL 運作，讓伺服器設定全權留在你自己的主機上。",
-        "cta": "自行託管教學",
+        "heading": "更想把資料留在內部？歡迎自行架設。",
+        "body": "Embed Fixer 完全開源。可使用 Docker 搭配 SQLite 或 PostgreSQL 運作，讓伺服器設定完全保留在自己的主機上。",
+        "cta": "自行架設說明",
         "copy": "複製",
         "copied": "已複製"
     },

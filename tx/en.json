@@ -113,9 +113,6 @@
     "platforms.ariaLabel": {
         "string": "Supported platform list"
     },
-    "platforms.builtIn": {
-        "string": "embedded by Embed Fixer itself"
-    },
     "proof.heading": {
         "string": "So far"
     },

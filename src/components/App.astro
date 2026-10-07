@@ -38,8 +38,6 @@ const platforms = [
     { name: "Pinterest", services: ["EmbedEZ"] },
     { name: "YouTube", services: ["Koutube"] },
 ];
-// Sites with no fix service are embedded by the bot itself.
-const serviceList = (services: string[]) => services.join(", ") || t.platforms.builtIn;
 const statValues = ["3700+", "210+"];
 const settingsCount = String(t.customization.settings.length);
 const withCount = (text: string, count: string) => text.replace("{count}", count);
@@ -142,7 +140,7 @@ const commandParts = (text: string) =>
                         platforms.map(({ name, services }, index) => (
                             <>
                                 <span role="listitem" data-site={name} class:list={{ lit: index === 0 }}>
-                                    {name}<span class="sr-only">: {serviceList(services)}</span>
+                                    {name}{services.length > 0 && <span class="sr-only">: {services.join(", ")}</span>}
                                 </span>
                                 {index < platforms.length - 1 && (
                                     <>
@@ -158,7 +156,11 @@ const commandParts = (text: string) =>
                     {
                         platforms.map(({ name, services }, index) => (
                             <span class:list={{ lit: index === 0 }}>
-                                <span>{name}</span> <i>→</i> {serviceList(services)}
+                                {services.length > 0 && (
+                                    <>
+                                        <span>{name}</span> <i>→</i> {services.join(", ")}
+                                    </>
+                                )}
                             </span>
                         ))
                     }

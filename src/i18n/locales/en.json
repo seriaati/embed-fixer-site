@@ -69,8 +69,7 @@
     "platforms": {
         "eyebrow": "Supported sites",
         "heading": "Big platforms and niche ones, most with several fix services to choose from.",
-        "ariaLabel": "Supported platform list",
-        "builtIn": "embedded by Embed Fixer itself"
+        "ariaLabel": "Supported platform list"
     },
     "proof": {
         "heading": "So far",

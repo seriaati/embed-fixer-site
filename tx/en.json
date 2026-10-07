@@ -292,5 +292,11 @@
     },
     "footer.copyright": {
         "string": "Copyright © 2026 Seria Ati. All rights reserved."
+    },
+    "footer.privacy": {
+        "string": "Privacy Policy"
+    },
+    "footer.terms": {
+        "string": "Terms of Service"
     }
 }

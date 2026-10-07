@@ -1,0 +1,62 @@
+---
+import type { MarkdownHeading } from "astro";
+import Layout from "../layouts/Layout.astro";
+import { getDictionary } from "../i18n";
+
+interface Props {
+    title: string;
+    description: string;
+    headings: MarkdownHeading[];
+}
+
+const { title, description, headings } = Astro.props;
+// The policies are only published in English.
+const t = getDictionary("en");
+const sections = headings.filter((heading) => heading.depth === 2);
+const path = Astro.url.pathname.replace(/\/$/, "");
+const repoUrl = "https://github.com/seriaati/embed-fixer";
+---
+
+<Layout lang="en" title={`${title} | Embed Fixer`} description={description} localized={false}>
+    <header class="legal-top wrap">
+        <a class="brand" href="/">
+            <img src="/logo.png" alt="" width="28" height="28" />
+            <span>Embed Fixer</span>
+        </a>
+    </header>
+
+    <main class="legal wrap">
+        <nav class="legal-toc" aria-label="Sections">
+            <p class="eyebrow">Contents</p>
+            <ol>
+                {
+                    sections.map((heading) => (
+                        <li>
+                            <a href={`#${heading.slug}`}>{heading.text}</a>
+                        </li>
+                    ))
+                }
+            </ol>
+        </nav>
+        <article class="legal-body">
+            <slot />
+        </article>
+    </main>
+
+    <footer class="site-footer" aria-label="Site footer">
+        <div class="site-footer-row">
+            <p>{t.footer.copyright}</p>
+            <a class="footer-link" href={repoUrl} target="_blank" rel="noreferrer">GitHub</a>
+            <a
+                class="footer-link"
+                href="/privacy"
+                aria-current={path === "/privacy" ? "page" : undefined}>{t.footer.privacy}</a
+            >
+            <a
+                class="footer-link"
+                href="/terms"
+                aria-current={path === "/terms" ? "page" : undefined}>{t.footer.terms}</a
+            >
+        </div>
+    </footer>
+</Layout>

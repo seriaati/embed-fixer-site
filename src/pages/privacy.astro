@@ -1,0 +1,12 @@
+---
+import Legal from "../components/Legal.astro";
+import { Content, getHeadings } from "../legal/privacy.md";
+---
+
+<Legal
+    title="Privacy Policy"
+    description="What data the Embed Fixer Discord bot stores, how it is used, and how long it is kept."
+    headings={getHeadings()}
+>
+    <Content />
+</Legal>

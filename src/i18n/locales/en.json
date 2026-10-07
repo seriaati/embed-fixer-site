@@ -181,6 +181,8 @@
         "heading": "Add it once, and shared links preview properly from then on."
     },
     "footer": {
-        "copyright": "Copyright © 2026 Seria Ati. All rights reserved."
+        "copyright": "Copyright © 2026 Seria Ati. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
     }
 }

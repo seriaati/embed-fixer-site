@@ -7,6 +7,8 @@ interface Props {
 	description?: string;
 	ogImage?: string;
 	lang?: string;
+	// false for pages that have no translated versions
+	localized?: boolean;
 }
 
 const {
@@ -14,6 +16,7 @@ const {
 	description = "Feature-rich Discord bot for fixing social media embeds.",
 	ogImage = "/logo.png",
 	lang = "en",
+	localized = true,
 } = Astro.props;
 
 const baseUrl = Astro.site ?? Astro.url;
@@ -47,19 +50,24 @@ const getLocaleUrl = (code: string) => {
 		<link rel="canonical" href={canonicalUrl} />
 
 		{
-			localeOptions.map((option) => (
+			localized &&
+				localeOptions.map((option) => (
+					<link
+						rel="alternate"
+						hreflang={option.code}
+						href={getLocaleUrl(option.code)}
+					/>
+				))
+		}
+		{
+			localized && (
 				<link
 					rel="alternate"
-					hreflang={option.code}
-					href={getLocaleUrl(option.code)}
+					hreflang="x-default"
+					href={getLocaleUrl(DEFAULT_LOCALE)}
 				/>
-			))
+			)
 		}
-		<link
-			rel="alternate"
-			hreflang="x-default"
-			href={getLocaleUrl(DEFAULT_LOCALE)}
-		/>
 
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />

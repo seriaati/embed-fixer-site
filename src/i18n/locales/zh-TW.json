@@ -181,6 +181,8 @@
         "heading": "只需新增一次，從此分享連結都能正常預覽。"
     },
     "footer": {
-        "copyright": "Copyright © 2026 Seria Ati. 保留所有權利。"
+        "copyright": "Copyright © 2026 Seria Ati. 保留所有權利。",
+        "privacy": "隱私權政策",
+        "terms": "服務條款"
     }
 }

@@ -726,6 +726,141 @@ code {
     outline-offset: -3px;
 }
 
+/* ---------- Legal pages ----------
+   Long reading: contents rail on the left, a readable measure on the right. */
+
+.legal-top {
+    padding-block: 24px;
+}
+
+.legal-top .brand {
+    width: max-content;
+    text-decoration: none;
+}
+
+.legal {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    gap: 48px 64px;
+    padding-block: clamp(48px, 8vw, 112px) clamp(72px, 10vw, 140px);
+}
+
+.legal-toc {
+    position: sticky;
+    top: 32px;
+    align-self: start;
+}
+
+.legal-toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 400 13px/1.4 var(--mono);
+}
+
+.legal-toc a {
+    display: block;
+    padding: 6px 0;
+    color: var(--dim);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.legal-toc a:hover {
+    color: var(--paper);
+}
+
+.legal-body {
+    max-width: 68ch;
+    color: var(--dim);
+}
+
+.legal-body h1 {
+    margin: 0;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 88px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-variation-settings: "wdth" 88;
+    color: var(--paper);
+}
+
+.legal-body h1 + p {
+    margin-top: 20px;
+    font: 400 13px/1.4 var(--mono);
+}
+
+.legal-body h2 {
+    margin: 56px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid var(--faint);
+    font-weight: 800;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    font-variation-settings: "wdth" 88;
+    color: var(--paper);
+    scroll-margin-top: 24px;
+}
+
+.legal-body h1 + h2 {
+    margin-top: 40px;
+}
+
+/* the source Markdown bolds every heading; the heading weight already does that job */
+.legal-body h1 strong,
+.legal-body h2 strong {
+    font-weight: inherit;
+}
+
+.legal-body p,
+.legal-body ul {
+    margin: 0 0 16px;
+}
+
+.legal-body ul {
+    padding-left: 1.2em;
+    list-style: disc;
+}
+
+.legal-body ul ul {
+    margin: 8px 0 0;
+    list-style: circle;
+}
+
+.legal-body li + li {
+    margin-top: 8px;
+}
+
+.legal-body li::marker {
+    color: var(--muted);
+}
+
+.legal-body strong {
+    font-weight: 700;
+    color: var(--paper);
+}
+
+.legal-body a {
+    color: var(--paper);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.legal-body a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.legal-body code {
+    padding: 0.1em 0.35em;
+    background: var(--raised);
+    color: var(--paper);
+}
+
+.footer-link[aria-current="page"] {
+    color: var(--paper);
+}
+
 /* ---------- Chinese ----------
    Anybody has no CJK glyphs, so Chinese falls back to a system font. Its dense strokes need
    lighter weights, open leading and a touch of tracking where Latin display type runs tight. */
@@ -779,8 +914,13 @@ body:lang(zh) {
     }
 
     .host,
-    .settings {
+    .settings,
+    .legal {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+    .legal-toc {
+        display: none;
     }
 }
 
@@ -802,6 +942,7 @@ body:lang(zh) {
     .wall span,
     .btn,
     .btn span,
+    .legal-toc a,
     .language-select-caret {
         transition: none;
     }

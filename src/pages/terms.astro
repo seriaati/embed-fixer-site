@@ -1,0 +1,12 @@
+---
+import Legal from "../components/Legal.astro";
+import { Content, getHeadings } from "../legal/terms.md";
+---
+
+<Legal
+    title="Terms of Service"
+    description="The terms for using, self-hosting and contributing to the Embed Fixer Discord bot."
+    headings={getHeadings()}
+>
+    <Content />
+</Legal>

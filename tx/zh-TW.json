@@ -292,5 +292,11 @@
     },
     "footer.copyright": {
         "string": "Copyright © 2026 Seria Ati. 保留所有權利。"
+    },
+    "footer.privacy": {
+        "string": "隱私權政策"
+    },
+    "footer.terms": {
+        "string": "服務條款"
     }
 }
